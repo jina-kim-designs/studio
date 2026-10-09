@@ -23,9 +23,9 @@ const projects = [
   { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: everydayImage, description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
 ];
 const otherWork = [
-  { title: 'AI + design systems automation', description: 'Editorial design & art direction', image: studioImage, category: 'Exploration' },
-  { title: 'Pocket Mentor', description: 'building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: everydayImage, category: 'Hackathon' },
-  { title: 'Cross-platform parity', description: 'Identity systems & visual experiments', image: studioImage, category: 'Collaboration' },
+  { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, category: 'Exploration' },
+  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: everydayImage, category: 'Hackathon' },
+  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration' },
 ];
 
 function SectionHeading({ number, title, aside }: { number: string; title: string; aside?: ReactNode }) {
