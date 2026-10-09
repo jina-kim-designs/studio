@@ -45,10 +45,10 @@ function Portfolio() {
       <section className="hero-band" aria-label="Introduction">
         <div className="portfolio-shell hero-inner">
           <p className="eyebrow">Designer. Thinker. Always curious.</p>
-          <h1 className="hero-title">Hello, I’m<br /><em>Your Name.</em></h1>
+          <h1 className="hero-title">Hello, I’m<br /><em>Jina.</em></h1>
           <span className="hero-mark" aria-hidden="true">✳</span>
           <p className="hero-intro">I turn complex questions into thoughtful, human experiences. Working at the intersection of strategy, storytelling, and design.</p>
-          <div className="hero-bottom"><span className="availability">Based in Your City · Open to good conversations</span><a href="#work" className="inline-flex items-center gap-2">A few things I’ve made <ArrowDown size={14} /></a></div>
+          <div className="hero-bottom"><span className="availability">Based in Washington, D.C. · Open to good conversations</span><a href="#work" className="inline-flex items-center gap-2">A few things I’ve made <ArrowDown size={14} /></a></div>
         </div>
       </section>
       <section className="portfolio-shell portfolio-section" id="work">
