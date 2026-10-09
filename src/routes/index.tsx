@@ -46,7 +46,7 @@ function Portfolio() {
         <div className="portfolio-shell hero-inner">
           <p className="eyebrow">Designer. Thinker. Always curious.</p>
           <h1 className="hero-title">Hello, I’m<br /><em>Jina.</em></h1>
-          <svg className="hero-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M100 50 Q58.32 46.56 85.36 14.64 Q53.44 41.68 50 0 Q46.56 41.68 14.64 14.64 Q41.68 46.56 0 50 Q41.68 53.44 14.64 85.36 Q46.56 58.32 50 100 Q53.44 58.32 85.36 85.36 Q58.32 53.44 100 50 Z" fill="currentColor" /></svg>
+          <svg className="hero-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M100 50 Q56.47 47.32 64.14 35.86 Q52.68 42.53 50 0 Q47.32 42.53 35.86 35.86 Q43.53 47.32 0 50 Q43.53 52.68 35.86 64.14 Q47.32 57.47 50 100 Q52.68 57.47 64.14 64.14 Q56.47 52.68 100 50 Z" fill="currentColor" /></svg>
           <p className="hero-intro">I turn complex questions into thoughtful, human experiences. Working at the intersection of strategy, storytelling, and design.</p>
           <div className="hero-bottom"><span className="availability">Based in Washington, D.C. · Open to good conversations</span><a href="#work" className="inline-flex items-center gap-2">A few things I’ve made <ArrowDown size={14} /></a></div>
         </div>
