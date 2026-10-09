@@ -72,7 +72,7 @@ function Portfolio() {
           </Link>
         </article>
         {projects.slice(1).map(project => <article className="project-item" key={project.title}>
-          <Button variant="ghost" className="project-image-link" onClick={() => setSelected(project)} aria-label={`View ${project.title} case study`}><img className="project-image" src={project.image} alt={`${project.title} — sample design project`} width={1536} height={1024} loading="lazy" /></Button>
+          <Button variant="ghost" className="project-image-link" onClick={() => setSelected(project)} aria-label={`View ${project.title} case study`}><img className="project-image" src={project.image} alt={project.alt} width={1536} height={1024} loading="lazy" /></Button>
           <div className="project-caption"><div><h3 className="project-title">{project.title}</h3><p className="project-description">{project.subtitle}</p><div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div><Button variant="ghost" className="arrow-link" title={`Read ${project.title}`} aria-label={`Read ${project.title}`} onClick={() => setSelected(project)}><ArrowUpRight /></Button></div>
         </article>)}
       </section>
