@@ -11,3 +11,4 @@
 - [ ] Autopilot: own case study page matching the palette page
 - [ ] Autopilot card: add "Shipped to Production" tag next to the eyebrow
 - [ ] Autopilot card: fix the "Read the case study" indent to match the first card
+- [ ] Align the palette tablet image style with the more realistic Autopilot phone photo
