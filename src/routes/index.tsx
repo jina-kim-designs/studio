@@ -6,7 +6,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
 import everydayImage from '@/assets/everyday-project.jpg';
-import autopilotAsset from '@/assets/autopilot-aligned-screen.jpg.asset.json';
+import autopilotAsset from '@/assets/autopilot-angled-screen.jpg.asset.json';
 const autopilotImage = autopilotAsset.url;
 
 export const Route = createFileRoute('/')({
@@ -23,7 +23,7 @@ export const Route = createFileRoute('/')({
 
 const projects = [
   { title: 'Building a scalable data visualization palette', subtitle: 'A shared language of color for data across the enterprise.', tags: ['Design systems', 'Strategy', '2026'], image: studioImage, alt: 'Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface', description: 'An example brand identity project exploring the relationship between architecture, people, and place.' },
-  { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: autopilotImage, alt: 'Close-up of a phone showing transaction amounts, the Automatic Savings tile, and bottom navigation on a pale blue and cream surface', description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
+  { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: autopilotImage, alt: 'Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface', description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
 ];
 const otherWork = [
   { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, category: 'Exploration' },
@@ -74,7 +74,7 @@ function Portfolio() {
         </article>
         <article className="featured-study">
           <div className="featured-copy">
-            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Automated savings</p>
+            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Automated savings<span className="featured-tag">Shipped to Production</span></p>
             <h3 className="featured-title">{projects[1]!.title}</h3>
             <p className="featured-text">{projects[1]!.subtitle} I drove the research and design behind Autopilot, Capital One’s automated savings tool, taking it from customer insight to launch.</p>
             <dl className="featured-stats">
@@ -82,11 +82,11 @@ function Portfolio() {
               <div><dt>0→1</dt><dd>new savings tool</dd></div>
               <div><dt>UX</dt><dd>research & design</dd></div>
             </dl>
-            <Button variant="ghost" className="featured-link" onClick={() => setSelected(projects[1]!)}>Read the case study <ArrowUpRight size={15} /></Button>
+            <Link to="/work/autopilot" className="featured-link">Read the case study <ArrowUpRight size={15} /></Link>
           </div>
-          <button type="button" className="featured-visual" onClick={() => setSelected(projects[1]!)} aria-label="View the Autopilot case study">
+          <Link to="/work/autopilot" className="featured-visual" aria-label="Read the Autopilot case study">
             <img src={projects[1]!.image} alt={projects[1]!.alt} width={1536} height={1024} loading="lazy" />
-          </button>
+          </Link>
         </article>
       </section>
       <section className="portfolio-shell portfolio-section" id="other-work">

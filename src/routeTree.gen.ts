@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkAutopilotRouteImport } from './routes/work.autopilot'
 import { Route as WorkDataVisualizationPaletteRouteImport } from './routes/work.data-visualization-palette'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkAutopilotRoute = WorkAutopilotRouteImport.update({
+  id: '/work/autopilot',
+  path: '/work/autopilot',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkDataVisualizationPaletteRoute =
@@ -26,27 +32,31 @@ const WorkDataVisualizationPaletteRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/work/autopilot': typeof WorkAutopilotRoute
   '/work/data-visualization-palette': typeof WorkDataVisualizationPaletteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/work/autopilot': typeof WorkAutopilotRoute
   '/work/data-visualization-palette': typeof WorkDataVisualizationPaletteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/work/autopilot': typeof WorkAutopilotRoute
   '/work/data-visualization-palette': typeof WorkDataVisualizationPaletteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/work/data-visualization-palette'
+  fullPaths: '/' | '/work/autopilot' | '/work/data-visualization-palette'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/work/data-visualization-palette'
-  id: '__root__' | '/' | '/work/data-visualization-palette'
+  to: '/' | '/work/autopilot' | '/work/data-visualization-palette'
+  id: '__root__' | '/' | '/work/autopilot' | '/work/data-visualization-palette'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WorkAutopilotRoute: typeof WorkAutopilotRoute
   WorkDataVisualizationPaletteRoute: typeof WorkDataVisualizationPaletteRoute
 }
 
@@ -57,6 +67,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/autopilot': {
+      id: '/work/autopilot'
+      path: '/work/autopilot'
+      fullPath: '/work/autopilot'
+      preLoaderRoute: typeof WorkAutopilotRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/data-visualization-palette': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WorkAutopilotRoute: WorkAutopilotRoute,
   WorkDataVisualizationPaletteRoute: WorkDataVisualizationPaletteRoute,
 }
 export const routeTree = rootRouteImport
