@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import type { ReactNode } from 'react';
-import dataviz from '@/assets/dataviz-palette.png.asset.json';
+import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 
 const title = 'Building a scalable data visualization palette — Jina';
 const description = 'Case study: creating a shared, accessible language of color for data visualization across the enterprise design system.';
@@ -40,7 +40,7 @@ function CaseStudy() {
           <div><dt>Timeline</dt><dd>2026</dd></div>
           <div><dt>Focus</dt><dd>Color, accessibility, systems</dd></div>
         </dl>
-        <div className="cs-visual"><img src={dataviz.url} alt="Data visualization palette applied to bar, line, area, and donut charts" /></div>
+        <div className="cs-visual"><img src={dataviz} alt="Editorial specimen book showing the data visualization palette, chart examples, and color swatches" /></div>
       </div></section>
       <div className="portfolio-shell">
         <Section n="01" label="Overview"><p>Placeholder: a short summary of the project, why it mattered, and your role in shaping it.</p></Section>
