@@ -6,7 +6,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
 import everydayImage from '@/assets/everyday-project.jpg';
-import autopilotAsset from '@/assets/autopilot-fitted-screen.jpg.asset.json';
+import autopilotAsset from '@/assets/autopilot-aligned-screen.jpg.asset.json';
 const autopilotImage = autopilotAsset.url;
 
 export const Route = createFileRoute('/')({
