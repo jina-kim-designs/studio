@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import dataviz from '@/assets/dataviz-palette.png.asset.json';
+import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 import { useState, type ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -67,7 +67,7 @@ function Portfolio() {
             <Link to="/work/data-visualization-palette" className="featured-link">Read the case study <ArrowUpRight size={15} /></Link>
           </div>
           <Link to="/work/data-visualization-palette" className="featured-visual" aria-label="Read the data visualization palette case study">
-            <img src={dataviz.url} alt="Data visualization palette applied to bar, line, area, and donut charts" loading="lazy" />
+            <img src={dataviz} alt="Editorial specimen book showing the data visualization palette, chart examples, and color swatches" loading="lazy" />
           </Link>
         </article>
         {projects.slice(1).map(project => <article className="project-item" key={project.title}>
