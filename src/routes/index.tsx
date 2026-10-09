@@ -71,10 +71,22 @@ function Portfolio() {
             <img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" loading="lazy" />
           </Link>
         </article>
-        {projects.slice(1).map(project => <article className="project-item" key={project.title}>
-          <Button variant="ghost" className="project-image-link" onClick={() => setSelected(project)} aria-label={`View ${project.title} case study`}><img className="project-image" src={project.image} alt={project.alt} width={1536} height={1024} loading="lazy" /></Button>
-          <div className="project-caption"><div><h3 className="project-title">{project.title}</h3><p className="project-description">{project.subtitle}</p><div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div><Button variant="ghost" className="arrow-link" title={`Read ${project.title}`} aria-label={`Read ${project.title}`} onClick={() => setSelected(project)}><ArrowUpRight /></Button></div>
-        </article>)}
+        <article className="featured-study">
+          <div className="featured-copy">
+            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Automated savings</p>
+            <h3 className="featured-title">{projects[1]!.title}</h3>
+            <p className="featured-text">{projects[1]!.subtitle} I drove the research and design behind Autopilot, Capital One’s automated savings tool, taking it from customer insight to launch.</p>
+            <dl className="featured-stats">
+              <div><dt>2022</dt><dd>insight to launch</dd></div>
+              <div><dt>0→1</dt><dd>new savings tool</dd></div>
+              <div><dt>UX</dt><dd>research & design</dd></div>
+            </dl>
+            <Button variant="ghost" className="featured-link" onClick={() => setSelected(projects[1]!)}>Read the case study <ArrowUpRight size={15} /></Button>
+          </div>
+          <button type="button" className="featured-visual" onClick={() => setSelected(projects[1]!)} aria-label="View the Autopilot case study">
+            <img src={projects[1]!.image} alt={projects[1]!.alt} width={1536} height={1024} loading="lazy" />
+          </button>
+        </article>
       </section>
       <section className="portfolio-shell portfolio-section" id="other-work">
         <SectionHeading number="02" title="A few other things" aside="Experiments, collaborations & side quests" />
