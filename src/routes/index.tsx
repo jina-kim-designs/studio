@@ -19,13 +19,13 @@ export const Route = createFileRoute('/')({
 });
 
 const projects = [
-  { title: 'Atelier Nord', subtitle: 'A considered identity for spaces that matter.', tags: ['Brand strategy', 'Visual identity', '2025'], image: studioImage, description: 'An example brand identity project exploring the relationship between architecture, people, and place.' },
-  { title: 'Everyday', subtitle: 'Making a little more room for everyday wellbeing.', tags: ['Product design', 'UX research', '2025'], image: everydayImage, description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
+  { title: 'Building a scalable data visualization palette', subtitle: 'A shared language of color for data across the enterprise.', tags: ['Design systems', 'Strategy', '2026'], image: studioImage, description: 'An example brand identity project exploring the relationship between architecture, people, and place.' },
+  { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: everydayImage, description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
 ];
 const otherWork = [
-  { title: 'A new perspective', description: 'Editorial design & art direction', image: studioImage, category: 'Independent project' },
-  { title: 'Small moments', description: 'A digital experience for the everyday', image: everydayImage, category: 'Exploration' },
-  { title: 'Form & feeling', description: 'Identity systems & visual experiments', image: studioImage, category: 'Personal project' },
+  { title: 'AI + design systems automation', description: 'Editorial design & art direction', image: studioImage, category: 'Exploration' },
+  { title: 'Pocket Mentor', description: 'building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: everydayImage, category: 'Hackathon' },
+  { title: 'Cross-platform parity', description: 'Identity systems & visual experiments', image: studioImage, category: 'Collaboration' },
 ];
 
 function SectionHeading({ number, title, aside }: { number: string; title: string; aside?: ReactNode }) {
@@ -72,7 +72,7 @@ function Portfolio() {
       </section>
       <section className="archive-band" id="archive"><div className="portfolio-shell portfolio-section archive-section">
         <SectionHeading number="05" title="From the archives" aside="Older work, still part of the story" />
-        {[['Early explorations', 'Visual identity', '2023'], ['A different kind of publication', 'Editorial design', '2022'], ['Ideas that became something', 'Digital design', '2021']].map(([title, category, year]) => <div className="archive-row" key={title}><details><summary><span>{title}</span><span className="archive-meta"><span className="archive-category">{category}</span><span>{year}</span><Plus size={15} /></span></summary><p className="body-copy">Sample archived project. A brief reflection on the original idea, your approach, and what you learned along the way.</p></details></div>)}
+        { [['Cocoon Technologies', 'Visual identity', '2023'], ['OptiCloud', 'Editorial design', '2022'], ['Highland Township Public Library', 'Digital design', '2021']].map(([title, category, year]) => <div className="archive-row" key={title}><details><summary><span>{title}</span><span className="archive-meta"><span className="archive-category">{category}</span><span>{year}</span><Plus size={15} /></span></summary><p className="body-copy">Sample archived project. A brief reflection on the original idea, your approach, and what you learned along the way.</p></details></div>)}
       </div></section>
       <section className="portfolio-shell portfolio-section" id="education">
         <SectionHeading number="06" title="Foundations & favourites" aside="Education & the tools of the trade" />
