@@ -8,3 +8,6 @@
 - [x] Autopilot case study: match the featured-card format of the first case study (copy panel, stats, link, visual).
 
 - [x] Autopilot visual: use the angle from the uploaded reference phone, with the user's L2 screen inserted unaltered so it reads as part of the phone
+- [ ] Autopilot: own case study page matching the palette page
+- [ ] Autopilot card: add "Shipped to Production" tag next to the eyebrow
+- [ ] Autopilot card: fix the "Read the case study" indent to match the first card
