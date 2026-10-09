@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkDataVisualizationPaletteRouteImport } from './routes/work.data-visualization-palette'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkDataVisualizationPaletteRoute =
+  WorkDataVisualizationPaletteRouteImport.update({
+    id: '/work/data-visualization-palette',
+    path: '/work/data-visualization-palette',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/work/data-visualization-palette': typeof WorkDataVisualizationPaletteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/work/data-visualization-palette': typeof WorkDataVisualizationPaletteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/work/data-visualization-palette': typeof WorkDataVisualizationPaletteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/work/data-visualization-palette'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/work/data-visualization-palette'
+  id: '__root__' | '/' | '/work/data-visualization-palette'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WorkDataVisualizationPaletteRoute: typeof WorkDataVisualizationPaletteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/data-visualization-palette': {
+      id: '/work/data-visualization-palette'
+      path: '/work/data-visualization-palette'
+      fullPath: '/work/data-visualization-palette'
+      preLoaderRoute: typeof WorkDataVisualizationPaletteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WorkDataVisualizationPaletteRoute: WorkDataVisualizationPaletteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
