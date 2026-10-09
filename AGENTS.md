@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the portfolio as a sequential scrolling page with reusable section and project structures; this preserves the requested reading order.
+- Store demonstration projects as browser-safe static content and show case studies in accessible dialogs; no persistence is needed for placeholder work.
+- Declare the requested display typeface first with a web-loaded serif fallback; the portfolio remains usable until a licensed font file is provided.
