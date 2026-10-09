@@ -57,8 +57,8 @@ function Portfolio() {
         <article className="featured-study">
           <div className="featured-copy">
             <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Enterprise design system</p>
-            <h3 className="featured-title">{projects[0].title}</h3>
-            <p className="featured-text">{projects[0].subtitle} I led a unified, accessible color palette so every chart across the enterprise speaks the same visual language.</p>
+            <h3 className="featured-title">{projects[0]!.title}</h3>
+            <p className="featured-text">{projects[0]!.subtitle} I led a unified, accessible color palette so every chart across the enterprise speaks the same visual language.</p>
             <dl className="featured-stats">
               <div><dt>40+</dt><dd>chart types</dd></div>
               <div><dt>AA</dt><dd>contrast tested</dd></div>
