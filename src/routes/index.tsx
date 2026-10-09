@@ -1,4 +1,5 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
+import dataviz from '@/assets/dataviz-palette.png.asset.json';
 import { useState, type ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -53,7 +54,23 @@ function Portfolio() {
       </section>
       <section className="portfolio-shell portfolio-section" id="work">
         <SectionHeading number="01" title="Selected case studies" aside="A closer look at the process & the outcome" />
-        {projects.map(project => <article className="project-item" key={project.title}>
+        <article className="featured-study">
+          <div className="featured-copy">
+            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Enterprise design system</p>
+            <h3 className="featured-title">{projects[0].title}</h3>
+            <p className="featured-text">{projects[0].subtitle} I led a unified, accessible color palette so every chart across the enterprise speaks the same visual language.</p>
+            <dl className="featured-stats">
+              <div><dt>40+</dt><dd>chart types</dd></div>
+              <div><dt>AA</dt><dd>contrast tested</dd></div>
+              <div><dt>12</dt><dd>teams aligned</dd></div>
+            </dl>
+            <Link to="/work/data-visualization-palette" className="featured-link">Read the case study <ArrowUpRight size={15} /></Link>
+          </div>
+          <Link to="/work/data-visualization-palette" className="featured-visual" aria-label="Read the data visualization palette case study">
+            <img src={dataviz.url} alt="Data visualization palette applied to bar, line, area, and donut charts" loading="lazy" />
+          </Link>
+        </article>
+        {projects.slice(1).map(project => <article className="project-item" key={project.title}>
           <Button variant="ghost" className="project-image-link" onClick={() => setSelected(project)} aria-label={`View ${project.title} case study`}><img className="project-image" src={project.image} alt={`${project.title} — sample design project`} width={1536} height={1024} loading="lazy" /></Button>
           <div className="project-caption"><div><h3 className="project-title">{project.title}</h3><p className="project-description">{project.subtitle}</p><div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div><Button variant="ghost" className="arrow-link" title={`Read ${project.title}`} aria-label={`Read ${project.title}`} onClick={() => setSelected(project)}><ArrowUpRight /></Button></div>
         </article>)}
