@@ -40,7 +40,7 @@ function CaseStudy() {
           <div><dt>Timeline</dt><dd>2026</dd></div>
           <div><dt>Focus</dt><dd>Color, accessibility, systems</dd></div>
         </dl>
-        <div className="cs-visual"><img src={dataviz} alt="Editorial specimen book showing the data visualization palette, chart examples, and color swatches" /></div>
+        <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
       </div></section>
       <div className="portfolio-shell">
         <Section n="01" label="Overview"><p>Placeholder: a short summary of the project, why it mattered, and your role in shaping it.</p></Section>

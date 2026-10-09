@@ -67,7 +67,7 @@ function Portfolio() {
             <Link to="/work/data-visualization-palette" className="featured-link">Read the case study <ArrowUpRight size={15} /></Link>
           </div>
           <Link to="/work/data-visualization-palette" className="featured-visual" aria-label="Read the data visualization palette case study">
-            <img src={dataviz} alt="Editorial specimen book showing the data visualization palette, chart examples, and color swatches" loading="lazy" />
+            <img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" loading="lazy" />
           </Link>
         </article>
         {projects.slice(1).map(project => <article className="project-item" key={project.title}>
