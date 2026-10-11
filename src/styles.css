@@ -149,9 +149,11 @@
   --color-sky: var(--sky);
   --color-honey: var(--honey);
   --color-olive: var(--olive);
+  --color-paper: var(--paper);
 }
 :root {
   --sky: oklch(0.901757 0.023390 213.625536);
+  --paper: oklch(0.9362 0.0177 81.33);
   --honey: oklch(0.796946 0.115306 77.417933);
   --olive: oklch(0.762321 0.111102 107.602089);
   --overlay: oklch(0.25 0.015 107 / 65%);
@@ -281,7 +283,7 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .featured-visual:hover img, .featured-visual:focus-visible img { transform: scale(1.05); }
 
 /* Case study page */
-.cs-hero { background: var(--sky); padding: 70px 0 60px; }
+.cs-hero { background: var(--paper); padding: 70px 0 60px; }
 .cs-back { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; margin-bottom: 36px; }
 .cs-title { font-family: var(--font-display); font-weight: 400; font-size: 54px; line-height: 1.08; max-width: 780px; margin-top: 16px; }
 .cs-sub { font-size: 15px; line-height: 1.7; max-width: 600px; margin-top: 18px; }
