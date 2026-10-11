@@ -31,16 +31,20 @@ function CaseStudy() {
     <main className="cs-page">
       <section className="cs-hero"><div className="portfolio-shell">
         <Link to="/" hash="work" className="cs-back"><ArrowLeft size={14} /> Back to case studies</Link>
-        <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Design systems</p>
-        <h1 className="cs-title">Building a scalable data visualization palette</h1>
-        <p className="cs-sub">Rebuilt Enterprise Design System's data visualization color palette and shipped usage guidance alongside it, so product teams could build accessible, on-brand charts without a one-off design review each time</p>
+        <div className="cs-hero-grid">
+          <div className="cs-hero-copy">
+            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Design systems</p>
+            <h1 className="cs-title">Building a scalable data visualization palette</h1>
+            <p className="cs-sub">Rebuilt Enterprise Design System's data visualization color palette and shipped usage guidance alongside it, so product teams could build accessible, on-brand charts without a one-off design review each time</p>
+          </div>
+          <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
+        </div>
         <dl className="cs-meta">
           <div><dt>Role</dt><dd>Product designer</dd></div>
           <div><dt>Team</dt><dd>Enterprise Design System</dd></div>
           <div><dt>Timeline</dt><dd>2026</dd></div>
           <div><dt>Focus</dt><dd>Color, accessibility, systems</dd></div>
         </dl>
-        <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
       </div></section>
       <div className="portfolio-shell cs-shell">
          <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for a “Beaconizing” — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>

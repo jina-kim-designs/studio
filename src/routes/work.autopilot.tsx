@@ -31,16 +31,20 @@ function CaseStudy() {
     <main className="cs-page">
       <section className="cs-hero"><div className="portfolio-shell">
         <Link to="/" hash="work" className="cs-back"><ArrowLeft size={14} /> Back to case studies</Link>
-        <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Automated savings<span className="featured-tag">Shipped to Production</span></p>
-        <h1 className="cs-title">Autopilot: Designing savings habits that stick</h1>
-        <p className="cs-sub">Turning good intentions into automatic progress.</p>
+        <div className="cs-hero-grid">
+          <div className="cs-hero-copy">
+            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Automated savings<span className="featured-tag">Shipped to Production</span></p>
+            <h1 className="cs-title">Autopilot: Designing savings habits that stick</h1>
+            <p className="cs-sub">Turning good intentions into automatic progress.</p>
+          </div>
+          <div className="cs-visual"><img src={autopilotAsset.url} alt="Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface" /></div>
+        </div>
         <dl className="cs-meta">
           <div><dt>Role</dt><dd>Product design intern</dd></div>
           <div><dt>Team</dt><dd>Financial well-being</dd></div>
           <div><dt>Timeline</dt><dd>2022</dd></div>
           <div><dt>Focus</dt><dd>UX research, product design</dd></div>
         </dl>
-        <div className="cs-visual"><img src={autopilotAsset.url} alt="Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface" /></div>
       </div></section>
       <div className="portfolio-shell cs-shell">
         <Section n="01" label="Problem"><p>Placeholder: why customers struggled to save consistently, and who it affected.</p></Section>
