@@ -24,11 +24,11 @@ function Section({ n, label, children }: { n: string; label: string; children: R
 
 function CaseStudy() {
   return <>
-    <header className="portfolio-shell site-header">
+    <header className="portfolio-shell cs-shell site-header">
       <Link className="wordmark" to="/" aria-label="Jina, back home">Jina<span className="text-honey">.</span></Link>
       <nav className="site-nav" aria-label="Case study navigation"><Link to="/" hash="work">All work</Link><Link to="/" hash="contact" className="flex items-center gap-1">Let’s talk <ArrowUpRight size={13} /></Link></nav>
     </header>
-    <main>
+    <main className="cs-page">
       <section className="cs-hero"><div className="portfolio-shell">
         <Link to="/" hash="work" className="cs-back"><ArrowLeft size={14} /> Back to case studies</Link>
         <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Automated savings<span className="featured-tag">Shipped to Production</span></p>
@@ -42,7 +42,7 @@ function CaseStudy() {
         </dl>
         <div className="cs-visual"><img src={autopilotAsset.url} alt="Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface" /></div>
       </div></section>
-      <div className="portfolio-shell">
+      <div className="portfolio-shell cs-shell">
         <Section n="01" label="Problem"><p>Placeholder: why customers struggled to save consistently, and who it affected.</p></Section>
         <Section n="02" label="Before"><p>Placeholder: what saving looked like before Autopilot — manual transfers, forgotten goals, lost momentum.</p></Section>
         <Section n="03" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. regulatory and money-movement rules</li><li>Constraint two — e.g. existing app patterns</li><li>Constraint three — e.g. internship timeline</li></ul></Section>
@@ -50,7 +50,7 @@ function CaseStudy() {
         <Section n="05" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
-      <section className="cs-next"><div className="portfolio-shell"><p className="eyebrow">Next case study</p><Link to="/work/data-visualization-palette" className="cs-label inline-flex items-center gap-2 mt-3">Building a scalable data visualization palette <ArrowUpRight size={20} /></Link></div></section>
+      <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/data-visualization-palette" className="cs-label inline-flex items-center gap-2 mt-3">Building a scalable data visualization palette <ArrowUpRight size={20} /></Link></div></section>
     </main>
   </>;
 }
