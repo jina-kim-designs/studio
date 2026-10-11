@@ -56,7 +56,7 @@ function CaseStudy() {
           <p className="cs-lead">The misuse showed up in two concrete, recurring patterns:</p>
           <ul className="cs-list cs-list--stacked"><li><strong>Data viz tokens leaking into non-chart UI.</strong> Teams reached for data visualization option and decision tokens when building visuals that had nothing to do with charts — using tokens meant to carry specific data-series meaning in contexts where that meaning didn’t apply at all.</li><li><strong>Wrong token, “close enough” color.</strong> Within charts themselves, teams frequently picked whichever token visually resembled the color they wanted (e.g., “the closest red”) rather than the token whose name and intended usage actually matched the situation — breaking the system’s naming contract even when the visual result looked passable.</li></ul>
           <p className="cs-callout">Without central chart standards or core team capacity, product teams are reinventing the wheel in silos. This creates fragmented user experiences, redundant design effort, and critical accessibility risks across our products.</p></Section>
-        <Section n="02" label="Hypothesis"><p>We see data visualization as an evolutionary journey. By establishing community-sourced design assets and usage guidelines, we will:</p>
+        <Section n="02" label="Hypothesis"><p>We see data visualization as an evolutionary journey. By establishing community-sourced design assets and usage guidelines, we will establish:</p>
           <ul className="cs-list">
             <li><strong>Visual unity</strong> — create a consistent visual language across the enterprise</li>
             <li><strong>Smoother handoffs</strong> — streamline design-to-dev handoffs with shared, documented standards</li>
