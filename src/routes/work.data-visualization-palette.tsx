@@ -47,7 +47,7 @@ function CaseStudy() {
         </dl>
       </div></section>
       <div className="portfolio-shell cs-shell">
-         <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for a “Beaconizing” — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
+         <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for an update — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
           <ol className="cs-problems">
             <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rest of the rebranded system.</p></div></li>
             <li><span className="cs-problem-num">2</span><div><h3>Token sprawl with no usage signal</h3><p>The palette had accumulated far more color tokens than teams were actually using. With no clear guidance on which token applied to which situation, teams routinely picked the wrong one — misusing color tokens in ways that undermined the system’s consistency, simply because there was no clear answer to “which token do I use here?”</p></div></li>
