@@ -63,8 +63,8 @@ function Portfolio() {
             <p className="featured-text">{projects[0]!.subtitle} I led a unified, accessible color palette so every chart across the enterprise speaks the same visual language.</p>
             <dl className="featured-stats">
               <div><dt>40+</dt><dd>chart types</dd></div>
-              <div><dt>AA</dt><dd>contrast tested</dd></div>
-              <div><dt>12</dt><dd>teams aligned</dd></div>
+              <div><dt>AAA</dt><dd>contrast tested</dd></div>
+              <div><dt>41%</dt><dd>TOKEN MANAGEMENT REDUCTION</dd></div>
             </dl>
             <Link to="/work/data-visualization-palette" className="featured-link">Read the case study <ArrowUpRight size={15} /></Link>
           </div>
