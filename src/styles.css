@@ -303,14 +303,15 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-body { font-size: 14px; line-height: 1.8; }
 .cs-body > p { max-width: 660px; }
 .cs-body p + p { margin-top: 14px; }
-.cs-body p, .cs-list li, .cs-problems p { text-wrap: pretty; }
+.cs-body p, .cs-list li, .cs-problems p, .cs-callout { text-wrap: pretty; }
 .cs-list { display: grid; gap: 14px 48px; margin-top: 18px; }
 @media (min-width: 900px) { .cs-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
+.cs-list.cs-list--stacked { grid-template-columns: 1fr; gap: 20px; max-width: 660px; }
 .cs-list li { padding-left: 18px; position: relative; }
 .cs-list li::before { content: ""; position: absolute; left: 0; top: .7em; width: 7px; height: 7px; border-radius: 999px; background: var(--honey); }
 .cs-list li strong { font-weight: 600; }
 .cs-lead { margin-top: 28px; font-weight: 600; }
-.cs-callout { max-width: 660px; margin-top: 30px; padding: 18px 22px; border-left: 2px solid var(--honey); background: color-mix(in oklab, var(--honey) 7%, transparent); font-size: 14px; line-height: 1.75; }
+.cs-callout { max-width: 660px; margin-top: 34px; padding: 28px 34px; border-left: 3px solid var(--honey); background: color-mix(in oklab, var(--honey) 8%, transparent); font-family: var(--font-display); font-size: 21px; line-height: 1.55; }
 .cs-problems { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
 .cs-problems li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 20px 24px; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in oklab, var(--card) 62%, transparent); }
 .cs-problems li > div { display: grid; grid-template-columns: 230px minmax(0, 1fr); column-gap: 28px; }
