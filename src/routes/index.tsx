@@ -60,9 +60,9 @@ function Portfolio() {
           <div className="featured-copy">
             <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Enterprise design system</p>
             <h3 className="featured-title">{projects[0]!.title}</h3>
-            <p className="featured-text">{projects[0]!.subtitle} I led a unified, accessible color palette so every chart across the enterprise speaks the same visual language.</p>
+            <p className="featured-text">{projects[0]!.subtitle} I co-led a unified, accessible color palette so every chart across the enterprise speaks the same visual language.</p>
             <dl className="featured-stats">
-              <div><dt>40+</dt><dd>chart types</dd></div>
+              <div><dt>5</dt><dd>MAIN PALETTES</dd></div>
               <div><dt>AAA</dt><dd>contrast tested</dd></div>
               <div><dt>41%</dt><dd>TOKEN MANAGEMENT REDUCTION</dd></div>
             </dl>
