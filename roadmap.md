@@ -12,3 +12,4 @@
 - [x] Autopilot card: add "Shipped to Production" tag next to the eyebrow
 - [x] Autopilot card: fix the "Read the case study" indent to match the first card
 - [x] Align the palette tablet image style with the more realistic Autopilot phone photo
+- [x] Case study header: warm oat `--paper` background instead of sky blue
