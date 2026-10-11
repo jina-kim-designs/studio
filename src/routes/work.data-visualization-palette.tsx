@@ -33,7 +33,7 @@ function CaseStudy() {
         <Link to="/" hash="work" className="cs-back"><ArrowLeft size={14} /> Back to case studies</Link>
         <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Design systems</p>
         <h1 className="cs-title">Building a scalable data visualization palette</h1>
-        <p className="cs-sub">Modernizing system guidelines and expanding WCAG AAA-compliant palettes to improve developer velocity and inclusive user experiences.</p>
+        <p className="cs-sub">Rebuilt Gravity's data visualization color palette and shipped usage guidance alongside it, so product teams could build accessible, on-brand charts without a one-off design review each time</p>
         <dl className="cs-meta">
           <div><dt>Role</dt><dd>Product designer</dd></div>
           <div><dt>Team</dt><dd>Enterprise Design System</dd></div>
