@@ -38,7 +38,7 @@ function SectionHeading({ number, title, aside }: { number: string; title: strin
 }
 
 function Portfolio() {
-  const [selected, setSelected] = useState<(typeof projects)[number] & { aspect?: string } | null>(null);
+  const [selected, setSelected] = useState<(typeof projects)[number] & { aspect?: string | undefined } | null>(null);
   return <>
     <header className="portfolio-shell site-header" id="top">
       <a className="wordmark" href="#top" aria-label="Jina, back to top">Jina<span className="text-honey">.</span></a>
