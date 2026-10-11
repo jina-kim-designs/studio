@@ -24,25 +24,29 @@ function Section({ n, label, children }: { n: string; label: string; children: R
 
 function CaseStudy() {
   return <>
-    <header className="portfolio-shell site-header">
+    <header className="portfolio-shell cs-shell site-header">
       <Link className="wordmark" to="/" aria-label="Jina, back home">Jina<span className="text-honey">.</span></Link>
       <nav className="site-nav" aria-label="Case study navigation"><Link to="/" hash="work">All work</Link><Link to="/" hash="contact" className="flex items-center gap-1">Let’s talk <ArrowUpRight size={13} /></Link></nav>
     </header>
-    <main>
+    <main className="cs-page">
       <section className="cs-hero"><div className="portfolio-shell">
         <Link to="/" hash="work" className="cs-back"><ArrowLeft size={14} /> Back to case studies</Link>
-        <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Design systems</p>
-        <h1 className="cs-title">Building a scalable data visualization palette</h1>
-        <p className="cs-sub">Rebuilt Enterprise Design System's data visualization color palette and shipped usage guidance alongside it, so product teams could build accessible, on-brand charts without a one-off design review each time</p>
+        <div className="cs-hero-grid">
+          <div className="cs-hero-copy">
+            <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Design systems</p>
+            <h1 className="cs-title">Building a scalable data visualization palette</h1>
+            <p className="cs-sub">Rebuilt Enterprise Design System's data visualization color palette and shipped usage guidance alongside it, so product teams could build accessible, on-brand charts without a one-off design review each time</p>
+          </div>
+          <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
+        </div>
         <dl className="cs-meta">
           <div><dt>Role</dt><dd>Product designer</dd></div>
           <div><dt>Team</dt><dd>Enterprise Design System</dd></div>
           <div><dt>Timeline</dt><dd>2026</dd></div>
           <div><dt>Focus</dt><dd>Color, accessibility, systems</dd></div>
         </dl>
-        <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
       </div></section>
-      <div className="portfolio-shell">
+      <div className="portfolio-shell cs-shell">
          <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for a “Beaconizing” — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
           <ol className="cs-problems">
             <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rest of the rebranded system.</p></div></li>
@@ -57,7 +61,7 @@ function CaseStudy() {
         <Section n="05" label="Outcome"><p>Placeholder: what changed after launch, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
-      <section className="cs-next"><div className="portfolio-shell"><p className="eyebrow">Next case study</p><Link to="/work/autopilot" className="cs-label inline-flex items-center gap-2 mt-3">Autopilot: Designing savings habits that stick <ArrowUpRight size={20} /></Link></div></section>
+      <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/autopilot" className="cs-label inline-flex items-center gap-2 mt-3">Autopilot: Designing savings habits that stick <ArrowUpRight size={20} /></Link></div></section>
     </main>
   </>;
 }
