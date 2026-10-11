@@ -43,7 +43,7 @@ function CaseStudy() {
         <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
       </div></section>
       <div className="portfolio-shell">
-         <Section n="01" label="Problem"><p>Gravity's existing data visualization palette was due for an update — bringing it up to current token and brand standards.&nbsp;Data-heavy dashboards were utilizing inconsistent color palettes, leading to unpredictable visual frameworks, potential accessibility violations for colorblind users, and slowed cross-functional velocity due to design drift.
+         <Section n="01" label="Problem"><p>Gravity's existing data visualization palette was due for an update — bringing it up to current token and brand standards.&nbsp;Data-heavy dashboards were utilizing inconsistent color palettes, leading to unpredictable visual frameworks, potential accessibility violations for colorblind users, and slowed cross-functional velocity due to design drift.&nbsp;
 
 
 Beyond the colors themselves, there was a second, less obvious problem: teams building charts had no clear rules for *how* to use whatever palette existed.</p></Section>
