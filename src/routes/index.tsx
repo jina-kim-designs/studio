@@ -5,9 +5,10 @@ import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
-import everydayImage from '@/assets/everyday-project.jpg';
 import autopilotAsset from '@/assets/autopilot-angled-screen.jpg.asset.json';
 const autopilotImage = autopilotAsset.url;
+import pocketMentorAsset from '@/assets/pocket-mentor.png.asset.json';
+const pocketMentorImage = pocketMentorAsset.url;
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -25,9 +26,10 @@ const projects = [
   { title: 'Building a scalable data visualization palette', subtitle: 'A shared language of color for data across the enterprise.', tags: ['Design systems', 'Strategy', '2026'], image: studioImage, alt: 'Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface', description: 'An example brand identity project exploring the relationship between architecture, people, and place.' },
   { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: autopilotImage, alt: 'Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface', description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
 ];
-const otherWork = [
+type OtherWorkItem = { title: string; description: string; image: string; category: string; alt?: string; aspect?: string };
+const otherWork: OtherWorkItem[] = [
   { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, category: 'Exploration' },
-  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: everydayImage, category: 'Hackathon' },
+  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon' },
   { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration' },
 ];
 
@@ -36,7 +38,7 @@ function SectionHeading({ number, title, aside }: { number: string; title: strin
 }
 
 function Portfolio() {
-  const [selected, setSelected] = useState<(typeof projects)[number] | null>(null);
+  const [selected, setSelected] = useState<(typeof projects)[number] & { aspect?: string } | null>(null);
   return <>
     <header className="portfolio-shell site-header" id="top">
       <a className="wordmark" href="#top" aria-label="Jina, back to top">Jina<span className="text-honey">.</span></a>
