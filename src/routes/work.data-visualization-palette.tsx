@@ -49,8 +49,8 @@ function CaseStudy() {
       <div className="portfolio-shell cs-shell">
          <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for an update — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
           <ol className="cs-problems">
-            <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rebranded system it had to live within.</p></div></li>
-            <li><span className="cs-problem-num">2</span><div><h3>Token sprawl with no usage signal</h3><p>The palette had accumulated far more color tokens than teams were actually using. With no clear guidance on which token applied to which situation, teams routinely picked the wrong one — undermining the system’s consistency with no clear answer to “which token do I use here?”</p></div></li>
+            <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rebranded system and the products built on top of it.</p></div></li>
+            <li><span className="cs-problem-num">2</span><div><h3>Token sprawl with no usage signal</h3><p>The palette had accumulated far more color tokens than teams were actually using. With no clear guidance on which token applied to which situation, teams routinely picked the wrong one — with no clear answer to “which token do I use here?”</p></div></li>
             <li><span className="cs-problem-num">3</span><div><h3>Accessibility and contrast gaps</h3><p>The existing palette hadn’t been built with color accessibility and contrast as a first-class requirement, meaning some combinations in active use didn’t meet the bar charts need to be readable for all users.</p></div></li>
           </ol>
           <p className="cs-lead">The misuse showed up in two concrete, recurring patterns:</p>
