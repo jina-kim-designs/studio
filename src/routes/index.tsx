@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
 import autopilotAsset from '@/assets/autopilot-angled-screen.jpg.asset.json';
 const autopilotImage = autopilotAsset.url;
-import pocketMentorImage from '@/assets/pocket-mentor-sharp.webp';
+import pocketMentorGridAsset from '@/assets/pocket-mentor-grid.png.asset.json';
+const pocketMentorImage = pocketMentorGridAsset.url;
 import pocketMentorIconAsset from '@/assets/pocket-mentor-icon.png.asset.json';
 
 export const Route = createFileRoute('/')({
