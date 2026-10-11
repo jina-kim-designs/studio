@@ -312,13 +312,12 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-list li strong { font-weight: 600; }
 .cs-lead { margin-top: 28px; font-weight: 600; }
 .cs-callout { max-width: 660px; margin-top: 34px; padding: 28px 34px; border-left: 3px solid var(--honey); background: color-mix(in oklab, var(--honey) 8%, transparent); font-family: var(--font-display); font-size: 21px; line-height: 1.55; }
-.cs-problems { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
-.cs-problems li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 20px 24px; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in oklab, var(--card) 62%, transparent); }
-.cs-problems li > div { display: grid; grid-template-columns: 230px minmax(0, 1fr); column-gap: 28px; }
-@media (max-width: 860px) { .cs-problems li > div { grid-template-columns: 1fr; row-gap: 6px; } }
+.cs-problems { list-style: none; display: grid; gap: 12px; margin-top: 22px; max-width: 660px; }
+.cs-problems li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 18px 22px; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in oklab, var(--card) 62%, transparent); }
+.cs-problems li > div { display: grid; row-gap: 6px; }
 .cs-problem-num { font-family: var(--font-display); font-size: 17px; line-height: 1.5; color: var(--honey); }
 .cs-problems h3 { font-family: var(--font-sans); font-size: 14px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
-.cs-problems p { margin: 0; max-width: 60ch; }
+.cs-problems p { margin: 0; }
 .cs-stats { display: flex; gap: 40px; margin-top: 24px; justify-content: space-between; }
 .cs-stats dt { font-family: var(--font-display); font-size: 36px; line-height: 1; }
 .cs-stats dd { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-foreground); margin-top: 8px; }
