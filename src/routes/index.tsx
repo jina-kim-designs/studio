@@ -72,7 +72,7 @@ function Portfolio() {
             <img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" loading="lazy" />
           </Link>
         </article>
-        <article className="featured-study">
+        <article className="featured-study flip">
           <div className="featured-copy">
             <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Featured · Automated savings<span className="featured-tag">Shipped to Production</span></p>
             <h3 className="featured-title">{projects[1]!.title}</h3>
