@@ -33,7 +33,7 @@ function CaseStudy() {
         <Link to="/" hash="work" className="cs-back"><ArrowLeft size={14} /> Back to case studies</Link>
         <p className="eyebrow featured-eyebrow"><span className="featured-dot" />Case study · Design systems</p>
         <h1 className="cs-title">Building a scalable data visualization palette</h1>
-        <p className="cs-sub">A shared language of color for data across the enterprise.</p>
+        <p className="cs-sub">Modernizing system guidelines and expanding WCAG AAA-compliant palettes to improve developer velocity and inclusive user experiences.</p>
         <dl className="cs-meta">
           <div><dt>Role</dt><dd>Product designer</dd></div>
           <div><dt>Team</dt><dd>Enterprise Design System</dd></div>
@@ -44,7 +44,10 @@ function CaseStudy() {
       </div></section>
       <div className="portfolio-shell">
         <Section n="01" label="Overview"><p>Placeholder: a short summary of the project, why it mattered, and your role in shaping it.</p></Section>
-        <Section n="02" label="Problem"><p>Placeholder: the core problem teams faced with color in data visualization, and who it affected.</p></Section>
+         <Section n="02" label="Problem"><p>Gravity's existing data visualization palette was due for an update — bringing it up to current token and brand standards. [PLACEHOLDER: what specifically was wrong with the old palette? Was it visually inconsistent with the rest of the rebranded system? Did it fail accessibility contrast checks? Were there too few colors to support complex charts, forcing teams to invent their own? Be specific — this is the section that justifies why the work mattered.]
+
+
+Beyond the colors themselves, there was a second, less obvious problem: teams building charts had no clear rules for *how* to use whatever palette existed.</p></Section>
         <Section n="03" label="Before"><p>Placeholder: what the experience looked like before — inconsistent palettes, accessibility gaps, duplicated effort.</p></Section>
         <Section n="04" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. accessibility contrast requirements</li><li>Constraint two — e.g. existing brand colors</li><li>Constraint three — e.g. multiple platforms and chart libraries</li></ul></Section>
         <Section n="05" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped the palette.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
