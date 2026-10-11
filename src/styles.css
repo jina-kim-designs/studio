@@ -285,7 +285,7 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 
 /* Case study page */
 .cs-hero { background: var(--paper); padding: 70px 0 60px; }
-.cs-hero-grid { display: grid; gap: 36px; align-items: end; margin-top: 10px; }
+.cs-hero-grid { display: grid; gap: 36px; align-items: center; margin-top: 10px; }
 .cs-hero-copy { min-width: 0; }
 .cs-hero .cs-visual { max-width: 900px; margin: 6px auto 0; }
 @media (min-width: 1000px) { .cs-hero-grid { grid-template-columns: minmax(0, 1fr) 460px; gap: 64px; } .cs-hero .cs-visual { max-width: none; margin: 0; } }
