@@ -43,13 +43,12 @@ function CaseStudy() {
         <div className="cs-visual"><img src={autopilotAsset.url} alt="Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface" /></div>
       </div></section>
       <div className="portfolio-shell">
-        <Section n="01" label="Overview"><p>Placeholder: a short summary of Autopilot, why it mattered, and your role in shaping it.</p></Section>
-        <Section n="02" label="Problem"><p>Placeholder: why customers struggled to save consistently, and who it affected.</p></Section>
-        <Section n="03" label="Before"><p>Placeholder: what saving looked like before Autopilot — manual transfers, forgotten goals, lost momentum.</p></Section>
-        <Section n="04" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. regulatory and money-movement rules</li><li>Constraint two — e.g. existing app patterns</li><li>Constraint three — e.g. internship timeline</li></ul></Section>
-        <Section n="05" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped Autopilot.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
-        <Section n="06" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
-        <Section n="07" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
+        <Section n="01" label="Problem"><p>Placeholder: why customers struggled to save consistently, and who it affected.</p></Section>
+        <Section n="02" label="Before"><p>Placeholder: what saving looked like before Autopilot — manual transfers, forgotten goals, lost momentum.</p></Section>
+        <Section n="03" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. regulatory and money-movement rules</li><li>Constraint two — e.g. existing app patterns</li><li>Constraint three — e.g. internship timeline</li></ul></Section>
+        <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped Autopilot.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
+        <Section n="05" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
+        <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell"><p className="eyebrow">Next case study</p><Link to="/work/data-visualization-palette" className="cs-label inline-flex items-center gap-2 mt-3">Building a scalable data visualization palette <ArrowUpRight size={20} /></Link></div></section>
     </main>
