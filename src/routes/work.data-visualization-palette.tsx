@@ -43,10 +43,14 @@ function CaseStudy() {
         <div className="cs-visual"><img src={dataviz} alt="Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface" /></div>
       </div></section>
       <div className="portfolio-shell">
-         <Section n="01" label="Problem"><p>Gravity's existing data visualization palette was due for an update — bringing it up to current token and brand standards.&nbsp;Data-heavy dashboards were utilizing inconsistent color palettes, leading to unpredictable visual frameworks, potential accessibility violations for colorblind users, and slowed cross-functional velocity due to design drift.&nbsp;
-
-
-Beyond the colors themselves, there was a second, less obvious problem: teams building charts had no clear rules for *how* to use whatever palette existed.</p></Section>
+         <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for a “Beaconizing” — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
+          <ol className="cs-problems">
+            <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rest of the rebranded system.</p></div></li>
+            <li><span className="cs-problem-num">2</span><div><h3>Token sprawl with no usage signal</h3><p>The palette had accumulated far more color tokens than teams were actually using. With no clear guidance on which token applied to which situation, teams routinely picked the wrong one — misusing color tokens in ways that undermined the system’s consistency, simply because there was no clear answer to “which token do I use here?”</p></div></li>
+            <li><span className="cs-problem-num">3</span><div><h3>Accessibility and contrast gaps</h3><p>The existing palette hadn’t been built with color accessibility and contrast as a first-class requirement, meaning some combinations in active use didn’t meet the bar charts need to be readable for all users.</p></div></li>
+          </ol>
+          <p className="cs-lead">The misuse showed up in two concrete, recurring patterns:</p>
+          <ul className="cs-list"><li><strong>Data viz tokens leaking into non-chart UI.</strong> Teams reached for data visualization option and decision tokens when building visuals that had nothing to do with charts — using tokens meant to carry specific data-series meaning in contexts where that meaning didn’t apply at all.</li><li><strong>Wrong token, “close enough” color.</strong> Within charts themselves, teams frequently picked whichever token visually resembled the color they wanted (e.g., “the closest red”) rather than the token whose name and intended usage actually matched the situation — breaking the system’s naming contract even when the visual result looked passable.</li></ul></Section>
         <Section n="02" label="Before"><p>Placeholder: what the experience looked like before — inconsistent palettes, accessibility gaps, duplicated effort.</p></Section>
         <Section n="03" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. accessibility contrast requirements</li><li>Constraint two — e.g. existing brand colors</li><li>Constraint three — e.g. multiple platforms and chart libraries</li></ul></Section>
         <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped the palette.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
