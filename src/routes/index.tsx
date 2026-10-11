@@ -8,6 +8,7 @@ import studioImage from '@/assets/studio-project.jpg';
 import autopilotAsset from '@/assets/autopilot-angled-screen.jpg.asset.json';
 const autopilotImage = autopilotAsset.url;
 import pocketMentorImage from '@/assets/pocket-mentor-sharp.webp';
+import pocketMentorIconAsset from '@/assets/pocket-mentor-icon.png.asset.json';
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -25,10 +26,10 @@ const projects = [
   { title: 'Building a scalable data visualization palette', subtitle: 'A shared language of color for data across the enterprise.', tags: ['Design systems', 'Strategy', '2026'], image: studioImage, alt: 'Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface', description: 'An example brand identity project exploring the relationship between architecture, people, and place.' },
   { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: autopilotImage, alt: 'Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface', description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
 ];
-type OtherWorkItem = { title: string; description: string; image: string; category: string; alt?: string; aspect?: string };
+type OtherWorkItem = { title: string; description: string; image: string; category: string; alt?: string; aspect?: string; thumb?: string };
 const otherWork: OtherWorkItem[] = [
   { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, category: 'Exploration' },
-  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon' },
+  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon' },
   { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration' },
 ];
 
@@ -92,7 +93,7 @@ function Portfolio() {
       </section>
       <section className="portfolio-shell portfolio-section" id="other-work">
         <SectionHeading number="02" title="A few other things" aside="Experiments, collaborations & side quests" />
-        {otherWork.map(work => <article className="work-row" key={work.title}><img src={work.image} className="work-thumb" alt={work.alt ?? `${work.title} sample project`} width={56} height={56} loading="lazy" /><div><h3 className="project-title">{work.title}</h3><p className="project-description">{work.description}</p></div><span className="work-type">{work.category}</span><Button variant="ghost" size="icon" title={`View ${work.title}`} aria-label={`View ${work.title}`} onClick={() => setSelected({ title: work.title, subtitle: work.description, description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: work.image, alt: work.alt ?? `${work.title} sample project`, aspect: work.aspect, tags: [work.category, 'AI'] })}><ArrowUpRight /></Button></article>)}
+        {otherWork.map(work => <article className="work-row" key={work.title}><img src={work.thumb ?? work.image} className="work-thumb" alt={work.alt ?? `${work.title} sample project`} width={56} height={56} loading="lazy" /><div><h3 className="project-title">{work.title}</h3><p className="project-description">{work.description}</p></div><span className="work-type">{work.category}</span><Button variant="ghost" size="icon" title={`View ${work.title}`} aria-label={`View ${work.title}`} onClick={() => setSelected({ title: work.title, subtitle: work.description, description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: work.image, alt: work.alt ?? `${work.title} sample project`, aspect: work.aspect, tags: [work.category, 'AI'] })}><ArrowUpRight /></Button></article>)}
       </section>
       <section className="current-band" id="today"><div className="portfolio-shell portfolio-section current-section">
         <SectionHeading number="03" title="What I’m doing today" aside="The here & now" />
