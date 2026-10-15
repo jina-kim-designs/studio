@@ -179,8 +179,11 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .hero-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 38px; font-size: 11px; }
 .availability { display: inline-flex; gap: 8px; align-items: center; }
 .availability::before { content: ''; width: 6px; height: 6px; background: var(--foreground); border-radius: 50%; }
-.hero-mark { position: absolute; right: 56px; top: 80px; width: 220px; height: 220px; color: var(--honey); transform: rotate(-10deg); animation: hero-mark-spin 26s linear infinite; }
-@keyframes hero-mark-spin { from { transform: rotate(-10deg); } to { transform: rotate(350deg); } }
+.hero-mark { position: absolute; right: 56px; top: 80px; width: 220px; height: 220px; color: var(--honey); transform: rotate(-10deg); transform-origin: center; animation: hero-mark-breathe 8s ease-in-out infinite; }
+@keyframes hero-mark-breathe {
+  0%, 100% { transform: rotate(-10deg) scale(0.97); opacity: 0.84; }
+  50% { transform: rotate(-10deg) scale(1.02); opacity: 1; }
+}
 .portfolio-section { padding-top: 65px; padding-bottom: 65px; border-bottom: 1px solid var(--border); }
 .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; }
 .section-title { font-family: var(--font-display); font-weight: 400; font-size: 38px; line-height: 1.2; }
