@@ -62,7 +62,31 @@ function CaseStudy() {
             <li><strong>Smoother handoffs</strong> — streamline design-to-dev handoffs with shared, documented standards</li>
             <li><strong>Chart literacy &amp; accessibility</strong> — elevate how charts are read, and make them readable for everyone</li>
           </ul></Section>
-        <Section n="03" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. accessibility contrast requirements</li><li>Constraint two — e.g. existing brand colors</li><li>Constraint three — e.g. multiple platforms and chart libraries</li></ul></Section>
+        <Section n="03" label="Constraints"><p>Three forces shaped what the rebuild had to deliver:</p>
+          <ul className="cs-constraints">
+            <li>
+              <h3>Needed to work as a system, not a single palette</h3>
+              <p>Charts take different forms, and each needs its own color logic — so a single flat color list wasn’t enough. This is why the work shipped as 5 distinct palettes rather than one:</p>
+              <ul className="cs-types">
+                <li><strong>Categorical</strong> — distinct, unrelated categories</li>
+                <li><strong>Sequential</strong> — a single metric increasing in intensity</li>
+                <li><strong>Divergent</strong> — two-directional, like negative-to-positive</li>
+                <li><strong>Rating</strong> — a bounded scale, e.g. star or satisfaction ratings</li>
+                <li><strong>Call-out</strong> — highlighting a specific value against the rest</li>
+              </ul>
+              <p>The rebuild also had to resolve the sprawl problem directly: the final system cut the token count from 150 down to 78 — nearly halving it while still covering all 5 use cases.</p>
+            </li>
+            <li>
+              <h3>Accessibility without sacrificing distinction</h3>
+              <p>Colors needed sufficient contrast to be accessible while still reading as visually distinct data series. The target was a <strong>3:1 contrast ratio</strong> for every color in the system — the WCAG AA minimum for non-text graphical elements.</p>
+              <p>Every candidate was tested with Color Oracle (a color-blindness simulator) and custom AI-assisted tools for checking color combinations and iterating on palette candidates faster. The same process applied across all 5 palettes, split between myself (Categorical, Rating) and my co-lead (Sequential, Divergent, Call-out).</p>
+            </li>
+            <li>
+              <h3>Had to be usable without a design review each time</h3>
+              <p>The goal wasn’t just a prettier palette — it was removing the design team as a bottleneck for every chart built across the organization.</p>
+              <p>There wasn’t a precise tracked number, but demand was clearly real: many teams across the organization were independently requesting this rebuild — a signal that the lack of self-serve guidance was a recurring friction point, not an isolated complaint.</p>
+            </li>
+          </ul></Section>
         <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped the palette.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
         <Section n="05" label="Outcome"><p>Placeholder: what changed after launch, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
