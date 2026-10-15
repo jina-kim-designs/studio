@@ -179,8 +179,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .hero-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 38px; font-size: 11px; }
 .availability { display: inline-flex; gap: 8px; align-items: center; }
 .availability::before { content: ''; width: 6px; height: 6px; background: var(--foreground); border-radius: 50%; }
-.hero-mark { position: absolute; right: 66px; top: 90px; width: 184px; height: 184px; color: var(--honey); transform: rotate(-10deg); transition: transform .8s cubic-bezier(.33, 1, .68, 1); }
-.hero-mark:hover { animation: hero-mark-spin 9s linear infinite; }
+.hero-mark { position: absolute; right: 56px; top: 80px; width: 220px; height: 220px; color: var(--honey); transform: rotate(-10deg); animation: hero-mark-spin 26s linear infinite; }
 @keyframes hero-mark-spin { from { transform: rotate(-10deg); } to { transform: rotate(350deg); } }
 .portfolio-section { padding-top: 65px; padding-bottom: 65px; border-bottom: 1px solid var(--border); }
 .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; }
@@ -240,7 +239,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .site-nav .desktop-link { display: none; }
   .hero-inner { padding-top: 40px; padding-bottom: 36px; }
   .hero-title { font-size: 58px; margin-top: 22px; }
-  .hero-mark { width: 52px; height: 52px; top: 30px; right: 24px; }
+  .hero-mark { width: 62px; height: 62px; top: 26px; right: 20px; }
   .hero-intro { font-size: 13px; max-width: 270px; }
   .hero-bottom { margin-top: 28px; gap: 14px; flex-wrap: wrap; }
   .portfolio-section { padding-top: 42px; padding-bottom: 42px; }
