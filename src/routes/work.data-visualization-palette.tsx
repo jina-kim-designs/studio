@@ -2,6 +2,8 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import type { ReactNode } from 'react';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
+import afterAsset from '@/assets/gravity-dataviz-after.png.asset.json';
+import beforeAsset from '@/assets/gravity-dataviz-before.png.asset.json';
 
 const title = 'Building a scalable data visualization palette — Jina';
 const description = 'Case study: creating a shared, accessible language of color for data visualization across the enterprise design system.';
@@ -135,7 +137,7 @@ function CaseStudy() {
           <p>Teams can now build correct, accessible, on-brand charts independently, without routing through a one-off design review for each one — grounded directly in the guidance’s chart anatomy, type selection, and content rules rather than needing to ask the design team each time.</p>
           <p>It’s still early days for this system, so formal adoption metrics aren’t available yet. The clearest outcome so far is structural: the token count dropped from 150 to 78, and every token now has documented guidance behind it — removing the ambiguity that caused the original misuse patterns (data viz tokens in non-chart UI, “closest color” substitutions) in the first place.</p>
           <dl className="cs-stats"><div><dt>48%</dt><dd>Token reduction</dd></div><div><dt>150 → 78</dt><dd>Tokens, before and after</dd></div><div><dt>5</dt><dd>Palettes, each with guidance</dd></div></dl></Section>
-        <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
+        <Section n="06" label="Before / After"><div className="cs-compare"><figure><img src={beforeAsset.url} alt="The previous data visualization palette: eight columns of saturated categorical swatches and sequential ramps on a white slide" /><figcaption>Before</figcaption></figure><figure><img src={afterAsset.url} alt="The rebuilt data visualization palette: six columns of cohesive categorical, sequential, divergent, rating, and call-out swatches on a white slide" /><figcaption>After</figcaption></figure></div></Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/autopilot" className="cs-label inline-flex items-center gap-2 mt-3">Autopilot: Designing savings habits that stick <ArrowUpRight size={20} /></Link></div></section>
     </main>
