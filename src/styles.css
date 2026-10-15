@@ -308,6 +308,7 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-list { display: grid; gap: 14px 48px; margin-top: 18px; }
 @media (min-width: 900px) { .cs-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
 .cs-list.cs-list--stacked { grid-template-columns: 1fr; gap: 20px; max-width: 660px; }
+.cs-list.cs-list--full { grid-template-columns: 1fr; }
 .cs-list li { padding-left: 18px; position: relative; }
 .cs-list li::before { content: ""; position: absolute; left: 0; top: .7em; width: 7px; height: 7px; border-radius: 999px; background: var(--honey); }
 .cs-list li strong { font-weight: 600; }
