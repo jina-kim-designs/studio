@@ -179,10 +179,13 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .hero-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 38px; font-size: 11px; }
 .availability { display: inline-flex; gap: 8px; align-items: center; }
 .availability::before { content: ''; width: 6px; height: 6px; background: var(--foreground); border-radius: 50%; }
-.hero-mark { position: absolute; right: 56px; top: 80px; width: 220px; height: 220px; color: var(--honey); transform: rotate(-10deg); transform-origin: center; animation: hero-mark-breathe 8s ease-in-out infinite; }
+.hero-mark { position: absolute; right: 48px; top: 62px; width: 340px; height: 340px; color: var(--honey); transform: rotate(-10deg); transform-origin: center; animation: hero-mark-breathe 8s ease-in-out infinite; }
 @keyframes hero-mark-breathe {
-  0%, 100% { transform: rotate(-10deg) scale(0.97); opacity: 0.84; }
-  50% { transform: rotate(-10deg) scale(1.02); opacity: 1; }
+  0%, 100% { transform: rotate(-10deg) scale(0.98); opacity: 0.84; }
+  50% { transform: rotate(-10deg) scale(1.015); opacity: 1; }
+}
+@media (max-width: 1040px) {
+  .hero-mark { width: 210px; height: 210px; top: 96px; right: 34px; }
 }
 .portfolio-section { padding-top: 65px; padding-bottom: 65px; border-bottom: 1px solid var(--border); }
 .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; }
@@ -235,6 +238,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .dialog-title { font-family: var(--font-display); font-size: 34px; }
 .dialog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .dialog-grid .resume-copy { white-space: pre-wrap; }
+.dialog-reflection { grid-column: 1 / -1; padding-top: 26px; border-top: 1px solid var(--border); }
+.dialog-reflection .resume-copy { max-width: none; }
 @media (max-width: 700px) {
   .portfolio-shell { padding-left: 24px; padding-right: 24px; }
   .site-header { height: 72px; }
@@ -242,7 +247,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .site-nav .desktop-link { display: none; }
   .hero-inner { padding-top: 40px; padding-bottom: 36px; }
   .hero-title { font-size: 58px; margin-top: 22px; }
-  .hero-mark { width: 62px; height: 62px; top: 26px; right: 20px; }
+  .hero-mark { width: 92px; height: 92px; top: 22px; right: 18px; }
   .hero-intro { font-size: 13px; max-width: 270px; }
   .hero-bottom { margin-top: 28px; gap: 14px; flex-wrap: wrap; }
   .portfolio-section { padding-top: 42px; padding-bottom: 42px; }
