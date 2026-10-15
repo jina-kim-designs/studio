@@ -342,6 +342,12 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-compare .cs-placeholder.after { background: var(--sky); }
 .cs-compare figcaption { padding: 12px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
 .cs-compare img { display: block; width: 100%; height: auto; background: #fff; }
+.cs-reflection { display: grid; gap: 0; margin-top: 32px; max-width: 660px; }
+.cs-reflection > div { padding: 20px 0; border-bottom: 1px solid var(--border); }
+.cs-reflection > div:first-child { padding-top: 4px; }
+.cs-reflection > div:last-child { border-bottom: 0; padding-bottom: 4px; }
+.cs-reflection h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0 0 6px; }
+.cs-reflection p { margin: 0; }
 .cs-next { background: var(--honey); padding: 50px 0; }
 
 @media (max-width: 700px) {

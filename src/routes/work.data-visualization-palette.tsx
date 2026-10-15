@@ -138,6 +138,23 @@ function CaseStudy() {
           <p>It’s still early days for this system, so formal adoption metrics aren’t available yet. The clearest outcome so far is structural: the token count was reduced, and every token now has documented guidance behind it — removing the ambiguity that caused the original misuse patterns (data viz tokens in non-chart UI, “closest color” substitutions) in the first place.</p>
           <dl className="cs-stats"><div><dt>48%</dt><dd>Token reduction</dd></div><div><dt>4</dt><dd>Chart guidance docs</dd></div><div><dt>5</dt><dd>Palettes with guidance</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><img src={beforeAsset.url} alt="The previous data visualization palette: eight columns of saturated categorical swatches and sequential ramps on a white slide" /><figcaption>Before</figcaption></figure><figure><img src={afterAsset.url} alt="The rebuilt data visualization palette: six columns of cohesive categorical, sequential, divergent, rating, and call-out swatches on a white slide" /><figcaption>After</figcaption></figure></div></Section>
+        <Section n="07" label="Reflection"><p>Looking back at this project, a few things stand out:</p>
+          <ul className="cs-list cs-list--stacked">
+            <li><strong>Guidance is what actually fixes misuse — not just better colors.</strong> The original problem wasn’t just that the palette looked outdated; it was that nobody had clear direction on which token to use when. Cutting the token count nearly in half (150 → 78) while pairing it with real usage guidance — anatomy, chart types, content rules — addressed the root cause of the misuse patterns, not just the symptom.</li>
+            <li><strong>Accessibility has to be a first-class constraint from the start, not a pass at the end.</strong> Building the 3:1 contrast target and Color Oracle testing into the palette-generation process itself (rather than checking compliance after the colors were already chosen) meant accessibility didn’t have to compete with visual distinction after the fact.</li>
+            <li><strong>AI-assisted tooling meaningfully sped up a traditionally slow, manual process.</strong> Testing color combinations by hand across 5 palettes and multiple vision-type simulations doesn’t scale well; building custom tools to accelerate that iteration was a direct, practical application of AI to a real design bottleneck — not just a visual design decision but a process one.</li>
+            <li><strong>Cross-functional collaboration (Accessibility, Brand, DevX) was necessary, not optional</strong>, given the scope — a 3-month, 2-person core effort covering 5 palettes couldn’t have landed on brand, accessible, and implementable outcomes without input from the teams who owned those respective standards.</li>
+          </ul>
+          <div className="cs-reflection">
+            <div>
+              <h3>What’s next</h3>
+              <p>User research to study whether the updates actually worked — how well the new palettes and guidance land with teams, and what still needs improvement — plus training sessions to walk teams through how to use the updated system directly, rather relying on the docsite and Figma guidance alone to drive adoption.</p>
+            </div>
+            <div>
+              <h3>What I’d do differently</h3>
+              <p>Lean on the AI-assisted testing tools earlier. We built and started using them partway through the process; starting with that tooling in place from the beginning would have let us iterate on color combinations faster from day one, instead of spending the earliest phase on slower manual testing before the tools existed.</p>
+            </div>
+          </div></Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/autopilot" className="cs-label inline-flex items-center gap-2 mt-3">Autopilot: Designing savings habits that stick <ArrowUpRight size={20} /></Link></div></section>
     </main>
