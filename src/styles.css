@@ -314,14 +314,18 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-list li strong { font-weight: 600; }
 .cs-lead { margin-top: 28px; font-weight: 600; }
 .cs-callout { max-width: 660px; margin-top: 34px; padding: 24px 30px; border-left: 3px solid var(--honey); background: color-mix(in oklab, var(--honey) 8%, transparent); font-family: var(--font-display); font-size: 18px; line-height: 1.6; }
-.cs-problems { list-style: none; display: grid; gap: 12px; margin-top: 22px; max-width: 660px; }
-.cs-problems li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 18px 22px; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in oklab, var(--card) 62%, transparent); }
+.cs-problems { list-style: none; display: grid; gap: 0; margin-top: 22px; max-width: 660px; }
+.cs-problems li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.cs-problems li:first-child { padding-top: 4px; }
+.cs-problems li:last-child { border-bottom: 0; padding-bottom: 4px; }
 .cs-problems li > div { display: grid; row-gap: 6px; }
 .cs-problem-num { font-family: var(--font-display); font-size: 17px; line-height: 1.5; color: var(--honey); }
 .cs-problems h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
 .cs-problems p { margin: 0; }
-.cs-constraints { list-style: none; display: grid; gap: 12px; margin-top: 22px; max-width: 660px; padding: 0; }
-.cs-constraints > li { display: grid; row-gap: 10px; padding: 20px 24px; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in oklab, var(--card) 62%, transparent); }
+.cs-constraints { list-style: none; display: grid; gap: 0; margin-top: 22px; max-width: 660px; padding: 0; }
+.cs-constraints > li { display: grid; row-gap: 10px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.cs-constraints > li:first-child { padding-top: 4px; }
+.cs-constraints > li:last-child { border-bottom: 0; padding-bottom: 4px; }
 .cs-constraints h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
 .cs-constraints p { margin: 0; max-width: 660px; }
 .cs-types { list-style: none; display: grid; gap: 8px; margin: 0; padding: 0; }
