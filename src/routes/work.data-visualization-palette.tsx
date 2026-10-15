@@ -68,7 +68,7 @@ function CaseStudy() {
               <span className="cs-problem-num">1</span>
               <div>
                 <h3>Needed to work as a system, not a single palette</h3>
-                <p>Charts take different forms, and each needs its own color logic — so a single flat color list wasn’t enough. This is why the work shipped as 5 distinct palettes rather than one:</p>
+                <p>Charts take different forms, and each needs its own color logic — so a single flat color list wasn’t enough. Additionally, the current palette supported a large number of colors that were not being used, confusing to customers, and resulting in tech maintenance bloat. This is why the work shipped as 5 distinct palettes rather than one:</p>
                 <ul className="cs-types">
                   <li><strong>Categorical</strong> — distinct, unrelated categories</li>
                   <li><strong>Sequential</strong> — a single metric increasing in intensity</li>
