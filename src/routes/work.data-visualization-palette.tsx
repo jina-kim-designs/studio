@@ -131,7 +131,10 @@ function CaseStudy() {
               </div>
             </li>
           </ul></Section>
-        <Section n="05" label="Outcome"><p>Placeholder: what changed after launch, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
+        <Section n="05" label="Outcome"><p>The rebuild reduced the token count by <strong>48%</strong> — cutting it from 150 down to 78 — reducing tech maintenance bloat and simplifying the structure of the colors for more intuitive understanding of usage.</p>
+          <p>Teams can now build correct, accessible, on-brand charts independently, without routing through a one-off design review for each one — grounded directly in the guidance’s chart anatomy, type selection, and content rules rather than needing to ask the design team each time.</p>
+          <p>It’s still early days for this system, so formal adoption metrics aren’t available yet. The clearest outcome so far is structural: the token count dropped from 150 to 78, and every token now has documented guidance behind it — removing the ambiguity that caused the original misuse patterns (data viz tokens in non-chart UI, “closest color” substitutions) in the first place.</p>
+          <dl className="cs-stats"><div><dt>48%</dt><dd>Token reduction</dd></div><div><dt>150 → 78</dt><dd>Tokens, before and after</dd></div><div><dt>5</dt><dd>Palettes, each with guidance</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/autopilot" className="cs-label inline-flex items-center gap-2 mt-3">Autopilot: Designing savings habits that stick <ArrowUpRight size={20} /></Link></div></section>
