@@ -322,13 +322,13 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-problem-num { font-family: var(--font-display); font-size: 17px; line-height: 1.5; color: var(--honey); }
 .cs-problems h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
 .cs-problems p { margin: 0; }
-.cs-constraints { list-style: none; display: grid; gap: 0; margin-top: 22px; max-width: 660px; padding: 0; }
-.cs-constraints > li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--border); }
-.cs-constraints > li > div { display: grid; row-gap: 10px; }
-.cs-constraints > li:first-child { padding-top: 4px; }
-.cs-constraints > li:last-child { border-bottom: 0; padding-bottom: 4px; }
-.cs-constraints h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
-.cs-constraints p { margin: 0; max-width: 660px; }
+.cs-constraints, .cs-process { list-style: none; display: grid; gap: 0; margin-top: 22px; max-width: 660px; padding: 0; }
+.cs-constraints > li, .cs-process > li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.cs-constraints > li > div, .cs-process > li > div { display: grid; row-gap: 10px; }
+.cs-constraints > li:first-child, .cs-process > li:first-child { padding-top: 4px; }
+.cs-constraints > li:last-child, .cs-process > li:last-child { border-bottom: 0; padding-bottom: 4px; }
+.cs-constraints h3, .cs-process h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
+.cs-constraints p, .cs-process p { margin: 0; max-width: 660px; }
 .cs-types { list-style: none; display: grid; gap: 8px; margin: 0; padding: 0; }
 .cs-types li { padding-left: 16px; position: relative; }
 .cs-types li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 999px; background: var(--honey); }
