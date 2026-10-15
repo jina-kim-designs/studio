@@ -103,7 +103,7 @@ function CaseStudy() {
               <div>
                 <h3>Rebuilding the palette</h3>
                 <p>Rather than inventing new hues from scratch, the 5 palettes were generated from Gravity’s existing brand palette — building color scales directly off the brand’s established colors so the data viz system stayed visually tied to the rest of Gravity rather than introducing a disconnected secondary color language.</p>
-                <p>Across all 5 palettes, the team used Color Oracle to simulate color-blind vision and check that colors stayed distinguishable across vision types, and built custom AI-assisted tools to test color combinations and speed up iterating on palette candidates — rather than manually testing each combination by hand. For my two owned palettes (Categorical, Rating), I ran this process myself; my co-lead ran the same process for the other three.</p>
+                <p>Across all 5 palettes, we used Color Oracle to simulate color-blind vision and check that colors stayed distinguishable across vision types, and built custom AI-assisted tools to test color combinations and speed up iterating on palette candidates — rather than manually testing each combination by hand. For my two owned palettes (Categorical, Rating), I ran this process myself; my co-lead ran the same process for the other three.</p>
               </div>
             </li>
             <li>
