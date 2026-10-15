@@ -110,7 +110,7 @@ function CaseStudy() {
               <span className="cs-problem-num">2</span>
               <div>
                 <h3>Why guidance, not just colors</h3>
-                <p>This is the decision that elevates the work from a visual refresh to a systems contribution: colors alone don’t prevent misuse. I authored usage guidance covering:</p>
+                <p>This is the decision that elevates the work from a visual refresh to a systems contribution: colors alone don’t prevent misuse. I co-authored usage guidance covering:</p>
                 <ul className="cs-types">
                   <li><strong>Chart anatomy</strong> — what each part of a chart is for</li>
                   <li><strong>Chart types &amp; components</strong> — the available chart types, and how to use the chart components themselves</li>
