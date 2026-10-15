@@ -13,3 +13,4 @@
 - [x] Autopilot card: fix the "Read the case study" indent to match the first card
 - [x] Align the palette tablet image style with the more realistic Autopilot phone photo
 - [x] Case study header: warm oat `--paper` background instead of sky blue
+- [ ] Pocket Mentor popup: add a Reflection text area under My contribution / The outcome (placeholder copy — needs Jina’s wording).
