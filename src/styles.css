@@ -323,7 +323,8 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-problems h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
 .cs-problems p { margin: 0; }
 .cs-constraints { list-style: none; display: grid; gap: 0; margin-top: 22px; max-width: 660px; padding: 0; }
-.cs-constraints > li { display: grid; row-gap: 10px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.cs-constraints > li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.cs-constraints > li > div { display: grid; row-gap: 10px; }
 .cs-constraints > li:first-child { padding-top: 4px; }
 .cs-constraints > li:last-child { border-bottom: 0; padding-bottom: 4px; }
 .cs-constraints h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
