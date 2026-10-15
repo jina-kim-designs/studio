@@ -47,7 +47,7 @@ function CaseStudy() {
         </dl>
       </div></section>
       <div className="portfolio-shell cs-shell">
-         <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for an update — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
+        <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for an update — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
           <ol className="cs-problems">
             <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rebranded system and the products built on top of it.</p></div></li>
             <li><span className="cs-problem-num">2</span><div><h3>Token sprawl with no usage signal</h3><p>The palette had accumulated far more color tokens than teams were actually using. With no clear guidance on which token applied to which situation, teams routinely picked the wrong one — with no clear answer to “which token do I use here?”</p></div></li>
@@ -65,26 +65,35 @@ function CaseStudy() {
         <Section n="03" label="Constraints"><p>Three forces shaped what the rebuild had to deliver:</p>
           <ul className="cs-constraints">
             <li>
-              <h3>Needed to work as a system, not a single palette</h3>
-              <p>Charts take different forms, and each needs its own color logic — so a single flat color list wasn’t enough. This is why the work shipped as 5 distinct palettes rather than one:</p>
-              <ul className="cs-types">
-                <li><strong>Categorical</strong> — distinct, unrelated categories</li>
-                <li><strong>Sequential</strong> — a single metric increasing in intensity</li>
-                <li><strong>Divergent</strong> — two-directional, like negative-to-positive</li>
-                <li><strong>Rating</strong> — a bounded scale, e.g. star or satisfaction ratings</li>
-                <li><strong>Call-out</strong> — highlighting a specific value against the rest</li>
-              </ul>
-              <p>The rebuild also had to resolve the sprawl problem directly: the final system cut the token count from 150 down to 78 — nearly halving it while still covering all 5 use cases.</p>
+              <span className="cs-problem-num">1</span>
+              <div>
+                <h3>Needed to work as a system, not a single palette</h3>
+                <p>Charts take different forms, and each needs its own color logic — so a single flat color list wasn’t enough. This is why the work shipped as 5 distinct palettes rather than one:</p>
+                <ul className="cs-types">
+                  <li><strong>Categorical</strong> — distinct, unrelated categories</li>
+                  <li><strong>Sequential</strong> — a single metric increasing in intensity</li>
+                  <li><strong>Divergent</strong> — two-directional, like negative-to-positive</li>
+                  <li><strong>Rating</strong> — a bounded scale, e.g. star or satisfaction ratings</li>
+                  <li><strong>Call-out</strong> — highlighting a specific value against the rest</li>
+                </ul>
+                <p>The rebuild also had to resolve the sprawl problem directly: the final system cut the token count from 150 down to 78 — nearly halving it while still covering all 5 use cases.</p>
+              </div>
             </li>
             <li>
-              <h3>Accessibility without sacrificing distinction</h3>
-              <p>Colors needed sufficient contrast to be accessible while still reading as visually distinct data series. The target was a <strong>3:1 contrast ratio</strong> for every color in the system — the WCAG AA minimum for non-text graphical elements.</p>
-              <p>Every candidate was tested with Color Oracle (a color-blindness simulator) and custom AI-assisted tools for checking color combinations and iterating on palette candidates faster. The same process applied across all 5 palettes, split between myself (Categorical, Rating) and my co-lead (Sequential, Divergent, Call-out).</p>
+              <span className="cs-problem-num">2</span>
+              <div>
+                <h3>Accessibility without sacrificing distinction</h3>
+                <p>Colors needed sufficient contrast to be accessible while still reading as visually distinct data series. The target was a <strong>3:1 contrast ratio</strong> for every color in the system — the WCAG AA minimum for non-text graphical elements.</p>
+                <p>Every candidate was tested with Color Oracle (a color-blindness simulator) and custom AI-assisted tools for checking color combinations and iterating on palette candidates faster. The same process applied across all 5 palettes, split between myself (Categorical, Rating) and my co-lead (Sequential, Divergent, Call-out).</p>
+              </div>
             </li>
             <li>
-              <h3>Had to be usable without a design review each time</h3>
-              <p>The goal wasn’t just a prettier palette — it was removing the design team as a bottleneck for every chart built across the organization.</p>
-              <p>There wasn’t a precise tracked number, but demand was clearly real: many teams across the organization were independently requesting this rebuild — a signal that the lack of self-serve guidance was a recurring friction point, not an isolated complaint.</p>
+              <span className="cs-problem-num">3</span>
+              <div>
+                <h3>Had to be usable without a design review each time</h3>
+                <p>The goal wasn’t just a prettier palette — it was removing the design team as a bottleneck for every chart built across the organization.</p>
+                <p>There wasn’t a precise tracked number, but demand was clearly real: many teams across the organization were independently requesting this rebuild — a signal that the lack of self-serve guidance was a recurring friction point, not an isolated complaint.</p>
+              </div>
             </li>
           </ul></Section>
         <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped the palette.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
