@@ -96,7 +96,41 @@ function CaseStudy() {
               </div>
             </li>
           </ul></Section>
-        <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped the palette.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
+        <Section n="04" label="Process & decisions"><p>Three decisions shaped how the palette was built — and what shipped alongside it.</p>
+          <ul className="cs-process">
+            <li>
+              <span className="cs-problem-num">1</span>
+              <div>
+                <h3>Rebuilding the palette</h3>
+                <p>Rather than inventing new hues from scratch, the 5 palettes were generated from Gravity’s existing brand palette — building color scales directly off the brand’s established colors so the data viz system stayed visually tied to the rest of Gravity rather than introducing a disconnected secondary color language.</p>
+                <p>Across all 5 palettes, the team used Color Oracle to simulate color-blind vision and check that colors stayed distinguishable across vision types, and built custom AI-assisted tools to test color combinations and speed up iterating on palette candidates — rather than manually testing each combination by hand. For my two owned palettes (Categorical, Rating), I ran this process myself; my co-lead ran the same process for the other three.</p>
+              </div>
+            </li>
+            <li>
+              <span className="cs-problem-num">2</span>
+              <div>
+                <h3>Why guidance, not just colors</h3>
+                <p>This is the decision that elevates the work from a visual refresh to a systems contribution: colors alone don’t prevent misuse. I authored usage guidance covering:</p>
+                <ul className="cs-types">
+                  <li><strong>Chart anatomy</strong> — what each part of a chart is for</li>
+                  <li><strong>Chart types &amp; components</strong> — the available chart types, and how to use the chart components themselves</li>
+                  <li><strong>Color sequences</strong> — which sequences pair with which chart types</li>
+                  <li><strong>Accessible pairings</strong> — color combinations that hold up across vision types</li>
+                  <li><strong>Palette selection</strong> — when to reach for categorical vs. sequential vs. divergent vs. rating vs. call-out</li>
+                  <li><strong>Content guidelines</strong> — labeling and formatting data within charts</li>
+                </ul>
+                <p>The guidance lives in both Figma (alongside the palette definitions themselves) and the docsite — so it’s reachable whether a team is working directly in design files or referencing documentation independently.</p>
+              </div>
+            </li>
+            <li>
+              <span className="cs-problem-num">3</span>
+              <div>
+                <h3>Example applications</h3>
+                <p>The new system supports the chart types teams actually need day to day — bar charts, donut charts, and line charts — built with the Categorical, Sequential, Divergent, Rating, and Call-out palettes depending on what the data calls for.</p>
+                <p>One concrete application: these charts can be used to represent data health metrics, giving teams a consistent, accessible way to visualize system or data-quality signals rather than building one-off visualizations each time.</p>
+              </div>
+            </li>
+          </ul></Section>
         <Section n="05" label="Outcome"><p>Placeholder: what changed after launch, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
