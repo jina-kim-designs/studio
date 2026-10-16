@@ -90,7 +90,40 @@ function CaseStudy() {
             </li>
           </ul>
         </Section>
-        <Section n="03" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped Autopilot.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
+        <Section n="03" label="Process & decisions">
+          <p className="cs-lead">Designing the flow</p>
+          <p>Based on this research, I designed the end-to-end Autopilot flow around three decisions:</p>
+          <ul className="cs-process">
+            <li>
+              <span className="cs-problem-num">1</span>
+              <div>
+                <h3>A same-day daily transfer model</h3>
+                <p>Rather than a lump-sum or scheduled transfer, so saving happened in small, low-stakes “micro-bites” — removing the stress of deciding how much to save at any one time</p>
+              </div>
+            </li>
+            <li>
+              <span className="cs-problem-num">2</span>
+              <div>
+                <h3>A customer-set minimum balance, rather than a system-determined one</h3>
+                <p>So the customer stayed in control of what the system was allowed to touch and could trust that Autopilot would never save at the expense of their comfort threshold</p>
+              </div>
+            </li>
+            <li>
+              <span className="cs-problem-num">3</span>
+              <div>
+                <h3>An explainer screen before setup</h3>
+                <p>So the customer understood how the feature worked before enrolling — establishing trust and reliance in a system that would otherwise be moving their money without asking each time</p>
+              </div>
+            </li>
+          </ul>
+          <p>We considered a round-up savings model (rounding up purchases to the nearest dollar, similar to point-of-sale savings tools), but research showed customers in this segment didn’t find round-ups a meaningful or valuable way to save, so we moved forward with the daily-transfer model instead.</p>
+          <p className="cs-lead cs-lead--split">How the flow works:</p>
+          <ul className="cs-list cs-list--stacked cs-list--full">
+            <li><strong>Enrollment:</strong> customer selects an eligible checking and savings account, reviews what Autopilot does, and sets a minimum checking balance (floor of $150) before the rule is created</li>
+            <li><strong>The minimum balance guardrail:</strong> if a transfer would drop the customer’s available checking balance below their set minimum, the system skips that day’s transfer rather than executing it — the core mechanism that lets the feature move money without asking the customer to approve each transfer</li>
+            <li><strong>Editing and deleting a rule:</strong> customers can adjust their minimum balance or delete the rule entirely at any time, with changes taking effect within one calendar day</li>
+          </ul>
+        </Section>
         <Section n="04" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="05" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
