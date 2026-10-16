@@ -15,4 +15,5 @@
 - [x] Case study header: warm oat `--paper` background instead of sky blue
 - [ ] Pocket Mentor popup: add a Reflection text area under My contribution / The outcome (placeholder copy — needs Jina’s wording).
 - [x] Autopilot Problem section: real content — underserved segment, research factors, two needs, methods.
-- [ ] Autopilot: remaining sections still placeholder (Before, Constraints, Process & decisions, Outcome, Before / After).
+- [x] Autopilot section 02: “What needed to be true” replaces the Before placeholder — three numbered conditions.
+- [ ] Autopilot: remaining sections still placeholder (Constraints, Process & decisions, Outcome, Before / After).
