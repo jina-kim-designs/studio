@@ -14,3 +14,5 @@
 - [x] Align the palette tablet image style with the more realistic Autopilot phone photo
 - [x] Case study header: warm oat `--paper` background instead of sky blue
 - [ ] Pocket Mentor popup: add a Reflection text area under My contribution / The outcome (placeholder copy — needs Jina’s wording).
+- [x] Autopilot Problem section: real content — underserved segment, research factors, two needs, methods.
+- [ ] Autopilot: remaining sections still placeholder (Before, Constraints, Process & decisions, Outcome, Before / After).
