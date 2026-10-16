@@ -341,6 +341,7 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-constraints > li:last-child, .cs-process > li:last-child { border-bottom: 0; padding-bottom: 4px; }
 .cs-constraints h3, .cs-process h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 1.6; margin: 0; text-wrap: balance; }
 .cs-constraints p, .cs-process p { margin: 0; max-width: 660px; }
+.cs-process + p, .cs-constraints + p { margin-top: 36px; }
 .cs-types { list-style: none; display: grid; gap: 8px; margin: 0; padding: 0; }
 .cs-types li { padding-left: 16px; position: relative; }
 .cs-types li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 999px; background: var(--honey); }
