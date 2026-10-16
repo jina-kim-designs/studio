@@ -125,8 +125,7 @@ function CaseStudy() {
           </ul>
         </Section>
         <Section n="04" label="Handoff">
-          <p>By the end of my internship, I had handed off final specs to the team and presented the design to leadership.</p>
-          <p>The feature had already shipped into production by the time I left.</p>
+          <p>By the end of my internship, I had handed off final specs to the team and presented the design to leadership. The feature had already shipped into production by the time I left.</p>
         </Section>
         <Section n="05" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
