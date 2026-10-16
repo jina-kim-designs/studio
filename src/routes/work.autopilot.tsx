@@ -66,7 +66,14 @@ function CaseStudy() {
           </ol>
           <p className="cs-methods"><span>Research</span>Customer interviews, a review of internal customer data, and A/B testing.</p>
         </Section>
-        <Section n="02" label="Before"><p>Placeholder: what saving looked like before Autopilot — manual transfers, forgotten goals, lost momentum.</p></Section>
+        <Section n="02" label="What needed to be true">
+          <p className="cs-lead">For a solution to work for this segment:</p>
+          <ol className="cs-problems">
+            <li><span className="cs-problem-num">1</span><div><p>It had to remove the “how much” and “when” decisions entirely, rather than asking the customer to set them upfront.</p></div></li>
+            <li><span className="cs-problem-num">2</span><div><p>It had to only move money when it was genuinely safe to do so, since this segment is disproportionately vulnerable to overdraft and low-balance risk.</p></div></li>
+            <li><span className="cs-problem-num">3</span><div><p>It had to be simple enough to enroll in without feeling like another financial decision the customer wasn’t confident making.</p></div></li>
+          </ol>
+        </Section>
         <Section n="03" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. regulatory and money-movement rules</li><li>Constraint two — e.g. existing app patterns</li><li>Constraint three — e.g. internship timeline</li></ul></Section>
         <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped Autopilot.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
         <Section n="05" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
