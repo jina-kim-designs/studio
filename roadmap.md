@@ -19,4 +19,5 @@
 - [x] Autopilot: fold the three “what needed to be true” conditions into the Problem section; drop the separate section and renumber the rest.
 - [x] Autopilot Constraints: real content — trust designed in from the start, 10-week setup-flow deadline.
 - [x] Autopilot Process & decisions: real content — three design decisions, round-up alternative, how the flow works.
+- [x] Autopilot Handoff: new section 04 (specs handed off, presented to leadership, shipped to production); Outcome and Before / After renumbered 05 and 06.
 - [ ] Autopilot: remaining sections still placeholder (Outcome, Before / After).
