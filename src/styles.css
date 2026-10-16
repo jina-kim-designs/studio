@@ -340,7 +340,8 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-types li { padding-left: 16px; position: relative; }
 .cs-types li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 999px; background: var(--honey); }
 .cs-types strong { font-weight: 600; }
-.cs-factors { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 40px; margin-top: 16px; max-width: 660px; }
+.cs-factors { gap: 10px 40px; margin-top: 16px; max-width: 660px; }
+@media (min-width: 700px) { .cs-factors { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .cs-needs { list-style: none; display: grid; gap: 20px; margin-top: 18px; max-width: 660px; padding: 0; }
 @media (min-width: 700px) { .cs-needs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; } }
 .cs-needs li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: baseline; padding-top: 14px; border-top: 2px solid var(--border); }
