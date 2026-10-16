@@ -321,6 +321,8 @@ button.featured-visual { padding: 0; border: none; border-left: 1px solid var(--
 .cs-list li strong { font-weight: 600; }
 .cs-lead { margin-top: 28px; font-weight: 600; }
 .cs-body > .cs-lead:first-child { margin-top: 0; }
+.cs-lead--split { margin-top: 56px; padding-top: 30px; border-top: 1px solid var(--border); }
+
 .cs-callout { max-width: 660px; margin-top: 34px; padding: 24px 30px; border-left: 3px solid var(--honey); background: color-mix(in oklab, var(--honey) 8%, transparent); font-family: var(--font-display); font-size: 18px; line-height: 1.6; }
 .cs-problems { list-style: none; display: grid; gap: 0; margin-top: 22px; max-width: 660px; }
 .cs-problems li { display: grid; grid-template-columns: 22px 1fr; gap: 16px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--border); }
