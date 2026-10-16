@@ -47,7 +47,25 @@ function CaseStudy() {
         </dl>
       </div></section>
       <div className="portfolio-shell cs-shell">
-        <Section n="01" label="Problem"><p>Placeholder: why customers struggled to save consistently, and who it affected.</p></Section>
+        <Section n="01" label="Problem">
+          <p>Capital One’s existing automated savings tools — a recurring transfer on a schedule, and a one-time transfer of a percentage of each paycheck — didn’t work for a specific, underserved segment of customers: people with unstable or variable cash flow, living paycheck to paycheck, with a low sense of control over their finances and genuine uncertainty about how much they could safely save. For this segment, committing to a fixed recurring amount or percentage was itself a barrier to saving at all.</p>
+          <p className="cs-lead">My research identified the specific factors that make saving difficult for this group:</p>
+          <ul className="cs-types cs-factors">
+            <li>Past savings failures</li>
+            <li>Low financial literacy</li>
+            <li>Income instability</li>
+            <li>A present-bias orientation</li>
+            <li>Lack of known tools</li>
+            <li>Existing debt</li>
+            <li>Psychological barriers</li>
+          </ul>
+          <p className="cs-lead">From that, two things any new solution needed to deliver:</p>
+          <ol className="cs-needs">
+            <li><span className="cs-problem-num">1</span><h3>Reduced effort to save</h3></li>
+            <li><span className="cs-problem-num">2</span><h3>Increased confidence to save</h3></li>
+          </ol>
+          <p className="cs-methods"><span>Research</span>Customer interviews, a review of internal customer data, and A/B testing.</p>
+        </Section>
         <Section n="02" label="Before"><p>Placeholder: what saving looked like before Autopilot — manual transfers, forgotten goals, lost momentum.</p></Section>
         <Section n="03" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. regulatory and money-movement rules</li><li>Constraint two — e.g. existing app patterns</li><li>Constraint three — e.g. internship timeline</li></ul></Section>
         <Section n="04" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped Autopilot.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
