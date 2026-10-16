@@ -16,4 +16,5 @@
 - [ ] Pocket Mentor popup: add a Reflection text area under My contribution / The outcome (placeholder copy — needs Jina’s wording).
 - [x] Autopilot Problem section: real content — underserved segment, research factors, two needs, methods.
 - [x] Autopilot section 02: “What needed to be true” replaces the Before placeholder — three numbered conditions.
+- [x] Autopilot: fold the three “what needed to be true” conditions into the Problem section; drop the separate section and renumber the rest.
 - [ ] Autopilot: remaining sections still placeholder (Constraints, Process & decisions, Outcome, Before / After).
