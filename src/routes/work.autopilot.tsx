@@ -66,7 +66,7 @@ function CaseStudy() {
           </ol>
           <p className="cs-methods"><span>Research</span>Customer interviews, a review of internal customer data, and A/B testing.</p>
         </Section>
-        <Section n="02" label="What needed to be true">
+        <Section n="02" label="What needed to be true for a solution to work for this segment:">
           <p className="cs-lead">For a solution to work for this segment:</p>
           <ol className="cs-problems">
             <li><span className="cs-problem-num">1</span><div><p>It had to remove the “how much” and “when” decisions entirely, rather than asking the customer to set them upfront.</p></div></li>
