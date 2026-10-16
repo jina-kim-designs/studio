@@ -64,7 +64,7 @@ function CaseStudy() {
             <li><span className="cs-problem-num">1</span><h3>Reduced effort to save</h3></li>
             <li><span className="cs-problem-num">2</span><h3>Increased confidence to save</h3></li>
           </ol>
-          <p className="cs-lead">What needed to be true for a solution to work for this segment:</p>
+          <p className="cs-lead cs-lead--split">What needed to be true for a solution to work for this segment:</p>
           <ol className="cs-problems">
             <li><span className="cs-problem-num">1</span><div><p>It had to remove the “how much” and “when” decisions entirely, rather than asking the customer to set them upfront.</p></div></li>
             <li><span className="cs-problem-num">2</span><div><p>It had to only move money when it was genuinely safe to do so, since this segment is disproportionately vulnerable to overdraft and low-balance risk.</p></div></li>
