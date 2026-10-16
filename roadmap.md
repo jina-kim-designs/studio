@@ -17,4 +17,5 @@
 - [x] Autopilot Problem section: real content — underserved segment, research factors, two needs, methods.
 - [x] Autopilot section 02: “What needed to be true” replaces the Before placeholder — three numbered conditions.
 - [x] Autopilot: fold the three “what needed to be true” conditions into the Problem section; drop the separate section and renumber the rest.
-- [ ] Autopilot: remaining sections still placeholder (Constraints, Process & decisions, Outcome, Before / After).
+- [x] Autopilot Constraints: real content — trust designed in from the start, 10-week setup-flow deadline.
+- [ ] Autopilot: remaining sections still placeholder (Process & decisions, Outcome, Before / After).

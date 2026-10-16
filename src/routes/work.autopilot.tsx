@@ -72,7 +72,24 @@ function CaseStudy() {
           </ol>
           <p className="cs-methods"><span>Research</span>Customer interviews, a review of internal customer data, and A/B testing.</p>
         </Section>
-        <Section n="02" label="Constraints"><p>Placeholder: the limits you designed within.</p><ul className="cs-list"><li>Constraint one — e.g. regulatory and money-movement rules</li><li>Constraint two — e.g. existing app patterns</li><li>Constraint three — e.g. internship timeline</li></ul></Section>
+        <Section n="02" label="Constraints">
+          <ul className="cs-constraints">
+            <li>
+              <span className="cs-problem-num">1</span>
+              <div>
+                <h3>Trust had to be designed in from the start</h3>
+                <p>That meant building a shared language and an experience that made customers feel informed, in control, and confident in what was happening.</p>
+              </div>
+            </li>
+            <li>
+              <span className="cs-problem-num">2</span>
+              <div>
+                <h3>A setup flow in 10 weeks</h3>
+                <p>In 10 weeks, we needed to ship out a design and flow for setting up the Minimum Balance Threshold for Autopilot</p>
+              </div>
+            </li>
+          </ul>
+        </Section>
         <Section n="03" label="Process & decisions"><p>Placeholder: the key steps you took and the decisions that shaped Autopilot.</p><ul className="cs-list"><li>Decision one and why</li><li>Decision two and why</li><li>Decision three and why</li></ul></Section>
         <Section n="04" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
         <Section n="05" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
