@@ -141,6 +141,11 @@ function CaseStudy() {
         <Section n="06" label="What happened after (not my work)">
           <p>For context on where the product went: after I left, the team used pilot data and further research to identify a gap between how the feature was positioned (saving “daily”) and what many lower-balance customers actually experienced (a majority of transfer attempts for that segment were being skipped by the guardrail). They ran several rounds of content testing to close that gap, added a new customer-facing control letting people adjust how much Autopilot saves on their behalf, validated the fix with real users, and moved the feature toward general availability. None of that work is mine — I’m noting it only so the full arc of the product is clear.</p>
         </Section>
+        <Section n="07" label="Reflection">
+          <p>This project taught me to design with intention: every decision — the daily transfer model, the customer-set minimum, the explainer screen — was a bet grounded in research, and I learned not to be afraid to test and iterate on those bets rather than defending a first instinct.</p>
+          <p>Designing for financially vulnerable customers also taught me that trust has to be designed for explicitly, not assumed as a byproduct of good mechanics.</p>
+          <p>With more time, I’d push harder on validating assumptions earlier — testing the minimum-balance default and transfer cadence against real account behavior before finalizing the flow, rather than after. That’s the habit I’ve carried forward since: treat early design decisions as testable, not fixed, and build in the room to iterate before a feature ever reaches a pilot.</p>
+        </Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/data-visualization-palette" className="cs-label inline-flex items-center gap-2 mt-3">Building a scalable data visualization palette <ArrowUpRight size={20} /></Link></div></section>
     </main>
