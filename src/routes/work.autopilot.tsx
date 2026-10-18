@@ -127,7 +127,17 @@ function CaseStudy() {
         <Section n="04" label="Handoff">
           <p>By the end of my internship, I had handed off final specs to the team and presented the design to leadership. The feature had already shipped into production by the time I left.</p>
         </Section>
-        <Section n="05" label="Outcome"><p>Placeholder: what changed after shipping to production, and what you learned.</p><dl className="cs-stats"><div><dt>00</dt><dd>Metric one</dd></div><div><dt>00</dt><dd>Metric two</dd></div><div><dt>00</dt><dd>Metric three</dd></div></dl></Section>
+        <Section n="05" label="Outcome: Pilot performance">
+          <p>The design shipped to a limited pilot — 5% of the eligible population (~490K checking accounts) — on April 1, 2024, with no marketing behind it.</p>
+          <ul className="cs-list cs-list--stacked cs-list--full">
+            <li>Organic enrollment grew steadily month over month after launch (April through August 2024)</li>
+            <li>Adoption reached the intended target segments directly: a large share of paycheck-to-paycheck customers and financially constrained debit spenders enrolled</li>
+            <li>The majority of adopters had not previously used Capital One’s other automatic savings tools — suggesting the flow removed a real barrier for customers the existing tools weren’t reaching</li>
+            <li>Unenrollment stayed low relative to total enrollment</li>
+            <li>The feature moved a meaningful amount of money into customers’ savings in aggregate</li>
+          </ul>
+          <p className="cs-note">These numbers reflect the pilot period only, measuring the design as it shipped — not any of the subsequent changes made after my internship ended.</p>
+        </Section>
         <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/data-visualization-palette" className="cs-label inline-flex items-center gap-2 mt-3">Building a scalable data visualization palette <ArrowUpRight size={20} /></Link></div></section>
