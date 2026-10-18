@@ -138,7 +138,9 @@ function CaseStudy() {
           </ul>
           <p className="cs-note">These numbers reflect the pilot period only, measuring the design as it shipped — not any of the subsequent changes made after my internship ended.</p>
         </Section>
-        <Section n="06" label="Before / After"><div className="cs-compare"><figure><div className="cs-placeholder">Before image</div><figcaption>Before</figcaption></figure><figure><div className="cs-placeholder after">After image</div><figcaption>After</figcaption></figure></div></Section>
+        <Section n="06" label="What happened after (not my work)">
+          <p>For context on where the product went: after I left, the team used pilot data and further research to identify a gap between how the feature was positioned (saving “daily”) and what many lower-balance customers actually experienced (a majority of transfer attempts for that segment were being skipped by the guardrail). They ran several rounds of content testing to close that gap, added a new customer-facing control letting people adjust how much Autopilot saves on their behalf, validated the fix with real users, and moved the feature toward general availability. None of that work is mine — I’m noting it only so the full arc of the product is clear.</p>
+        </Section>
       </div>
       <section className="cs-next"><div className="portfolio-shell cs-shell"><p className="eyebrow">Next case study</p><Link to="/work/data-visualization-palette" className="cs-label inline-flex items-center gap-2 mt-3">Building a scalable data visualization palette <ArrowUpRight size={20} /></Link></div></section>
     </main>

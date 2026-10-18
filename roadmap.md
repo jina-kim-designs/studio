@@ -21,4 +21,4 @@
 - [x] Autopilot Process & decisions: real content — three design decisions, round-up alternative, how the flow works.
 - [x] Autopilot Handoff: new section 04 (specs handed off, presented to leadership, shipped to production); Outcome and Before / After renumbered 05 and 06.
 - [x] Autopilot Outcome renamed "Outcome: Pilot performance" — real content (pilot scope, five results, pilot-period caveat).
-- [ ] Autopilot: Before / After still placeholder.
+- [x] Autopilot: Before / After replaced with "What happened after (not my work)" — post-internship context paragraph.
