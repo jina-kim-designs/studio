@@ -39,7 +39,21 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">None of these needed human judgment to detect. They needed consistent classification logic run on a schedule, which made them a good fit for AI-built automation instead of one-off manual review.</p>
     </> },
     { label: 'The constraints', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
-    { label: 'The process', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'The process', body: <>
+      <p className="dialog-sub">Parity Drift Detector</p>
+      <p className="resume-copy">Compares a component’s Figma properties against its code model and classifies each pair: clean match, naming drift, polarity inversion, Figma-only, code-only, or default mismatch.</p>
+      <p className="resume-copy">Its most valuable catch is polarity inversion, where Figma and code express the same concept with opposite boolean senses (e.g., Disabled=True vs. is_enabled=False).</p>
+      <p className="resume-copy">Validated across seven components in three passes. It reproduced a known Checkbox bug, found the same pattern twice more under different names, surfaced four new coverage gaps, flagged one stale Figma option and one likely piece of dead code, and produced no false-confident matches.</p>
+      <p className="dialog-sub">Jira Stale Story Tracker</p>
+      <p className="resume-copy">Finds stale stories on a board, comments on them, and tags them with a stale label. It also clears the label once stories are canceled or ready for acceptance.</p>
+      <p className="resume-copy">Started as a Claude Code skill and became a standalone script.</p>
+      <p className="resume-copy">A scheduled GitHub Actions run failed because the Jira instance requires VPN, so it moved to local cron with credentials in macOS Keychain. A companion revert script can undo a bad run, since Jira has no bulk undo.</p>
+      <p className="dialog-sub">GRV Epic Closeout Tracker</p>
+      <p className="resume-copy">Scans active, Design-scoped Epics and groups them by the status of their child Stories: ready to close, needs formal acceptance, or one story away from done.</p>
+      <p className="resume-copy">The groups can overlap, and every Epic links straight to Jira.</p>
+      <p className="resume-copy">Caught a JQL bug before shipping: labels != template silently drops any multi-labeled issue, which would have hidden a real Epic.</p>
+      <p className="dialog-sum">Together, these show a pattern of catching problems early (design-code drift, stale work, near-done Epics) and building the tools to run reliably without manual effort.</p>
+    </> },
     { label: 'The outcome', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
     { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
   ] },
