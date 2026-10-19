@@ -28,3 +28,4 @@
 - [x] AI + design systems automation popup: section set aligned to Pocket Mentor's format — The challenge, The constraints, The process, The outcome, Reflection (Reflection full-width with top rule).
 - [ ] Automation popup: wording needed for The constraints and Reflection (currently marked "Waiting for your wording").
 - [x] Automation popup "The process": real content — Parity Drift Detector, Jira Stale Story Tracker, GRV Epic Closeout Tracker, plus the closing pattern line.
+- [x] Automation popup "The outcome": real content — two skills in production, drift detector validated manually, per-skill safety boundaries.

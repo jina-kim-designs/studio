@@ -54,7 +54,11 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Caught a JQL bug before shipping: labels != template silently drops any multi-labeled issue, which would have hidden a real Epic.</p>
       <p className="dialog-sum">Together, these show a pattern of catching problems early (design-code drift, stale work, near-done Epics) and building the tools to run reliably without manual effort.</p>
     </> },
-    { label: 'The outcome', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'The outcome', body: <>
+      <p className="resume-copy">Two skills are in production. The stale tracker runs weekly via local cron and the epic closeout tracker runs on its own schedule. Both deliver reports to your manager and the design team without anyone needing a live Claude Code session.</p>
+      <p className="resume-copy">The parity drift detector is written but validated manually. It has been through three test passes on seven real components. It reproduced a known historical bug category, generalized that pattern to two more components under different names, and found four new coverage gaps, with no false-confident matches.</p>
+      <p className="resume-copy">Each skill has a built-in safety boundary. The stale tracker has a revert script, the closeout tracker is report-only, and the drift detector detects without fixing. The point is that speed and safety don’t have to trade off.</p>
+    </> },
     { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
   ] },
   { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon', tags: ['Hackathon', 'AI'], dialog: [
