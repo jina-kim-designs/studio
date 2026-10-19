@@ -240,6 +240,10 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .dialog-grid .resume-copy { white-space: pre-wrap; }
 .dialog-reflection { grid-column: 1 / -1; padding-top: 26px; border-top: 1px solid var(--border); }
 .dialog-reflection .resume-copy { max-width: none; }
+.dialog-block--full { grid-column: 1 / -1; }
+.dialog-block--full .resume-copy { max-width: none; }
+.dialog-grid .dialog-problems { max-width: none; margin: 18px 0 26px; }
+.dialog-problems p { font-size: 12px; line-height: 1.8; color: var(--muted-foreground); }
 @media (max-width: 700px) {
   .portfolio-shell { padding-left: 24px; padding-right: 24px; }
   .site-header { height: 72px; }

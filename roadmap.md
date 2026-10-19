@@ -23,3 +23,4 @@
 - [x] Autopilot Outcome renamed "Outcome: Pilot performance" — real content (pilot scope, five results, pilot-period caveat).
 - [x] Autopilot: Before / After replaced with "What happened after (not my work)" — post-internship context paragraph.
 - [x] Autopilot Reflection: new section 07 — three paragraphs (designing with intention, trust designed explicitly, validating assumptions earlier).
+- [x] AI + design systems automation popup: "The challenge" filled with the parity-initiative content (three numbered overhead sources + the AI-fit closing line); each other-work item now carries its own popup content.
