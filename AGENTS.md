@@ -13,3 +13,4 @@
 - Store demonstration projects as browser-safe static content and show case studies in accessible dialogs; no persistence is needed for placeholder work.
 - Each other-work item owns its popup content through its own `dialog` blocks, so a popup never shows another project's copy; leave a block out until its real wording arrives rather than reusing placeholder text.
 - Declare the requested display typeface first with a web-loaded serif fallback; the portfolio remains usable until a licensed font file is provided.
+- Mark a popup visual as confidential with `blur: true` on the item so the dialog renders it frosted with a confidentiality caption; keep the source asset unaltered rather than pre-blurring it.
