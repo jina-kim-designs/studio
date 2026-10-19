@@ -30,3 +30,4 @@
 - [x] Automation popup "Reflection": real content — four lessons plus Next / Do differently.
 - [x] Automation popup "The process": real content — Parity Drift Detector, Jira Stale Story Tracker, GRV Epic Closeout Tracker, plus the closing pattern line.
 - [x] Automation popup "The outcome": real content — two skills in production, drift detector validated manually, per-skill safety boundaries.
+- [x] Pocket Mentor popup: main visual frosted/blurred for confidentiality with a "Screens blurred for confidentiality" caption; other popups left sharp.
