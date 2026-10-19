@@ -44,7 +44,7 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Real automation, not session-dependent. A skill that only runs when someone happens to be in a live Claude Code session is a manual task with extra steps, so both Jira skills got a recurring trigger outside any one conversation.</p>
       <p className="resume-copy">Honest classification over forced matches. When the drift detector can’t confirm a property on both sides, it reports “needs manual review” instead of guessing, since a false “clean match” is worse than an honest “inconclusive.”</p>
     </> },
-    { label: 'The process', body: <>
+    { label: 'The process', className: 'dialog-wide', body: <>
       <p className="dialog-sub">Parity Drift Detector</p>
       <p className="resume-copy">Compares a component’s Figma properties against its code model and classifies each pair: clean match, naming drift, polarity inversion, Figma-only, code-only, or default mismatch.</p>
       <p className="resume-copy">Its most valuable catch is polarity inversion, where Figma and code express the same concept with opposite boolean senses (e.g., Disabled=True vs. is_enabled=False).</p>
@@ -59,7 +59,7 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Caught a JQL bug before shipping: labels != template silently drops any multi-labeled issue, which would have hidden a real Epic.</p>
       <p className="dialog-sum">Together, these show a pattern of catching problems early (design-code drift, stale work, near-done Epics) and building the tools to run reliably without manual effort.</p>
     </> },
-    { label: 'The outcome', body: <>
+    { label: 'The outcome', className: 'dialog-wide', body: <>
       <p className="resume-copy">Two skills are in production. The stale tracker runs weekly via local cron and the epic closeout tracker runs on its own schedule. Both deliver reports to your manager and the design team without anyone needing a live Claude Code session.</p>
       <p className="resume-copy">The parity drift detector is written but validated manually. It has been through three test passes on seven real components. It reproduced a known historical bug category, generalized that pattern to two more components under different names, and found four new coverage gaps, with no false-confident matches.</p>
       <p className="resume-copy">Each skill has a built-in safety boundary. The stale tracker has a revert script, the closeout tracker is report-only, and the drift detector detects without fixing. The point is that speed and safety don’t have to trade off.</p>
