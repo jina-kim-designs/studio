@@ -27,11 +27,28 @@ const projects = [
   { title: 'Building a scalable data visualization palette', subtitle: 'A shared language of color for data across the enterprise.', tags: ['Design systems', 'Strategy', '2026'], image: studioImage, alt: 'Tablet showing the data visualization palette, chart examples, and color swatches on a pale blue and cream surface', description: 'An example brand identity project exploring the relationship between architecture, people, and place.' },
   { title: 'Autopilot: Designing savings habits that stick', subtitle: 'Turning good intentions into automatic progress.', tags: ['Product design', 'UX research', '2022'], image: autopilotImage, alt: 'Angled close-up of a phone showing the Automatic Savings tile and bottom navigation on a pale blue and cream surface', description: 'An example digital product bringing a gentler approach to daily routines, reflection, and personal wellbeing.' },
 ];
-type OtherWorkItem = { title: string; description: string; image: string; category: string; alt?: string; aspect?: string; thumb?: string };
+type DialogBlock = { label: string; body: ReactNode; className?: string };
+type OtherWorkItem = { title: string; description: string; image: string; category: string; alt?: string; aspect?: string; thumb?: string; tags: string[]; dialog: DialogBlock[] };
 const otherWork: OtherWorkItem[] = [
-  { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, category: 'Exploration' },
-  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon' },
-  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration' },
+  { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, category: 'Exploration', tags: ['Exploration', 'AI'], dialog: [
+    { label: 'The challenge', className: 'dialog-block--full', body: <>
+      <p className="resume-copy">Gravity’s parity initiative — keeping Figma and code definitions of each component in sync — started in Q1 2026 as largely manual work. By the time it was moving toward closeout later in the year, three recurring sources of overhead were slowing that finish, each discovered the same way: by hand, after the fact.</p>
+      <ol className="cs-problems dialog-problems">
+        <li><span className="cs-problem-num">1</span><div><h3>Parity bugs were caught after they shipped, not before.</h3><p>Looking back at this year’s parity history, several bugs shared one shape: a property got renamed or re-typed on one side (Figma or code) without the other side being updated to match — Checkbox’s changelog literally reads <em>“Renamed Properties: Inactive → Disabled; State → Pressed (changed to boolean).”</em> Bugs like this only became visible once a product team hit the inconsistency and filed a ticket. There was no step that caught the mismatch at review time, before it reached a user-facing bug report.</p></div></li>
+        <li><span className="cs-problem-num">2</span><div><h3>Grooming the parity/design backlog was a manual, recurring chore.</h3><p>Stories covering parity work and other design/grooming tasks have a tendency to go quiet without actually being resolved — nobody closes them, but nobody’s actively working them either. Finding these required someone to periodically scan the board by hand.</p></div></li>
+        <li><span className="cs-problem-num">3</span><div><h3>Knowing which Epics were actually done required reading every child Story.</h3><p>An Epic with 7 Stories where 6 are Closed and 1 is sitting in Ready for Acceptance is nearly done but not closeable without someone noticing and formally accepting that last Story — a state that’s easy to miss without manually opening every Epic.</p></div></li>
+      </ol>
+      <p className="resume-copy">None of these needed a person’s judgment to <em>detect</em> — they needed consistent, repeatable classification logic applied on a schedule. That’s what made them a good fit for AI-built automation rather than one-off manual review.</p>
+    </> },
+  ] },
+  { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon', tags: ['Hackathon', 'AI'], dialog: [
+    { label: 'The challenge', body: <p className="resume-copy">{'Customers often struggle to translate raw financial transaction data into actionable financial literacy.   \nFurthermore, there was a strategic gap between isolated digital banking tools and the in-person financial advisory services offered at retail banking locations.'}</p> },
+    { label: 'The approach', body: <p className="resume-copy">{'To treat artificial intelligence as an empowering financial companion rather than a passive tool. The strategy focused on creating an agentic AI that utilizes real-time transaction data to deliver proactive, personalized micro-lessons.    \nA core strategic pillar was structural transparency—building user trust through an interactive "Autonomy Dial" and establishing seamless handoffs from digital AI assistance to human mentors.'}</p> },
+    { label: 'My contribution', body: <p className="resume-copy">Led the design and strategy for a conceptual prototype that helps people grow their financial literacy, and shaped the experience to build trust in AI.</p> },
+    { label: 'The outcome', body: <p className="resume-copy">{'Rapid Concept Delivery: Successfully delivered a cohesive, 0-to-1 conceptual product within a rigorous 2-day timeframe, emphasizing trustworthy human-AI interaction.       \nStrategic Roadmap Contribution: Provided product leadership with a viable blueprint for unifying digital app experiences with in-person advisory services at Capital One Cafés.'}</p> },
+    { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy">Pocket Mentor pushed me to design for trust first: making the AI’s intent visible, and the handoff to a human mentor feel like a natural next step rather than a fallback.</p> },
+  ] },
+  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration', tags: ['Collaboration'], dialog: [] },
 ];
 
 function SectionHeading({ number, title, aside }: { number: string; title: string; aside?: ReactNode }) {
@@ -39,7 +56,7 @@ function SectionHeading({ number, title, aside }: { number: string; title: strin
 }
 
 function Portfolio() {
-  const [selected, setSelected] = useState<(typeof projects)[number] & { aspect?: string | undefined } | null>(null);
+  const [selected, setSelected] = useState<OtherWorkItem | null>(null);
   return <>
     <header className="portfolio-shell site-header" id="top">
       <a className="wordmark" href="#top" aria-label="Jina, back to top">Jina<span className="text-honey">.</span></a>
@@ -94,7 +111,7 @@ function Portfolio() {
       </section>
       <section className="portfolio-shell portfolio-section" id="other-work">
         <SectionHeading number="02" title="A few other things" aside="Experiments, collaborations & side quests" />
-        {otherWork.map(work => <article className="work-row" key={work.title}><img src={work.thumb ?? work.image} className="work-thumb" alt={work.alt ?? `${work.title} sample project`} width={56} height={56} loading="lazy" /><div><h3 className="project-title">{work.title}</h3><p className="project-description">{work.description}</p></div><span className="work-type">{work.category}</span><Button variant="ghost" size="icon" title={`View ${work.title}`} aria-label={`View ${work.title}`} onClick={() => setSelected({ title: work.title, subtitle: work.description, description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: work.image, alt: work.alt ?? `${work.title} sample project`, aspect: work.aspect, tags: [work.category, 'AI'] })}><ArrowUpRight /></Button></article>)}
+        {otherWork.map(work => <article className="work-row" key={work.title}><img src={work.thumb ?? work.image} className="work-thumb" alt={work.alt ?? `${work.title} sample project`} width={56} height={56} loading="lazy" /><div><h3 className="project-title">{work.title}</h3><p className="project-description">{work.description}</p></div><span className="work-type">{work.category}</span><Button variant="ghost" size="icon" title={`View ${work.title}`} aria-label={`View ${work.title}`} onClick={() => setSelected(work)}><ArrowUpRight /></Button></article>)}
       </section>
       <section className="current-band" id="today"><div className="portfolio-shell portfolio-section current-section">
         <SectionHeading number="03" title="What I’m doing today" aside="The here & now" />
