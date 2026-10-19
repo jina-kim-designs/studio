@@ -38,6 +38,10 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Knowing which Epics were actually done required reading every child Story. An Epic with 7 Stories where 6 are Closed and 1 is sitting in Ready for Acceptance is nearly done but not closeable without someone noticing and formally accepting that last Story — a state that’s easy to miss without manually opening every Epic.</p>
       <p className="resume-copy">None of these needed a person’s judgment to <em>detect</em> — they needed consistent, repeatable classification logic applied on a schedule. That’s what made them a good fit for AI-built automation rather than one-off manual review.</p>
     </> },
+    { label: 'The constraints', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'The process', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'The outcome', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
   ] },
   { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon', tags: ['Hackathon', 'AI'], dialog: [
     { label: 'The challenge', body: <p className="resume-copy">{'Customers often struggle to translate raw financial transaction data into actionable financial literacy.   \nFurthermore, there was a strategic gap between isolated digital banking tools and the in-person financial advisory services offered at retail banking locations.'}</p> },
