@@ -38,8 +38,13 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Epic status required reading every Story. An Epic with six closed Stories and one awaiting acceptance looks nearly done but can’t close until someone notices and accepts the last one.</p>
       <p className="resume-copy">None of these needed human judgment to detect. They needed consistent classification logic run on a schedule, which made them a good fit for AI-built automation instead of one-off manual review.</p>
     </> },
-    { label: 'The constraints', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
-    { label: 'The process', body: <>
+    { label: 'The constraints', body: <>
+      <p className="resume-copy">Detection, not auto-fix. Each skill surfaces discrepancies for a human to resolve and has an explicit write boundary. The drift detector never touches Figma or code, and the epic closeout tracker only reports in chat. The stale tracker writes only a comment and a label, never a status change, because a status transition resets Jira’s updated timestamp and would hide a genuinely unlooked-at issue from the next scheduled run.</p>
+      <p className="resume-copy">No status-name assumptions. Jira workflows differ across projects, so both trackers had to resolve the literal statuses this instance uses, like Canceled and Ready for Acceptance, rather than relying on the “Done” category. They also avoided the labels != template JQL shortcut, which silently drops any issue with other labels too. A real false exclusion confirmed this before shipping.</p>
+      <p className="resume-copy">Real automation, not session-dependent. A skill that only runs when someone happens to be in a live Claude Code session is a manual task with extra steps, so both Jira skills got a recurring trigger outside any one conversation.</p>
+      <p className="resume-copy">Honest classification over forced matches. When the drift detector can’t confirm a property on both sides, it reports “needs manual review” instead of guessing, since a false “clean match” is worse than an honest “inconclusive.”</p>
+    </> },
+    { label: 'The process', className: 'dialog-wide', body: <>
       <p className="dialog-sub">Parity Drift Detector</p>
       <p className="resume-copy">Compares a component’s Figma properties against its code model and classifies each pair: clean match, naming drift, polarity inversion, Figma-only, code-only, or default mismatch.</p>
       <p className="resume-copy">Its most valuable catch is polarity inversion, where Figma and code express the same concept with opposite boolean senses (e.g., Disabled=True vs. is_enabled=False).</p>
@@ -54,8 +59,19 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Caught a JQL bug before shipping: labels != template silently drops any multi-labeled issue, which would have hidden a real Epic.</p>
       <p className="dialog-sum">Together, these show a pattern of catching problems early (design-code drift, stale work, near-done Epics) and building the tools to run reliably without manual effort.</p>
     </> },
-    { label: 'The outcome', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
-    { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'The outcome', className: 'dialog-wide', body: <>
+      <p className="resume-copy">Two skills are in production. The stale tracker runs weekly via local cron and the epic closeout tracker runs on its own schedule. Both deliver reports to your manager and the design team without anyone needing a live Claude Code session.</p>
+      <p className="resume-copy">The parity drift detector is written but validated manually. It has been through three test passes on seven real components. It reproduced a known historical bug category, generalized that pattern to two more components under different names, and found four new coverage gaps, with no false-confident matches.</p>
+      <p className="resume-copy">Each skill has a built-in safety boundary. The stale tracker has a revert script, the closeout tracker is report-only, and the drift detector detects without fixing. The point is that speed and safety don’t have to trade off.</p>
+    </> },
+    { label: 'Reflection', className: 'dialog-reflection', body: <>
+      <p className="resume-copy">The recurring chores justified the infrastructure. Catching one bug early is useful once, but backlog rot and near-done Epics come up every week. That repeating pattern is what made the stale tracker and epic closeout tracker worth building as standing tools.</p>
+      <p className="resume-copy">“AI wrote a script” is not the same as “it works.” The first stale tracker automation, a GitHub Actions workflow, passed review but failed on every runner because none had VPN access to Jira. Treating that as a constraint rather than a bug led to local cron, Keychain credentials, a log file, and a revert script. The lesson: don’t call anything automated until it has survived its real environment.</p>
+      <p className="resume-copy">Human judgment mattered most where the tool couldn’t know the org’s conventions. The AI wrote correct JQL but didn’t know that labels != template drops multi-labeled issues on this Jira instance, or which status names the team actually uses to mean “handled.” Those catches came from checking output against known history. The tool’s edge was consistency, such as spotting the same polarity inversion a third time under the name Inactive.</p>
+      <p className="resume-copy">Detect-and-report was the right scope. None of the tools change Figma, the DSL, or Jira statuses directly, so every finding passes through a human. That was slower to ship but is why the output is trusted.</p>
+      <div className="dialog-notes"><div className="dialog-note"><span>Next</span><p className="resume-copy">Fold the drift detector into the parity program’s regular review cadence, and run it across the full component library against this year’s parity Jira history to estimate what share of filed bugs it would have caught.</p></div>
+      <div className="dialog-note"><span>Do differently</span><p className="resume-copy">Validate the recurring-automation path (cron) for the drift detector from the start, rather than losing time on the GitHub Actions dead end.</p></div></div>
+    </> },
   ] },
   { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', category: 'Hackathon', tags: ['Hackathon', 'AI'], dialog: [
     { label: 'The challenge', body: <p className="resume-copy">{'Customers often struggle to translate raw financial transaction data into actionable financial literacy.   \nFurthermore, there was a strategic gap between isolated digital banking tools and the in-person financial advisory services offered at retail banking locations.'}</p> },
