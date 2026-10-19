@@ -26,7 +26,7 @@
 - [x] AI + design systems automation popup: "The challenge" filled with the parity-initiative content as plain paragraphs matching the other sections (no numbering or dividers); each other-work item now carries its own popup content.
 - [x] Automation popup "The challenge": replaced with Jina's final, tightened wording (intro + three problems + closing line).
 - [x] AI + design systems automation popup: section set aligned to Pocket Mentor's format — The challenge, The constraints, The process, The outcome, Reflection (Reflection full-width with top rule).
-- [ ] Automation popup: wording needed for The constraints (currently marked "Waiting for your wording").
-- [ ] Automation popup "Reflection": real content — four lessons plus Next / Do differently.
+- [x] Automation popup "The constraints": real content — detection not auto-fix, no status-name assumptions, real automation, honest classification.
+- [x] Automation popup "Reflection": real content — four lessons plus Next / Do differently.
 - [x] Automation popup "The process": real content — Parity Drift Detector, Jira Stale Story Tracker, GRV Epic Closeout Tracker, plus the closing pattern line.
 - [x] Automation popup "The outcome": real content — two skills in production, drift detector validated manually, per-skill safety boundaries.

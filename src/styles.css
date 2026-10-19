@@ -272,6 +272,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .archive-category { display: none; }
   .dialog-content { padding: 22px; }
   .dialog-grid { grid-template-columns: 1fr; }
+  .dialog-notes { grid-template-columns: 1fr; }
   .footer-title { font-size: 32px; }
 }
 @media (prefers-reduced-motion: reduce) {

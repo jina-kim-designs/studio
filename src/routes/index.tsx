@@ -38,7 +38,12 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Epic status required reading every Story. An Epic with six closed Stories and one awaiting acceptance looks nearly done but can’t close until someone notices and accepts the last one.</p>
       <p className="resume-copy">None of these needed human judgment to detect. They needed consistent classification logic run on a schedule, which made them a good fit for AI-built automation instead of one-off manual review.</p>
     </> },
-    { label: 'The constraints', body: <p className="resume-copy dialog-todo">Waiting for your wording.</p> },
+    { label: 'The constraints', body: <>
+      <p className="resume-copy">Detection, not auto-fix. Each skill surfaces discrepancies for a human to resolve and has an explicit write boundary. The drift detector never touches Figma or code, and the epic closeout tracker only reports in chat. The stale tracker writes only a comment and a label, never a status change, because a status transition resets Jira’s updated timestamp and would hide a genuinely unlooked-at issue from the next scheduled run.</p>
+      <p className="resume-copy">No status-name assumptions. Jira workflows differ across projects, so both trackers had to resolve the literal statuses this instance uses, like Canceled and Ready for Acceptance, rather than relying on the “Done” category. They also avoided the labels != template JQL shortcut, which silently drops any issue with other labels too. A real false exclusion confirmed this before shipping.</p>
+      <p className="resume-copy">Real automation, not session-dependent. A skill that only runs when someone happens to be in a live Claude Code session is a manual task with extra steps, so both Jira skills got a recurring trigger outside any one conversation.</p>
+      <p className="resume-copy">Honest classification over forced matches. When the drift detector can’t confirm a property on both sides, it reports “needs manual review” instead of guessing, since a false “clean match” is worse than an honest “inconclusive.”</p>
+    </> },
     { label: 'The process', body: <>
       <p className="dialog-sub">Parity Drift Detector</p>
       <p className="resume-copy">Compares a component’s Figma properties against its code model and classifies each pair: clean match, naming drift, polarity inversion, Figma-only, code-only, or default mismatch.</p>
