@@ -37,4 +37,4 @@
 - [x] AI + design systems automation popup: use the uploaded terminal screenshot as the main visual, blurred like Pocket Mentor with the confidentiality caption.
 - [x] From the archives: reformat as structured entries (title, italic lead, uppercase role/timeline line, honey-tick sub-headings, bulleted outcome) and fill Highland Township Public Library with Jina's full write-up; row year set to 2023 to match the stated timeline.
 - [x] From the archives: reserve space for a before/after visual in the Highland Township entry (two-up pair, honey captions, stacks to one column on phone).
-- [ ] Pocket Mentor and AI + design systems automation popups: make the blurred visuals a little smaller.
+- [x] Pocket Mentor and AI + design systems automation popups: blurred visuals shrunk from ~70% to ~61% of the popup's width, still borderless, centered, caption legible.
