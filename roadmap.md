@@ -48,3 +48,4 @@
 - [x] Cross-platform parity popup: "Reflection" added with Jina's three paragraphs (obligation rather than career bet; embed in “Roadmap Creation” governance and escalate early; manual coordination as the throughline to the AI skills), wiki brackets replaced with plain wording.
 - [x] "A few other things" popups: every section now spans the popup as a full-width horizontal band (dialog grid switched to a single column; body text kept at the 660px measure); row order is now AI + design systems automation, Cross-platform parity, Pocket Mentor.
 - [x] Popups: the gap between a section heading and the content under it is now a consistent 12px everywhere, including before the honey bar in "The process" (was 30px); spacing between phases inside the process stays wider.
+- [x] Popups (all three): removed the divider line above "Reflection" and the extra space around it, so the gap before every section is the same 28px.
