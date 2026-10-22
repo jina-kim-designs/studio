@@ -238,9 +238,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .dialog-media { margin: 22px 0; }
 .dialog-media .dialog-image { margin: 0; }
 .dialog-frame { position: relative; overflow: hidden; }
-.dialog-frame--private { border: 1px solid var(--border); border-radius: 6px; background: color-mix(in oklab, var(--paper) 42%, var(--background)); }
-.dialog-image--private { filter: blur(5px) saturate(.86) contrast(.97); transform: scale(1.06); }
-.dialog-veil { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(155deg, color-mix(in oklab, var(--background) 24%, transparent), color-mix(in oklab, var(--paper) 26%, transparent)); backdrop-filter: blur(2px) saturate(112%); }
+.dialog-frame--private { overflow: visible; max-width: 88%; margin-inline: auto; }
+.dialog-image--private { filter: blur(3.5px) saturate(.9) contrast(.98); }
 .dialog-conf { display: flex; align-items: center; gap: 9px; margin-top: 13px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-foreground); }
 .dialog-conf::before { content: ''; width: 7px; height: 7px; border-radius: 999px; background: var(--honey); flex-shrink: 0; }
 .dialog-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
@@ -282,7 +281,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .archive-meta { gap: 12px; }
   .archive-category { display: none; }
   .dialog-content { padding: 22px; }
-  .dialog-image--private { filter: blur(4px) saturate(.86) contrast(.97); }
+  .dialog-image--private { filter: blur(3px) saturate(.9) contrast(.98); }
   .dialog-grid { grid-template-columns: 1fr; }
   .dialog-notes { grid-template-columns: 1fr; }
   .footer-title { font-size: 32px; }
