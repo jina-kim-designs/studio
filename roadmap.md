@@ -50,3 +50,4 @@
 - [x] Popups: the gap between a section heading and the content under it is now a consistent 12px everywhere, including before the honey bar in "The process" (was 30px); spacing between phases inside the process stays wider.
 - [x] Popups (all three): removed the divider line above "Reflection" and the extra space around it, so the gap before every section is the same 28px.
 - [x] Pocket Mentor popup: "The challenge" replaced with Jina's agentic-AI trust write-up (the approval question, why finance raises the stakes, the Eno origin, and the three must-be-true conditions as bold-led lines).
+- [x] Pocket Mentor popup: "The constraints" added after The challenge — user-granted autonomy, inspectable explainability, and hackathon time pressure, each bold-led to match the other popups.
