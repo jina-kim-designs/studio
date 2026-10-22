@@ -32,3 +32,4 @@
 - [x] Automation popup "The outcome": real content — two skills in production, drift detector validated manually, per-skill safety boundaries.
 - [x] Pocket Mentor popup: main visual frosted/blurred for confidentiality with a "Screens blurred for confidentiality" caption; other popups left sharp.
 - [x] AI + design systems automation row: use the uploaded Jira logo as the small thumbnail, re-cropped to its own bounds and tucked in 3px so it matches the Pocket Mentor badge's optical weight.
+- [x] Pocket Mentor popup: blurred visual freed from its frame — no border, no overlay wash, no edge crop — blur eased to 3.5px and the visual scaled to 88% width.
