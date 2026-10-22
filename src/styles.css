@@ -281,7 +281,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .archive-meta { gap: 12px; }
   .archive-category { display: none; }
   .dialog-content { padding: 22px; }
-  .dialog-image--private { filter: blur(6px) saturate(.82) contrast(.96); }
+  .dialog-image--private { filter: blur(4px) saturate(.86) contrast(.97); }
   .dialog-grid { grid-template-columns: 1fr; }
   .dialog-notes { grid-template-columns: 1fr; }
   .footer-title { font-size: 32px; }
