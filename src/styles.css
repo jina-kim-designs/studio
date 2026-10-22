@@ -277,7 +277,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .dialog-title { font-family: var(--font-display); font-size: 34px; }
 .dialog-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
 .dialog-grid .resume-copy { white-space: pre-wrap; max-width: 660px; }
-.dialog-reflection { grid-column: 1 / -1; padding-top: 26px; border-top: 1px solid var(--border); }
+.dialog-reflection { grid-column: 1 / -1; }
 .dialog-reflection .resume-copy { max-width: 660px; }
 .dialog-wide { grid-column: 1 / -1; }
 .dialog-wide .resume-copy { max-width: 660px; }
