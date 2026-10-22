@@ -66,4 +66,5 @@
 - [x] Cross-platform parity popup: add the uploaded Apple + Android visual as the popup's main image (no blur — it holds no confidential detail).
 - [x] Contact buttons: labels now just "Email" and "LinkedIn"; "Let's connect!" line above the footer buttons.
 - [x] Cross-platform parity popup: replace the visual with Jina's newest upload.
-- [ ] Add Jina's AI color-tool screenshot (sample palettes) to the most fitting spot in the palette case study.
+- [x] Added Jina's AI color-tool screenshot (Ratings Palette Generator) under the AI-tools paragraph in Section 04 of the palette case study.
+- [x] Confidential blur eased a touch: 3.5px to 2.5px on desktop, 3px to 2px on phones.
