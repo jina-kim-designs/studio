@@ -86,7 +86,7 @@ const otherWork: OtherWorkItem[] = [
   ] },
   { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration', tags: ['Collaboration'], dialog: [] },
 ];
-type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; beforeAlt?: string; afterAlt?: string }; blocks: { label: string; body: ReactNode }[] };
+type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; beforeAlt?: string; afterAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
 const archive: ArchiveEntry[] = [
   { title: 'Cocoon Technologies', category: 'Visual identity', year: '2023', blocks: [{ label: '', body: <p className="body-copy">Sample archived project. A brief reflection on the original idea, your approach, and what you learned along the way.</p> }] },
   { title: 'OptiCloud', category: 'Editorial design', year: '2022', blocks: [{ label: '', body: <p className="body-copy">Sample archived project. A brief reflection on the original idea, your approach, and what you learned along the way.</p> }] },
