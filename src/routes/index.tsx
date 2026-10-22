@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 import { useState, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, Mail, Linkedin } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
@@ -177,11 +177,12 @@ function SectionHeading({ number, title, aside }: { number: string; title: strin
 
 function Portfolio() {
   const [selected, setSelected] = useState<OtherWorkItem | null>(null);
+  const [talk, setTalk] = useState(false);
   return <>
     <header className="portfolio-shell site-header" id="top">
       <a className="wordmark" href="#top" aria-label="Jina, back to top">Jina<span className="text-honey">.</span></a>
       <nav className="site-nav" aria-label="Portfolio navigation">
-        <a href="#work">Work</a><a href="#today" className="desktop-link">Today</a><a href="#experience">Resume</a><a href="#contact" className="flex items-center gap-1">Let’s talk <ArrowUpRight size={13} /></a>
+        <a href="#work">Work</a><a href="#today" className="desktop-link">Today</a><a href="#experience">Resume</a><button type="button" className="flex items-center gap-1" onClick={() => setTalk(true)}>Let’s talk <ArrowUpRight size={13} /></button>
       </nav>
     </header>
     <main>
@@ -250,9 +251,12 @@ function Portfolio() {
         <div className="education-grid"><div><h3 className="subheading">Education</h3><h4 className="resume-role">B.S. Information</h4><p className="resume-company">University of Michigan - Ann Arbor · 2019 — 2023</p><p className="resume-copy">Concentration: UX design</p></div><div><h3 className="subheading">TOOLS I WORK WITH </h3><div className="tool-list">{['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'A sketchbook & a pencil', 'Claude Code', 'ChatGPT', 'Gemini', 'Lovable', 'Jira', 'Confluence', 'Google Suite'].map(tool => <span key={tool}>{tool}</span>)}</div></div></div>
       </section>
     </main>
-    <footer className="portfolio-shell" id="contact"><div className="site-footer"><h2 className="footer-title">Good things start with a conversation.</h2><div className="footer-links"><a className="footer-link" href="mailto:jiki5462@gmail.com"><span>Email</span><em>jiki5462@gmail.com <ArrowUpRight size={13} /></em></a><a className="footer-link" href="https://www.linkedin.com/in/jinakim5462/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><em>linkedin.com/in/jinakim5462 <ArrowUpRight size={13} /></em></a></div><div className="footer-bottom"><span>© 2026 Jina</span><a href="#top" className="inline-flex items-center gap-2">Back to top <ArrowUp size={12} /></a></div></div></footer>
+    <footer className="portfolio-shell" id="contact"><div className="site-footer"><h2 className="footer-title">Good things start with a conversation.</h2><div className="footer-links"><a className="footer-btn footer-btn--solid" href="mailto:jiki5462@gmail.com"><Mail size={14} /> jiki5462@gmail.com</a><a className="footer-btn" href="https://www.linkedin.com/in/jinakim5462/" target="_blank" rel="noopener noreferrer"><Linkedin size={14} /> linkedin.com/in/jinakim5462 <ArrowUpRight size={13} /></a></div><div className="footer-bottom"><span>© 2026 Jina</span><a href="#top" className="inline-flex items-center gap-2">Back to top <ArrowUp size={12} /></a></div></div></footer>
     <Dialog.Root open={selected !== null} onOpenChange={open => { if (!open) setSelected(null); }}>
         <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content">{selected && <><div className="dialog-top"><div><p className="eyebrow mb-2">OTHER WORK</p><Dialog.Title className="dialog-title">{selected.title}</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close case study"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">{selected.description}</Dialog.Description>{!selected.hideImage && <figure className={selected.blur ? 'dialog-media dialog-media--private' : 'dialog-media'}><div className={selected.blur ? 'dialog-frame dialog-frame--private' : 'dialog-frame'}><img src={selected.image} alt={`${selected.title} sample project detail`} className={selected.blur ? 'dialog-image dialog-image--private' : 'dialog-image'} style={{ aspectRatio: selected.aspect ?? '2 / 1' }} width={1536} height={1024} /></div>{selected.blur && <figcaption className="dialog-conf">Screens blurred for confidentiality</figcaption>}</figure>}<div className="project-tags mb-7">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.dialog.length > 0 && <div className="dialog-grid">{selected.dialog.map(block => <div className={block.className} key={block.label}><h3 className="resume-role">{block.label}</h3>{block.body}</div>)}</div>}</>}</Dialog.Content></Dialog.Portal>
+    </Dialog.Root>
+    <Dialog.Root open={talk} onOpenChange={setTalk}>
+        <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content dialog-talk"><div className="dialog-top"><div><p className="eyebrow mb-2">GET IN TOUCH</p><Dialog.Title className="dialog-title">Let’s talk</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close contact options"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">Email is the quickest way to reach me — or connect on LinkedIn.</Dialog.Description><div className="talk-options"><a className="footer-btn footer-btn--solid" href="mailto:jiki5462@gmail.com" onClick={() => setTalk(false)}><Mail size={14} /> jiki5462@gmail.com</a><a className="footer-btn" href="https://www.linkedin.com/in/jinakim5462/" target="_blank" rel="noopener noreferrer" onClick={() => setTalk(false)}><Linkedin size={14} /> linkedin.com/in/jinakim5462 <ArrowUpRight size={13} /></a></div></Dialog.Content></Dialog.Portal>
     </Dialog.Root>
   </>;
 }
