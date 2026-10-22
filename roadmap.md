@@ -58,4 +58,4 @@
 - [x] Highland archive entry: remove the open-original links under the screenshots.
 - [x] Archives: remove Cocoon Technologies and OptiCloud placeholder entries.
 - [x] AI + design systems automation popup: tightened all five sections for readability, keeping every key fact; bold lead-ins added.
-- [ ] Cross-platform parity popup: remove the large visual.
+- [x] Cross-platform parity popup: remove the large visual.
