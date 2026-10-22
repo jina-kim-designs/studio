@@ -11,6 +11,7 @@ import pocketMentorGridAsset from '@/assets/pocket-mentor-grid.png.asset.json';
 const pocketMentorImage = pocketMentorGridAsset.url;
 import pocketMentorIconAsset from '@/assets/pocket-mentor-icon.png.asset.json';
 import jiraLogoAsset from '@/assets/jira-1.svg.asset.json';
+import automationVisualAsset from '@/assets/group-269-1.png.asset.json';
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -31,7 +32,7 @@ const projects = [
 type DialogBlock = { label: string; body: ReactNode; className?: string };
 type OtherWorkItem = { title: string; description: string; image: string; category: string; alt?: string; aspect?: string; thumb?: string; thumbInset?: boolean; blur?: boolean; tags: string[]; dialog: DialogBlock[] };
 const otherWork: OtherWorkItem[] = [
-  { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: studioImage, thumb: jiraLogoAsset.url, thumbInset: true, alt: 'The Jira logo: three interlocking blue gradient chevrons', category: 'Exploration', tags: ['Exploration', 'AI'], dialog: [
+  { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: automationVisualAsset.url, thumb: jiraLogoAsset.url, thumbInset: true, alt: 'The Jira logo: three interlocking blue gradient chevrons', aspect: '1726 / 1738', blur: true, category: 'Exploration', tags: ['Exploration', 'AI'], dialog: [
     { label: 'The challenge', body: <>
       <p className="resume-copy">Gravity’s parity initiative, which keeps the Figma and code definitions of each component in sync, began in Q1 2026 as largely manual work. As it neared closeout, three recurring problems slowed it down, each found by hand and after the fact:</p>
       <p className="resume-copy">Parity bugs surfaced after shipping. A property would be renamed or re-typed on one side (Figma or code) without the other being updated, as in Checkbox’s rename of Inactive to Disabled. Teams only found these when they hit the bug and filed a ticket, since no review step caught the mismatch earlier.</p>
