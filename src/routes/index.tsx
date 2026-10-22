@@ -118,7 +118,24 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy"><strong>Visible reasoning.</strong> Every proactive suggestion explains why, since “trust me” doesn’t scale for financial advice.</p>
       <p className="resume-copy"><strong>A defined stopping point.</strong> The AI hands off to a human instead of completing the loop itself.</p>
     </> },
-    { label: 'The approach', body: <p className="resume-copy">{'To treat artificial intelligence as an empowering financial companion rather than a passive tool. The strategy focused on creating an agentic AI that utilizes real-time transaction data to deliver proactive, personalized micro-lessons.    \nA core strategic pillar was structural transparency—building user trust through an interactive "Autonomy Dial" and establishing seamless handoffs from digital AI assistance to human mentors.'}</p> },
+    { label: 'The constraints', body: <>
+      <p className="resume-copy"><strong>Autonomy had to be a user choice, not a product default.</strong> This was a self-imposed design principle, not something the hackathon required — a deliberate bet that trust has to be something the user grants, not something the product assumes it already has.</p>
+      <p className="resume-copy"><strong>Explainability couldn’t be decorative.</strong> A one-line “based on your activity” justification wasn’t enough for financial suggestions — the reasoning needed to be inspectable, not just asserted.</p>
+      <p className="resume-copy"><strong>Hackathon time pressure.</strong> Like any hackathon build, the team was working against a fixed, compressed window — the prototype had to demonstrate the full arc end-to-end rather than polish any single screen.</p>
+    </> },
+    { label: 'The process', className: 'dialog-wide', body: <>
+      <p className="resume-copy">Pocket Mentor builds trust through three deliberate design choices.</p>
+      <p className="dialog-sub">The autonomy dial</p>
+      <p className="resume-copy">Instead of a single AI on/off switch, onboarding has the user pick one of three autonomy levels before the mentor does anything:</p>
+      <p className="resume-copy"><strong>Basic information:</strong> generic financial literacy content, no account access.</p>
+      <p className="resume-copy"><strong>Read only:</strong> the mentor can view transactions and nothing else.</p>
+      <p className="resume-copy"><strong>Suggest and alert:</strong> the mentor can view transactions, send alerts, generate personalized insights, and work with the user on actions, with approval at each step.</p>
+      <p className="resume-copy">The choice happens inside the onboarding quiz, so personalization and consent are set at the same moment. The team treated “when does the user decide how much to trust this” as a first-order design question from the start.</p>
+      <p className="dialog-sub">Explainability as an interaction</p>
+      <p className="resume-copy">Every proactive nudge, like a grocery-budget win, a minimum-payment warning, or a car-savings milestone, comes with a “Why I suggested this” card. It expands into the real data behind the suggestion, such as actual dining spend against budget. The minimum-payment moment compares the interest cost of minimum payments with paying the full balance, then ties the difference back to the user’s car-savings timeline. This was a response to the vague “based on your activity” explanations common in other financial AI tools, and it lets a skeptical user check the reasoning themselves.</p>
+      <p className="dialog-sub">A human handoff</p>
+      <p className="resume-copy">The agent never closes a loan or finalizes a financial decision. When a user nears a savings goal and may pre-qualify for something like an auto loan, the mentor prepares a “Money Plan Report” (savings history, budget adherence, credit readiness estimate, goal progress) and books the user with a human mentor at a physical Café. The team drew this line from conviction that AI shouldn’t make real financial decisions unsupervised, not because of hackathon time pressure.</p>
+    </> },
     { label: 'My contribution', body: <p className="resume-copy">Led the design and strategy for a conceptual prototype that helps people grow their financial literacy, and shaped the experience to build trust in AI.</p> },
     { label: 'The outcome', body: <p className="resume-copy">{'Rapid Concept Delivery: Successfully delivered a cohesive, 0-to-1 conceptual product within a rigorous 2-day timeframe, emphasizing trustworthy human-AI interaction.       \nStrategic Roadmap Contribution: Provided product leadership with a viable blueprint for unifying digital app experiences with in-person advisory services at Capital One Cafés.'}</p> },
     { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy">Pocket Mentor pushed me to design for trust first: making the AI’s intent visible, and the handoff to a human mentor feel like a natural next step rather than a fallback.</p> },
