@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 import { useState, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, ChevronLeft, ChevronRight, Lock, Share2, PanelsTopLeft } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, ChevronLeft, ChevronRight, Lock, PanelsTopLeft } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
@@ -99,8 +99,8 @@ const archive: ArchiveEntry[] = [
   ] },
 ];
 
-function DesktopWindow({ src, alt, url, title }: { src?: string; alt?: string; url: string; title: string }) {
-  return <div className="desktop-window"><div className="desktop-titlebar"><span className="desktop-lights"><i className="desktop-light desktop-light--close" /><i className="desktop-light desktop-light--min" /><i className="desktop-light desktop-light--max" /></span><span className="desktop-tab"><span className="desktop-tab-favicon" />{title}</span><span className="desktop-newtab"><Plus size={13} /></span></div><div className="desktop-toolbar"><span className="desktop-nav"><ChevronLeft size={15} /><ChevronRight size={15} /></span><span className="desktop-share"><Share2 size={13} /></span><span className="desktop-address"><Lock size={10} />{url}</span><span className="desktop-side"><PanelsTopLeft size={13} /></span></div>{src ? <img src={src} alt={alt} loading="lazy" /> : <div className="archive-compare-slot" />}</div>;
+function DesktopWindow({ src, alt, url, title }: { src?: string | undefined; alt?: string | undefined; url: string; title: string }) {
+  return <div className="desktop-window"><div className="desktop-titlebar"><span className="desktop-lights"><i className="desktop-light desktop-light--close" /><i className="desktop-light desktop-light--min" /><i className="desktop-light desktop-light--max" /></span><span className="desktop-tab"><span className="desktop-tab-favicon" />{title}</span><span className="desktop-newtab"><Plus size={13} /></span></div><div className="desktop-toolbar"><span className="desktop-nav"><ChevronLeft size={15} /><ChevronRight size={15} /></span><span className="desktop-share"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12" /><path d="m7.5 7.5 4.5-4.5 4.5 4.5" /><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" /></svg></span><span className="desktop-address"><Lock size={10} />{url}</span><span className="desktop-side"><PanelsTopLeft size={13} /></span></div>{src ? <img src={src} alt={alt} loading="lazy" /> : <div className="archive-compare-slot" />}</div>;
 }
 
 function ArchiveRow({ entry }: { entry: ArchiveEntry }) {

@@ -235,19 +235,19 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .archive-bullets li::before { content: ""; position: absolute; left: 0; top: .78em; width: 5px; height: 5px; border-radius: 50%; background: var(--honey); }
 .archive-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 26px; max-width: 880px; }
 .archive-compare figure { margin: 0; }
-.desktop-window { --win-face: oklch(0.965 0.004 255); --win-face-2: oklch(0.925 0.006 255); --win-edge: oklch(0.5 0.012 255 / .5); --win-edge-soft: oklch(0.5 0.012 255 / .22); --win-ink: oklch(0.36 0.012 255); --win-red: oklch(0.7 0.19 25); --win-amber: oklch(0.8 0.15 85); --win-green: oklch(0.74 0.17 150); border: 1px solid var(--win-edge); border-radius: 12px; overflow: hidden; background: var(--win-face); box-shadow: inset 0 1px 0 oklch(1 0 0 / .6), 0 30px 55px -28px oklch(0.2 0.02 255 / .6), 0 5px 14px oklch(0.2 0.02 255 / .18); }
+.desktop-window { --win-face: oklch(0.972 0.0015 255); --win-face-2: oklch(0.935 0.002 255); --win-edge: oklch(0.45 0.008 255 / .45); --win-edge-soft: oklch(0.45 0.008 255 / .2); --win-ink: oklch(0.32 0.008 255); --win-red: oklch(0.7 0.19 25); --win-amber: oklch(0.8 0.15 85); --win-green: oklch(0.74 0.17 150); border: 1px solid var(--win-edge); border-radius: 11px; overflow: hidden; background: var(--win-face); box-shadow: inset 0 1px 0 oklch(1 0 0 / .7), 0 30px 55px -28px oklch(0.18 0.01 255 / .62), 0 5px 14px oklch(0.18 0.01 255 / .18); }
 .desktop-titlebar { display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 11px; background: linear-gradient(var(--win-face), var(--win-face-2)); border-bottom: 1px solid var(--win-edge-soft); }
 .desktop-lights { display: flex; gap: 8px; flex: none; }
 .desktop-light { width: 11px; height: 11px; border-radius: 50%; box-shadow: inset 0 0 0 0.5px oklch(0 0 0 / .16); }
 .desktop-light--close { background: var(--win-red); }
 .desktop-light--min { background: var(--win-amber); }
 .desktop-light--max { background: var(--win-green); }
-.desktop-tab { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 7px; height: 23px; border-radius: 6px; background: var(--paper); box-shadow: inset 0 0 0 0.5px var(--win-edge-soft); font-size: 11px; color: var(--win-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.desktop-tab { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 7px; height: 23px; border-radius: 6px; background: oklch(1 0 0); box-shadow: inset 0 0 0 0.5px var(--win-edge-soft); font-size: 11px; color: var(--win-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .desktop-tab-favicon { width: 10px; height: 10px; border-radius: 2px; background: color-mix(in oklab, var(--honey) 70%, var(--win-ink)); flex: none; }
 .desktop-newtab { flex: none; display: flex; color: color-mix(in oklab, var(--win-ink) 55%, transparent); }
 .desktop-toolbar { display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 13px; background: var(--win-face); border-bottom: 1px solid var(--win-edge-soft); }
 .desktop-nav, .desktop-share, .desktop-side { display: flex; align-items: center; gap: 11px; flex: none; color: color-mix(in oklab, var(--win-ink) 60%, transparent); }
-.desktop-address { flex: 1; max-width: 58%; margin-inline: auto; display: flex; align-items: center; justify-content: center; gap: 6px; height: 26px; padding: 0 12px; border-radius: 8px; background: var(--paper); box-shadow: inset 0 0 0 0.5px var(--win-edge), 0 1px 2px oklch(0 0 0 / .06); font-size: 11.5px; color: var(--win-ink); }
+.desktop-address { flex: 1; max-width: 58%; margin-inline: auto; display: flex; align-items: center; justify-content: center; gap: 6px; height: 26px; padding: 0 12px; border-radius: 8px; background: oklch(1 0 0); box-shadow: inset 0 0 0 0.5px var(--win-edge), 0 1px 2px oklch(0 0 0 / .06); font-size: 11.5px; color: var(--win-ink); }
 @media (max-width: 700px) { .desktop-share, .desktop-side, .desktop-newtab { display: none; } }
 .archive-compare img { display: block; width: 100%; height: auto; }
 .archive-compare-slot { aspect-ratio: 16 / 10; }
