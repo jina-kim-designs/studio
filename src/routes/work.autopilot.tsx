@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import type { ReactNode } from 'react';
 import autopilotAsset from '@/assets/autopilot-angled-screen.jpg.asset.json';
+import autopilotConceptAsset from '@/assets/autopilot-early-concept-flow.png.asset.json';
 
 const title = 'Autopilot: Designing savings habits that stick — Jina';
 const description = 'Case study: designing Autopilot, an automated savings tool that turns good intentions into automatic progress.';
@@ -123,6 +124,7 @@ function CaseStudy() {
             <li><strong>The minimum balance guardrail:</strong> if a transfer would drop the customer’s available checking balance below their set minimum, the system skips that day’s transfer rather than executing it — the core mechanism that lets the feature move money without asking the customer to approve each transfer</li>
             <li><strong>Editing and deleting a rule:</strong> customers can adjust their minimum balance or delete the rule entirely at any time, with changes taking effect within one calendar day</li>
           </ul>
+          <figure className="cs-concept"><img src={autopilotConceptAsset.url} alt="Early Autopilot setup flow: choosing the Autopilot rule from the savings options, the Autopilot explainer screen, and the review screen confirming a daily transfer rule" className="dialog-image--private" width={1920} height={1115} loading="lazy" /><figcaption className="dialog-conf">Early concept work — screens blurred for confidentiality</figcaption></figure>
         </Section>
         <Section n="04" label="Handoff">
           <p>By the end of my internship, I had handed off final specs to the team and presented the design to leadership. The feature had already shipped into production by the time I left.</p>
