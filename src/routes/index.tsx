@@ -110,6 +110,11 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy"><strong>62 closed in 2026</strong> — with the broader set of resolved-or-near-done work (closed, canceled as no-longer-relevant, or sitting in Ready for Acceptance) reaching 76 of those 139.</p>
       <p className="resume-copy"><strong>Customer feedback citing easier use and less confusion between design and tech</strong> — a direct signal that closing the parity gaps reduced the friction consuming teams were running into between what Figma specified and what shipped in code.</p>
     </> },
+    { label: 'Reflection', className: 'dialog-reflection', body: <>
+      <p className="resume-copy">Taking this on didn’t feel like a deliberate career bet — it felt obligatory. The audit had just produced a real, prioritized roadmap with momentum behind it; letting that stall for lack of a PM would have wasted the two-day working session and the months of pre-work that led into it. Someone needed to keep it moving, and nobody else was going to.</p>
+      <p className="resume-copy">If I had to backfill a PM gap like this again, I’d do two things, not one. First, I’d push to be embedded in the audit’s original “Roadmap Creation” governance step from the start, rather than reconstructing that context after the fact once the PMs were already gone — a handoff plan baked into the process beats an informal pickup three months later. Second, I’d escalate the gap explicitly and early rather than quietly absorbing the coordination work myself — partly so leadership has visibility into what’s actually unowned, and partly so the next person in this position isn’t starting from the same blind improvisation I did.</p>
+      <p className="resume-copy">This manual coordination work is also the direct throughline to the AI skills I later built — the Jira Stale Story Tracker and the GRV Epic Closeout Tracker exist specifically because this kind of status-chasing and backlog-scanning shouldn’t depend on me remembering to do it by hand, every week, forever.</p>
+    </> },
   ] },
 ];
 type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; current?: string; beforeAlt?: string; afterAlt?: string; currentAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
