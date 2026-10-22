@@ -68,3 +68,4 @@
 - [x] Cross-platform parity popup: replace the visual with Jina's newest upload.
 - [x] Added Jina's AI color-tool screenshot (Ratings Palette Generator) under the AI-tools paragraph in Section 04 of the palette case study.
 - [x] Confidential blur eased a touch: 3.5px to 2.5px on desktop, 3px to 2px on phones.
+- [x] Autopilot visual: blur eased a further touch (2.5px to 1.8px) and size reduced (960px to 760px wide).
