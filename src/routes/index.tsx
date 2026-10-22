@@ -105,6 +105,11 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">Re-prioritization by demand and effort: By January, several components tagged “Ready for Work” (Dropdown, Switch/Toggle, Verification input) were still waiting while customer pressure had shifted. I moved Table: Standard Row ahead because it was drawing a disproportionate number of enhancement requests for more flexibility and content types.</p>
       <p className="dialog-sum">Takeaway: Treating the audit as a starting point instead of a fixed sequence kept the roadmap responsive to what teams were actually blocked on months later.</p>
     </> },
+    { label: 'The outcome', className: 'dialog-wide', body: <>
+      <p className="resume-copy"><strong>139 parity-related tickets and Epics</strong> touched since January 2026, spanning Design, iOS, Android, and Web work (QA reviews, docsite updates, Figma kit updates, and cross-platform parity fixes).</p>
+      <p className="resume-copy"><strong>62 closed in 2026</strong> — with the broader set of resolved-or-near-done work (closed, canceled as no-longer-relevant, or sitting in Ready for Acceptance) reaching 76 of those 139.</p>
+      <p className="resume-copy"><strong>Customer feedback citing easier use and less confusion between design and tech</strong> — a direct signal that closing the parity gaps reduced the friction consuming teams were running into between what Figma specified and what shipped in code.</p>
+    </> },
   ] },
 ];
 type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; current?: string; beforeAlt?: string; afterAlt?: string; currentAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
