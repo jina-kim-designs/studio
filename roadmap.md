@@ -60,6 +60,6 @@
 - [x] AI + design systems automation popup: tightened all five sections for readability, keeping every key fact; bold lead-ins added.
 - [x] Cross-platform parity popup: remove the large visual.
 - [x] Cross-platform parity popup: tightened challenge, process, and reflection for readability; outcome kept verbatim; bold lead-ins added.
-- [ ] Autopilot case study: add the uploaded early-concept visual with the confidentiality blur and note.
-- [ ] Contact section: add Jina's email and LinkedIn in a clean, on-brand way.
-- [ ] Let's talk nav link: open a popup offering Email or LinkedIn choices.
+- [x] Autopilot case study: add the uploaded early-concept visual with the confidentiality blur and note.
+- [x] Contact section: add Jina's email and LinkedIn in a clean, on-brand way.
+- [x] Let's talk nav link: open a popup offering Email or LinkedIn choices.
