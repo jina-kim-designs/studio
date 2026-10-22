@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 import { useState, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, ChevronLeft, ChevronRight, Lock, Share2, PanelsTopLeft } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
@@ -99,10 +99,14 @@ const archive: ArchiveEntry[] = [
   ] },
 ];
 
+function DesktopWindow({ src, alt, url, title }: { src?: string; alt?: string; url: string; title: string }) {
+  return <div className="desktop-window"><div className="desktop-titlebar"><span className="desktop-lights"><i className="desktop-light desktop-light--close" /><i className="desktop-light desktop-light--min" /><i className="desktop-light desktop-light--max" /></span><span className="desktop-tab"><span className="desktop-tab-favicon" />{title}</span><span className="desktop-newtab"><Plus size={13} /></span></div><div className="desktop-toolbar"><span className="desktop-nav"><ChevronLeft size={15} /><ChevronRight size={15} /></span><span className="desktop-share"><Share2 size={13} /></span><span className="desktop-address"><Lock size={10} />{url}</span><span className="desktop-side"><PanelsTopLeft size={13} /></span></div>{src ? <img src={src} alt={alt} loading="lazy" /> : <div className="archive-compare-slot" />}</div>;
+}
+
 function ArchiveRow({ entry }: { entry: ArchiveEntry }) {
   const cmp = entry.compare;
   const shots: [string, string | undefined, string][] = cmp ? [['Before', cmp.before, cmp.beforeAlt ?? 'The library website before the redesign'], ['After', cmp.after, cmp.afterAlt ?? 'The library website after the redesign']] : [];
-  return <div className="archive-row"><details><summary><span>{entry.title}</span><span className="archive-meta"><span className="archive-category">{entry.category}</span><span>{entry.year}</span><Plus size={15} /></span></summary><div className="archive-body">{entry.lead && <p className="archive-lead">{entry.lead}</p>}{entry.meta && <p className="archive-meta-line">{entry.meta}</p>}{cmp && <div className="archive-compare">{shots.map(([cap, src, alt]) => <figure key={cap}><div className="archive-shot"><div className="archive-shot-bar"><span className="archive-shot-dots"><i /><i /><i /></span><span className="archive-shot-url">{cmp.url ?? 'highlandlibrary.info'}</span></div>{src ? <img src={src} alt={alt} loading="lazy" /> : <div className="archive-compare-slot" />}</div><figcaption>{cap}</figcaption></figure>)}</div>}{entry.blocks.map(block => <div key={block.label || entry.title}>{block.label && <h4 className="archive-sub">{block.label}</h4>}{block.body}</div>)}</div></details></div>;
+  return <div className="archive-row"><details><summary><span>{entry.title}</span><span className="archive-meta"><span className="archive-category">{entry.category}</span><span>{entry.year}</span><Plus size={15} /></span></summary><div className="archive-body">{entry.lead && <p className="archive-lead">{entry.lead}</p>}{entry.meta && <p className="archive-meta-line">{entry.meta}</p>}{cmp && <div className="archive-compare">{shots.map(([cap, src, alt]) => <figure key={cap}><DesktopWindow src={src} alt={alt} url={cmp.url ?? 'highlandlibrary.info'} title={entry.title} /><figcaption>{cap}</figcaption></figure>)}</div>}{entry.blocks.map(block => <div key={block.label || entry.title}>{block.label && <h4 className="archive-sub">{block.label}</h4>}{block.body}</div>)}</div></details></div>;
 }
 
 function SectionHeading({ number, title, aside }: { number: string; title: string; aside?: ReactNode }) {
