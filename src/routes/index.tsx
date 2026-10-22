@@ -141,7 +141,22 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy"><strong>Rapid concept delivery:</strong> Successfully delivered a cohesive, 0-to-1 conceptual product within a rigorous 2-day timeframe, emphasizing trustworthy human-AI interaction.</p>
       <p className="resume-copy"><strong>Strategic roadmap contribution:</strong> Provided product leadership with a viable blueprint for unifying digital app experiences with in-person advisory services at Capital One Cafés.</p>
     </> },
-    { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy">Pocket Mentor pushed me to design for trust first: making the AI’s intent visible, and the handoff to a human mentor feel like a natural next step rather than a fallback.</p> },
+    { label: 'Reflection', className: 'dialog-reflection', body: <>
+      <p className="resume-copy">Pocket Mentor pushed me to design for trust first: making the AI’s intent visible, and the handoff to a human mentor feel like a natural next step rather than a fallback.</p>
+      <p className="dialog-sub">What stood out</p>
+      <p className="resume-copy"><strong>The autonomy dial was the real design problem.</strong> The chat interface was the easy part. Giving users explicit control over how much agency the AI gets is what turned the project from a feature demo into a point of view: trust has to be built into the interaction from the first screen, not added later.</p>
+      <p className="resume-copy"><strong>Explainability had to carry weight.</strong> Showing the actual data behind each suggestion, instead of a vague “based on your activity” line, was the difference between an AI that asks to be trusted and one that earns it.</p>
+      <p className="resume-copy"><strong>The stopping point was as deliberate as the capabilities.</strong> The agent never completes a financial decision itself. It hands a prepared context package to a human.</p>
+      <p className="resume-copy"><strong>Restraint was the surprise.</strong> Designing what the AI could not do without a human in the loop meant being far more explicit than usual about its behavior at every step, and anticipating a skeptical user’s reaction before any real user saw the prototype.</p>
+      <p className="dialog-sub">What I’d validate with real users</p>
+      <p className="resume-copy">Whether people understand the three autonomy levels as distinct choices instead of picking one arbitrarily.</p>
+      <p className="resume-copy">Whether the human handoff reads as reassurance (“I’m being set up for a real conversation”) rather than the AI abandoning them at a serious moment.</p>
+      <p className="resume-copy">Both assumptions are central to the concept, and neither was tested beyond the team’s own judgment.</p>
+      <p className="resume-copy"><strong>Status:</strong> Pocket Mentor ended as a hackathon concept, with no active plan to continue it.</p>
+      <p className="dialog-sub">What I’d do differently</p>
+      <p className="resume-copy">Reconsider whether three fixed autonomy tiers are the right grain, or whether a more granular model would give users better control.</p>
+      <p className="resume-copy">Build a tighter process for specifying and reviewing AI-generated suggestions, so edge cases surface earlier instead of during the build.</p>
+    </> },
   ] },
 ];
 type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; current?: string; beforeAlt?: string; afterAlt?: string; currentAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
