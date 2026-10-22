@@ -293,6 +293,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .work-thumb { width: 46px; height: 46px; }
   .work-type { display: none; }
   .archive-meta { gap: 12px; }
+  .archive-compare { grid-template-columns: 1fr; }
   .archive-category { display: none; }
   .dialog-content { padding: 22px; }
   .dialog-image--private { filter: blur(3px) saturate(.9) contrast(.98); }
