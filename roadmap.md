@@ -57,3 +57,5 @@
 - [x] Cross-platform parity row: replace the placeholder icon with Jina's uploaded image.
 - [x] Highland archive entry: remove the open-original links under the screenshots.
 - [x] Archives: remove Cocoon Technologies and OptiCloud placeholder entries.
+- [x] AI + design systems automation popup: tightened all five sections for readability, keeping every key fact; bold lead-ins added.
+- [x] Cross-platform parity popup: remove the large visual.
