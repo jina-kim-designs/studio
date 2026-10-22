@@ -275,8 +275,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .dialog-conf::before { content: ''; width: 7px; height: 7px; border-radius: 999px; background: var(--honey); flex-shrink: 0; }
 .dialog-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
 .dialog-title { font-family: var(--font-display); font-size: 34px; }
-.dialog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.dialog-grid .resume-copy { white-space: pre-wrap; }
+.dialog-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.dialog-grid .resume-copy { white-space: pre-wrap; max-width: 660px; }
 .dialog-reflection { grid-column: 1 / -1; padding-top: 26px; border-top: 1px solid var(--border); }
 .dialog-reflection .resume-copy { max-width: 660px; }
 .dialog-wide { grid-column: 1 / -1; }
