@@ -52,3 +52,4 @@
 - [x] Pocket Mentor popup: "The challenge" replaced with Jina's agentic-AI trust write-up (the approval question, why finance raises the stakes, the Eno origin, and the three must-be-true conditions as bold-led lines).
 - [x] Pocket Mentor popup: "The constraints" added after The challenge — user-granted autonomy, inspectable explainability, and hackathon time pressure, each bold-led to match the other popups.
 - [x] Pocket Mentor popup: replace "The approach" with "The process" — the autonomy dial (three levels), the "Why I suggested this" explainability card, and the human handoff — from Jina's wording.
+- [x] Pocket Mentor popup: "The outcome" split into two lines with bold, sentence-cased lead-ins — "Rapid concept delivery" and "Strategic roadmap contribution".
