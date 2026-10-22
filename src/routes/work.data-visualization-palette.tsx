@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import type { ReactNode } from 'react';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 import afterAsset from '@/assets/gravity-dataviz-after.png.asset.json';
+import ratingsToolAsset from '@/assets/ratings-palette-generator.png.asset.json';
 import beforeAsset from '@/assets/gravity-dataviz-before.png.asset.json';
 
 const title = 'Building a scalable data visualization palette — Jina';
@@ -105,7 +106,7 @@ function CaseStudy() {
               <div>
                 <h3>Rebuilding the palette</h3>
                 <p>Rather than inventing new hues from scratch, the 5 palettes were generated from Gravity’s existing brand palette — building color scales directly off the brand’s established colors so the data viz system stayed visually tied to the rest of Gravity rather than introducing a disconnected secondary color language.</p>
-                <p>Across all 5 palettes, we used Color Oracle to simulate color-blind vision and check that colors stayed distinguishable across vision types, and built custom AI-assisted tools to test color combinations and speed up iterating on palette candidates — rather than manually testing each combination by hand. For my two owned palettes (Categorical, Rating), I ran this process myself; my co-lead ran the same process for the other three.</p>
+                <p>Across all 5 palettes, we used Color Oracle to simulate color-blind vision and check that colors stayed distinguishable across vision types, and built custom AI-assisted tools to test color combinations and speed up iterating on palette candidates — rather than manually testing each combination by hand. For my two owned palettes (Categorical, Rating), I ran this process myself; my co-lead ran the same process for the other three.</p><figure className="cs-concept"><img src={ratingsToolAsset.url} alt="The Ratings Palette Generator tool showing three palette variants, each with five rating-tier swatches, accessibility badges, and comparison gauges" width={1920} height={771} /><figcaption>The Ratings Palette Generator — one of the custom AI-assisted tools built to test color combinations and iterate on palette candidates faster</figcaption></figure>
               </div>
             </li>
             <li>

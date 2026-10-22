@@ -63,3 +63,9 @@
 - [x] Autopilot case study: add the uploaded early-concept visual with the confidentiality blur and note.
 - [x] Contact section: add Jina's email and LinkedIn in a clean, on-brand way.
 - [x] Let's talk nav link: open a popup offering Email or LinkedIn choices.
+- [x] Cross-platform parity popup: add the uploaded Apple + Android visual as the popup's main image (no blur — it holds no confidential detail).
+- [x] Contact buttons: labels now just "Email" and "LinkedIn"; "Let's connect!" line above the footer buttons.
+- [x] Cross-platform parity popup: replace the visual with Jina's newest upload.
+- [x] Added Jina's AI color-tool screenshot (Ratings Palette Generator) under the AI-tools paragraph in Section 04 of the palette case study.
+- [x] Confidential blur eased a touch: 3.5px to 2.5px on desktop, 3px to 2px on phones.
+- [x] Autopilot visual: blur eased a further touch (2.5px to 1.8px) and size reduced (960px to 760px wide).
