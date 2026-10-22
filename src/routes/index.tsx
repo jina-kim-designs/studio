@@ -85,7 +85,27 @@ const otherWork: OtherWorkItem[] = [
     { label: 'The outcome', body: <p className="resume-copy">{'Rapid Concept Delivery: Successfully delivered a cohesive, 0-to-1 conceptual product within a rigorous 2-day timeframe, emphasizing trustworthy human-AI interaction.       \nStrategic Roadmap Contribution: Provided product leadership with a viable blueprint for unifying digital app experiences with in-person advisory services at Capital One Cafés.'}</p> },
     { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy">Pocket Mentor pushed me to design for trust first: making the AI’s intent visible, and the handoff to a human mentor feel like a natural next step rather than a fallback.</p> },
   ] },
-  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration', tags: ['Collaboration'], dialog: [] },
+  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration', tags: ['Collaboration'], dialog: [
+    { label: 'The challenge', body: <>
+      <p className="resume-copy">The Enterprise Design System’s iOS and Android components had drifted apart because of earlier independent decisions and framework-specific builds. This made designs harder to keep consistent, slowed development, and raised platform costs. Product management commissioned a parity audit, scoped it, ran a 2-day working session, and committed to owning the resulting roadmap.</p>
+      <p className="resume-copy">The roadmap then stalled. The product lead who drove the audit left the team, and the other product partner moved to Web, so no one on the product side covered native parity. The initiative lost both its owner and its priority against other design-system work. Tickets stopped moving, no one was deciding what mattered next, and no one was checking with engineering on what had shipped versus what was still outstanding.</p>
+      <p className="resume-copy">The core lesson is that the audit itself worked but the ownership didn’t survive turnover, so the roadmap lost momentum.</p>
+    </> },
+    { label: 'The process', className: 'dialog-wide', body: <>
+      <p className="dialog-sub">Phase 1: The audit (Oct–Nov 2025)</p>
+      <p className="resume-copy">Led by Product, and the foundation for everything that followed. Product ran a structured, multi-phase audit to find and prioritize mobile discrepancies between iOS and Android.</p>
+      <p className="resume-copy">Kickoff: The team aligned on why mobile parity mattered, scoped the design and tech pre-work, and folded 61 existing component-enhancement requests into the audit instead of tracking them separately.</p>
+      <p className="resume-copy">Figma groundwork: Non-breaking cleanup standardized naming and layer structure, aligned property values, and normalized variants across both kits. It was sized at roughly 8 to 9 weeks of design work that needed no code changes to start.</p>
+      <p className="resume-copy">Working session: A 2-day session walked every major component category and classified each one against a shared status legend, then closed with a prioritization block that became the Q1 2026 roadmap.</p>
+      <p className="resume-copy">Bigger goal: A unified Component Schema across platforms, framed as the key to Server-Driven UI and AI-assisted development, with projected cuts of 30 to 45% in cross-platform rework.</p>
+      <p className="dialog-sub">Phase 2: Keeping it moving without a PM (Jan 2026–present)</p>
+      <p className="resume-copy">Where I stepped in. When the audit’s owners left, the roadmap stalled. I took on the coordination role without a formal mandate.</p>
+      <p className="resume-copy">Syncs and outreach: Recurring syncs with iOS, Android, and Web partners, plus direct 1:1 follow-ups, surfaced what had shipped, what was blocked, and what needed design input.</p>
+      <p className="resume-copy">Status docs: Tracking resolved versus outstanding work meant decisions rested on current facts instead of the stale November snapshot.</p>
+      <p className="resume-copy">Re-prioritization by demand and effort: By January, several components tagged “Ready for Work” (Dropdown, Switch/Toggle, Verification input) were still waiting while customer pressure had shifted. I moved Table: Standard Row ahead because it was drawing a disproportionate number of enhancement requests for more flexibility and content types.</p>
+      <p className="dialog-sum">Takeaway: Treating the audit as a starting point instead of a fixed sequence kept the roadmap responsive to what teams were actually blocked on months later.</p>
+    </> },
+  ] },
 ];
 type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; current?: string; beforeAlt?: string; afterAlt?: string; currentAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
 const archive: ArchiveEntry[] = [
