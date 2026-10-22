@@ -229,7 +229,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .archive-meta-line { margin-top: 14px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--archive-accent); }
 .archive-sub { font-size: 13px; font-weight: 600; color: var(--archive-ink); margin-top: 26px; letter-spacing: .01em; }
 .archive-sub::before { content: ""; display: block; width: 22px; height: 2px; margin-bottom: 11px; background: var(--honey); }
-.archive-body .body-copy { margin-top: 9px; color: var(--archive-ink); }
+.archive-body .body-copy { margin-top: 9px; max-width: none; color: var(--archive-ink); }
 .archive-bullets { list-style: none; margin-top: 10px; display: grid; gap: 9px; }
 .archive-bullets li { position: relative; padding-left: 16px; font-size: 12px; line-height: 1.8; color: var(--archive-ink); }
 .archive-bullets li::before { content: ""; position: absolute; left: 0; top: .78em; width: 5px; height: 5px; border-radius: 50%; background: var(--honey); }
