@@ -12,6 +12,7 @@ const pocketMentorImage = pocketMentorGridAsset.url;
 import pocketMentorIconAsset from '@/assets/pocket-mentor-icon.png.asset.json';
 import jiraLogoAsset from '@/assets/jira-1.svg.asset.json';
 import parityThumbAsset from '@/assets/cross-platform-parity-thumb.png.asset.json';
+import parityVisualAsset from '@/assets/cross-platform-parity-visual.png.asset.json';
 import automationVisualAsset from '@/assets/group-269-1.png.asset.json';
 import highlandBeforeAsset from '@/assets/highland-before-desktop.png.asset.json';
 import highlandAfterAsset from '@/assets/highland-our-design-desktop.png.asset.json';
@@ -73,7 +74,7 @@ const otherWork: OtherWorkItem[] = [
       <div className="dialog-note"><span>WHAT I'D DO DIFFERENTLY</span><p className="resume-copy">Validate the recurring-automation path (cron) for the drift detector from the start, rather than losing time on the GitHub Actions dead end.</p></div></div>
     </> },
   ] },
-  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, thumb: parityThumbAsset.url, alt: 'The Android robot mascot overlapping the Apple logo', hideImage: true, category: 'Collaboration', tags: ['Collaboration'], dialog: [
+  { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: parityVisualAsset.url, thumb: parityThumbAsset.url, alt: 'The Android robot mascot overlapping the Apple logo', aspect: '1280 / 720', category: 'Collaboration', tags: ['Collaboration'], dialog: [
     { label: 'The challenge', body: <>
       <p className="resume-copy"><strong>iOS and Android had drifted apart.</strong> The Enterprise Design System’s components diverged through earlier independent decisions and framework-specific builds, making designs harder to keep consistent, slowing development, and raising platform costs. Product management commissioned a parity audit, scoped it, ran a 2-day working session, and committed to owning the resulting roadmap.</p>
       <p className="resume-copy"><strong>The roadmap then stalled.</strong> The product lead who drove the audit left, and the other product partner moved to Web, leaving no one on the product side covering native parity. The initiative lost both its owner and its priority against other design-system work: tickets stopped moving, no one was deciding what mattered next, and no one was checking with engineering on what had shipped versus what was still outstanding.</p>

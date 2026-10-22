@@ -63,3 +63,4 @@
 - [x] Autopilot case study: add the uploaded early-concept visual with the confidentiality blur and note.
 - [x] Contact section: add Jina's email and LinkedIn in a clean, on-brand way.
 - [x] Let's talk nav link: open a popup offering Email or LinkedIn choices.
+- [x] Cross-platform parity popup: add the uploaded Apple + Android visual as the popup's main image (no blur — it holds no confidential detail).
