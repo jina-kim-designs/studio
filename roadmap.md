@@ -34,3 +34,5 @@
 - [x] AI + design systems automation row: use the uploaded Jira logo as the small thumbnail, re-cropped to its own bounds and tucked in 3px so it matches the Pocket Mentor badge's optical weight.
 - [x] Pocket Mentor popup: blurred visual freed from its frame — no border, no overlay wash, no edge crop — blur eased to 3.5px and the visual scaled to 88% width.
 - [x] Pocket Mentor popup: blurred visual scaled down again to ~76% of the popup's width (measured ~70% rendered), still borderless, unclipped, caption legible.
+- [x] AI + design systems automation popup: use the uploaded terminal screenshot as the main visual, blurred like Pocket Mentor with the confidentiality caption.
+- [x] From the archives: reformat as structured entries (title, italic lead, uppercase role/timeline line, honey-tick sub-headings, bulleted outcome) and fill Highland Township Public Library with Jina's full write-up; row year set to 2023 to match the stated timeline.
