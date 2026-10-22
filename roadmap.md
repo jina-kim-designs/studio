@@ -51,3 +51,4 @@
 - [x] Popups (all three): removed the divider line above "Reflection" and the extra space around it, so the gap before every section is the same 28px.
 - [x] Pocket Mentor popup: "The challenge" replaced with Jina's agentic-AI trust write-up (the approval question, why finance raises the stakes, the Eno origin, and the three must-be-true conditions as bold-led lines).
 - [x] Pocket Mentor popup: "The constraints" added after The challenge — user-granted autonomy, inspectable explainability, and hackathon time pressure, each bold-led to match the other popups.
+- [ ] Pocket Mentor popup: replace "The approach" with "The process" — the autonomy dial (three levels), the "Why I suggested this" explainability card, and the human handoff — from Jina's wording.
