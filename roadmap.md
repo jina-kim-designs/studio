@@ -62,3 +62,4 @@
 - [x] Cross-platform parity popup: tightened challenge, process, and reflection for readability; outcome kept verbatim; bold lead-ins added.
 - [ ] Autopilot case study: add the uploaded early-concept visual with the confidentiality blur and note.
 - [ ] Contact section: add Jina's email and LinkedIn in a clean, on-brand way.
+- [ ] Let's talk nav link: open a popup offering Email or LinkedIn choices.
