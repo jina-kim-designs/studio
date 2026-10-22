@@ -54,3 +54,4 @@
 - [x] Pocket Mentor popup: replace "The approach" with "The process" — the autonomy dial (three levels), the "Why I suggested this" explainability card, and the human handoff — from Jina's wording.
 - [x] Pocket Mentor popup: "The outcome" split into two lines with bold, sentence-cased lead-ins — "Rapid concept delivery" and "Strategic roadmap contribution".
 - [x] Pocket Mentor popup: "Reflection" expanded with Jina's full write-up — what stood out (autonomy dial, explainability, stopping point, restraint), what to validate with real users, hackathon status, and what she'd do differently.
+- [ ] Cross-platform parity row: replace the placeholder icon with Jina's uploaded image.
