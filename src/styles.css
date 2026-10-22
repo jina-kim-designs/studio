@@ -233,6 +233,11 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .archive-bullets { list-style: none; margin-top: 10px; display: grid; gap: 9px; }
 .archive-bullets li { position: relative; padding-left: 16px; font-size: 12px; line-height: 1.8; color: var(--muted-foreground); max-width: 660px; }
 .archive-bullets li::before { content: ""; position: absolute; left: 0; top: .78em; width: 5px; height: 5px; border-radius: 50%; background: var(--honey); }
+.archive-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 26px; max-width: 880px; }
+.archive-compare figure { margin: 0; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: var(--paper); }
+.archive-compare img { display: block; width: 100%; height: auto; }
+.archive-compare-slot { aspect-ratio: 16 / 10; }
+.archive-compare figcaption { padding: 11px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: color-mix(in oklab, var(--honey) 30%, var(--foreground)); }
 .archive-meta { display: flex; gap: 30px; font-size: 11px; align-items: center; }
 .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
 .subheading { font-size: 10px; text-transform: uppercase; margin-bottom: 22px; color: var(--muted-foreground); }
@@ -247,7 +252,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .dialog-media { margin: 22px 0; }
 .dialog-media .dialog-image { margin: 0; }
 .dialog-frame { position: relative; overflow: hidden; }
-.dialog-frame--private { overflow: visible; max-width: 76%; margin-inline: auto; }
+.dialog-frame--private { overflow: visible; max-width: 66%; margin-inline: auto; }
 .dialog-image--private { filter: blur(3.5px) saturate(.9) contrast(.98); }
 .dialog-conf { display: flex; align-items: center; gap: 9px; margin-top: 13px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-foreground); }
 .dialog-conf::before { content: ''; width: 7px; height: 7px; border-radius: 999px; background: var(--honey); flex-shrink: 0; }
@@ -288,6 +293,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .work-thumb { width: 46px; height: 46px; }
   .work-type { display: none; }
   .archive-meta { gap: 12px; }
+  .archive-compare { grid-template-columns: 1fr; }
   .archive-category { display: none; }
   .dialog-content { padding: 22px; }
   .dialog-image--private { filter: blur(3px) saturate(.9) contrast(.98); }
