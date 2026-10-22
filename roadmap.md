@@ -1,4 +1,5 @@
 # Portfolio
+- [x] Highland library: use the three supplied framed PNGs unchanged, labeled Before / Our design / Current update, at no larger than native resolution with original-image links.
 - [x] Confirm visual direction and use placeholder personal/project content.
 - [x] Build introduction, case studies, current work, other work, resume, archive, and education/tools.
 - [x] Verify portfolio pages, case studies, archive, and navigation.

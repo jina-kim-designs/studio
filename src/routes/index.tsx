@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
 import { useState, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, ChevronLeft, ChevronRight, Lock, PanelsTopLeft } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
@@ -12,8 +12,9 @@ const pocketMentorImage = pocketMentorGridAsset.url;
 import pocketMentorIconAsset from '@/assets/pocket-mentor-icon.png.asset.json';
 import jiraLogoAsset from '@/assets/jira-1.svg.asset.json';
 import automationVisualAsset from '@/assets/group-269-1.png.asset.json';
-import highlandBeforeAsset from '@/assets/highland-library-before.png.asset.json';
-import highlandAfterAsset from '@/assets/highland-library-after.png.asset.json';
+import highlandBeforeAsset from '@/assets/highland-before-desktop.png.asset.json';
+import highlandAfterAsset from '@/assets/highland-our-design-desktop.png.asset.json';
+import highlandCurrentAsset from '@/assets/highland-current-desktop.png.asset.json';
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -86,11 +87,11 @@ const otherWork: OtherWorkItem[] = [
   ] },
   { title: 'Cross-platform parity', description: 'Prioritized and planned cross-platform work to drive design system parity, aligning teams on a clear roadmap.', image: studioImage, category: 'Collaboration', tags: ['Collaboration'], dialog: [] },
 ];
-type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; beforeAlt?: string; afterAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
+type ArchiveEntry = { title: string; category: string; year: string; lead?: string; meta?: string; compare?: { before?: string; after?: string; current?: string; beforeAlt?: string; afterAlt?: string; currentAlt?: string; url?: string }; blocks: { label: string; body: ReactNode }[] };
 const archive: ArchiveEntry[] = [
   { title: 'Cocoon Technologies', category: 'Visual identity', year: '2023', blocks: [{ label: '', body: <p className="body-copy">Sample archived project. A brief reflection on the original idea, your approach, and what you learned along the way.</p> }] },
   { title: 'OptiCloud', category: 'Editorial design', year: '2022', blocks: [{ label: '', body: <p className="body-copy">Sample archived project. A brief reflection on the original idea, your approach, and what you learned along the way.</p> }] },
-  { title: 'Highland Township Public Library', category: 'Project lead', year: '2023', lead: 'Redesigning a community library’s website so patrons of every age can find what they need.', meta: 'Role: Lead Product Designer & Project Manager | Timeline: ~5 months, 2023', compare: { before: highlandBeforeAsset.url, after: highlandAfterAsset.url, url: 'highlandlibrary.info', beforeAlt: 'The Highland Township Public Library website before the redesign: a crowded home page with two sidebars of gradient buttons, a seed library announcement, and rows of partner badges', afterAlt: 'The Highland Township Public Library website after the redesign: a clean home page with a catalog search bar, featured events, and audience cards for kids, teens, adults, and parents' }, blocks: [
+  { title: 'Highland Township Public Library', category: 'Project lead', year: '2023', lead: 'Redesigning a community library’s website so patrons of every age can find what they need.', meta: 'Role: Lead Product Designer & Project Manager | Timeline: ~5 months, 2023', compare: { before: highlandBeforeAsset.url, after: highlandAfterAsset.url, current: highlandCurrentAsset.url, url: 'highlandlibrary.info', beforeAlt: 'Before: the library home page with sidebar navigation and a seed library announcement, inside the supplied desktop frame', afterAlt: 'Our design: catalog search, a library photograph, and featured events, inside the supplied desktop frame', currentAlt: 'Current update: the library home page with a building photograph, catalog search, quick links, and audience sections, inside the supplied desktop frame' }, blocks: [
     { label: 'The problem', body: <p className="body-copy">The library’s website put everything on one crowded home page, with unclear navigation and ambiguous icons. Patrons ranging from digital natives to seniors struggled to do the two things they came for: search the catalog and register for events.</p> },
     { label: 'The approach', body: <p className="body-copy">I co-designed the redesign with library leadership, so the digital experience would reflect how the physical library actually runs. To understand how patrons think, I ran both open and closed card sorting, then used the results to restructure the site around their mental models. The data showed that catalog search and event registration were the most important pathways, and also the hardest to use, so I prioritized them.</p> },
     { label: 'The key decision', body: <p className="body-copy">I chose universal accessibility over trendy UI. That meant explicit text labels instead of ambiguous icons, strict high-contrast visual hierarchies, and a clear structure by audience (kids, teens, adults, parents), so the site works for the broadest range of patrons.</p> },
@@ -99,14 +100,10 @@ const archive: ArchiveEntry[] = [
   ] },
 ];
 
-function DesktopWindow({ src, alt, url, title }: { src?: string | undefined; alt?: string | undefined; url: string; title: string }) {
-  return <div className="desktop-window"><div className="desktop-titlebar"><span className="desktop-lights"><i className="desktop-light desktop-light--close" /><i className="desktop-light desktop-light--min" /><i className="desktop-light desktop-light--max" /></span><span className="desktop-tab"><span className="desktop-tab-favicon" />{title}</span><span className="desktop-newtab"><Plus size={13} /></span><span className="desktop-tab-space" /></div><div className="desktop-toolbar"><span className="desktop-nav"><ChevronLeft size={15} /><ChevronRight size={15} /></span><span className="desktop-address"><Lock size={10} />{url}</span><span className="desktop-tools"><span className="desktop-share"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12" /><path d="m7.5 7.5 4.5-4.5 4.5 4.5" /><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" /></svg></span><span className="desktop-side"><PanelsTopLeft size={13} /></span></span></div>{src ? <img src={src} alt={alt} loading="lazy" /> : <div className="archive-compare-slot" />}</div>;
-}
-
 function ArchiveRow({ entry }: { entry: ArchiveEntry }) {
   const cmp = entry.compare;
-  const shots: [string, string | undefined, string][] = cmp ? [['Before', cmp.before, cmp.beforeAlt ?? 'The library website before the redesign'], ['After', cmp.after, cmp.afterAlt ?? 'The library website after the redesign']] : [];
-  return <div className="archive-row"><details><summary><span>{entry.title}</span><span className="archive-meta"><span className="archive-category">{entry.category}</span><span>{entry.year}</span><Plus size={15} /></span></summary><div className="archive-body">{entry.lead && <p className="archive-lead">{entry.lead}</p>}{entry.meta && <p className="archive-meta-line">{entry.meta}</p>}{cmp && <div className="archive-compare">{shots.map(([cap, src, alt]) => <figure key={cap}><DesktopWindow src={src} alt={alt} url={cmp.url ?? 'highlandlibrary.info'} title={entry.title} /><figcaption>{cap}</figcaption></figure>)}</div>}{entry.blocks.map(block => <div key={block.label || entry.title}>{block.label && <h4 className="archive-sub">{block.label}</h4>}{block.body}</div>)}</div></details></div>;
+  const shots: [string, string | undefined, string][] = cmp ? [['Before', cmp.before, cmp.beforeAlt ?? 'The library website before the redesign'], ['Our design', cmp.after, cmp.afterAlt ?? 'Our library website design'], ['Current update', cmp.current, cmp.currentAlt ?? 'The current library website']] : [];
+  return <div className="archive-row"><details><summary><span>{entry.title}</span><span className="archive-meta"><span className="archive-category">{entry.category}</span><span>{entry.year}</span><Plus size={15} /></span></summary><div className="archive-body">{entry.lead && <p className="archive-lead">{entry.lead}</p>}{entry.meta && <p className="archive-meta-line">{entry.meta}</p>}{cmp && <div className="archive-compare">{shots.filter(([, src]) => src).map(([cap, src, alt]) => <figure key={cap}><img src={src} alt={alt} width={583} height={360} loading="lazy" /><figcaption><span>{cap}</span><Button asChild variant="ghost" size="icon"><a href={src} target="_blank" rel="noopener noreferrer" aria-label={`Open ${cap.toLowerCase()} original image`} title="Open original image"><ArrowUpRight size={15} /></a></Button></figcaption></figure>)}</div>}{entry.blocks.map(block => <div key={block.label || entry.title}>{block.label && <h4 className="archive-sub">{block.label}</h4>}{block.body}</div>)}</div></details></div>;
 }
 
 function SectionHeading({ number, title, aside }: { number: string; title: string; aside?: ReactNode }) {

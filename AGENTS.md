@@ -14,3 +14,4 @@
 - Each other-work item owns its popup content through its own `dialog` blocks, so a popup never shows another project's copy; leave a block out until its real wording arrives rather than reusing placeholder text.
 - Declare the requested display typeface first with a web-loaded serif fallback; the portfolio remains usable until a licensed font file is provided.
 - Mark a popup visual as confidential with `blur: true` on the item so the dialog renders it frosted with a confidentiality caption; keep the source asset unaltered rather than pre-blurring it.
+- Render supplied archive screenshots with their existing frames, unchanged and no larger than their native resolution, with links to the originals; this preserves screenshot text rather than inventing detail through AI enhancement.
