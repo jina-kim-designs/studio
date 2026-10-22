@@ -209,6 +209,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .work-row { display: grid; grid-template-columns: 56px 1fr auto auto; align-items: center; gap: 28px; padding: 23px 0; border-bottom: 1px solid var(--border); }
 .work-row:last-child { border-bottom: 0; }
 .work-thumb { height: 56px; width: 56px; object-fit: cover; border-radius: 2px; }
+.work-thumb--inset { padding: 3px; }
 .work-type { font-size: 11px; color: var(--muted-foreground); }
 .resume-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; padding: 26px 0; border-bottom: 1px solid var(--border); }
 .resume-row:last-child { border: 0; }
