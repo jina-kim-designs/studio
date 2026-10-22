@@ -137,7 +137,10 @@ const otherWork: OtherWorkItem[] = [
       <p className="resume-copy">The agent never closes a loan or finalizes a financial decision. When a user nears a savings goal and may pre-qualify for something like an auto loan, the mentor prepares a “Money Plan Report” (savings history, budget adherence, credit readiness estimate, goal progress) and books the user with a human mentor at a physical Café. The team drew this line from conviction that AI shouldn’t make real financial decisions unsupervised, not because of hackathon time pressure.</p>
     </> },
     { label: 'My contribution', body: <p className="resume-copy">Led the design and strategy for a conceptual prototype that helps people grow their financial literacy, and shaped the experience to build trust in AI.</p> },
-    { label: 'The outcome', body: <p className="resume-copy">{'Rapid Concept Delivery: Successfully delivered a cohesive, 0-to-1 conceptual product within a rigorous 2-day timeframe, emphasizing trustworthy human-AI interaction.       \nStrategic Roadmap Contribution: Provided product leadership with a viable blueprint for unifying digital app experiences with in-person advisory services at Capital One Cafés.'}</p> },
+    { label: 'The outcome', body: <>
+      <p className="resume-copy"><strong>Rapid concept delivery:</strong> Successfully delivered a cohesive, 0-to-1 conceptual product within a rigorous 2-day timeframe, emphasizing trustworthy human-AI interaction.</p>
+      <p className="resume-copy"><strong>Strategic roadmap contribution:</strong> Provided product leadership with a viable blueprint for unifying digital app experiences with in-person advisory services at Capital One Cafés.</p>
+    </> },
     { label: 'Reflection', className: 'dialog-reflection', body: <p className="resume-copy">Pocket Mentor pushed me to design for trust first: making the AI’s intent visible, and the handoff to a human mentor feel like a natural next step rather than a fallback.</p> },
   ] },
 ];
