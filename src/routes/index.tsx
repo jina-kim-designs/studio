@@ -18,6 +18,60 @@ import highlandBeforeAsset from '@/assets/highland-before-desktop.png.asset.json
 import highlandAfterAsset from '@/assets/highland-our-design-desktop.png.asset.json';
 import highlandCurrentAsset from '@/assets/highland-current-desktop.png.asset.json';
 
+const CONTACT_EMAIL = 'jiki5462@gmail.com';
+const CONTACT_LINKEDIN = 'https://www.linkedin.com/in/jinakim5462/';
+
+async function copyContactText(text: string) {
+  try { await navigator.clipboard.writeText(text); return true; } catch { /* clipboard unavailable */ }
+  try {
+    const helper = document.createElement('textarea');
+    helper.value = text;
+    helper.setAttribute('readonly', '');
+    helper.style.position = 'fixed';
+    helper.style.opacity = '0';
+    document.body.appendChild(helper);
+    helper.select();
+    const ok = document.execCommand('copy');
+    helper.remove();
+    return ok;
+  } catch { return false; }
+}
+
+function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate?: () => void }) {
+  const [note, setNote] = useState<string | null>(null);
+  const noteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const showNote = (message: string) => {
+    setNote(message);
+    if (noteTimer.current) clearTimeout(noteTimer.current);
+    noteTimer.current = setTimeout(() => setNote(null), 6000);
+  };
+
+  // The preview frame blocks mailto and popups, so copy the details as a fallback.
+  const handleEmail = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch { /* blocked in the preview frame */ }
+    void copyContactText(CONTACT_EMAIL).then(copied => showNote(copied ? `Copied — ${CONTACT_EMAIL}` : `Email me at ${CONTACT_EMAIL}`));
+  };
+
+  const handleLinkedIn = async (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    try {
+      const win = window.open(CONTACT_LINKEDIN, '_blank', 'noopener,noreferrer');
+      if (win) { onNavigate?.(); return; }
+    } catch { /* blocked in the preview frame */ }
+    const copied = await copyContactText(CONTACT_LINKEDIN);
+    showNote(copied ? 'Copied — paste it in your browser to open LinkedIn' : `LinkedIn: ${CONTACT_LINKEDIN}`);
+  };
+
+  return <>
+    <span className={stacked ? 'contact-pair contact-pair--stacked' : 'contact-pair'}>
+      <a className="footer-btn footer-btn--solid" href={`mailto:${CONTACT_EMAIL}`} onClick={handleEmail}><Mail size={14} /> Email</a>
+      <a className="footer-btn" href={CONTACT_LINKEDIN} target="_blank" rel="noopener noreferrer" onClick={event => { void handleLinkedIn(event); }}><Linkedin size={14} /> LinkedIn <ArrowUpRight size={13} /></a>
+    </span>
+    {note && <p className="contact-note" role="status">{note}</p>}
+  </>;
+}
+
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
     { title: 'Jina Kim — Design Portfolio' },
