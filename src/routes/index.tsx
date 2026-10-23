@@ -22,19 +22,23 @@ const CONTACT_EMAIL = 'jiki5462@gmail.com';
 const CONTACT_LINKEDIN = 'https://www.linkedin.com/in/jinakim5462/';
 
 async function copyContactText(text: string) {
-  try { await navigator.clipboard.writeText(text); return true; } catch { /* clipboard unavailable */ }
-  try {
-    const helper = document.createElement('textarea');
-    helper.value = text;
-    helper.setAttribute('readonly', '');
-    helper.style.position = 'fixed';
-    helper.style.opacity = '0';
-    document.body.appendChild(helper);
-    helper.select();
-    const ok = document.execCommand('copy');
-    helper.remove();
-    return ok;
-  } catch { return false; }
+  const attempt = (async () => {
+    try { await navigator.clipboard.writeText(text); return true; } catch { /* clipboard unavailable */ }
+    try {
+      const helper = document.createElement('textarea');
+      helper.value = text;
+      helper.setAttribute('readonly', '');
+      helper.style.position = 'fixed';
+      helper.style.opacity = '0';
+      document.body.appendChild(helper);
+      helper.select();
+      const ok = document.execCommand('copy');
+      helper.remove();
+      return ok;
+    } catch { return false; }
+  })();
+  // Clipboard calls can stay pending in some embedded browsers; don't wait on them.
+  return Promise.race([attempt, new Promise<boolean>(resolve => setTimeout(() => resolve(false), 1200))]);
 }
 
 function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate?: () => void }) {
@@ -46,12 +50,12 @@ function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate
     noteTimer.current = setTimeout(() => setNote(null), 6000);
   };
 
-  // The preview frame blocks mailto and popups, so copy the details as a fallback.
+  // The preview frame blocks mailto and popups, so surface the details right away.
   const handleEmail = (event: ReactMouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
-    console.log('[contact] email click');
-    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch (err) { console.log('[contact] mailto blocked', err); }
-    void copyContactText(CONTACT_EMAIL).then(copied => { console.log('[contact] copy result', copied); showNote(copied ? `Copied — ${CONTACT_EMAIL}` : `Email me at ${CONTACT_EMAIL}`); }).catch(err => console.log('[contact] copy error', err));
+    showNote(`Email me at ${CONTACT_EMAIL}`);
+    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch { /* blocked in the preview frame */ }
+    void copyContactText(CONTACT_EMAIL).then(copied => { if (copied) showNote(`Copied — ${CONTACT_EMAIL}`); });
   };
 
   const handleLinkedIn = async (event: ReactMouseEvent<HTMLAnchorElement>) => {
@@ -60,8 +64,9 @@ function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate
       const win = window.open(CONTACT_LINKEDIN, '_blank', 'noopener,noreferrer');
       if (win) { onNavigate?.(); return; }
     } catch { /* blocked in the preview frame */ }
+    showNote(`LinkedIn: ${CONTACT_LINKEDIN.replace(/^https?:\/\//, '')}`);
     const copied = await copyContactText(CONTACT_LINKEDIN);
-    showNote(copied ? 'Copied — paste it in your browser to open LinkedIn' : `LinkedIn: ${CONTACT_LINKEDIN}`);
+    if (copied) showNote('Copied — paste it in your browser to open LinkedIn');
   };
 
   return <>
