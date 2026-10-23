@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
-import { useState, type ReactNode } from 'react';
+import { useState, useRef, type MouseEvent as ReactMouseEvent, type ReactNode } from 'react';
 import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, Mail, Linkedin } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,66 @@ import automationVisualAsset from '@/assets/group-269-1.png.asset.json';
 import highlandBeforeAsset from '@/assets/highland-before-desktop.png.asset.json';
 import highlandAfterAsset from '@/assets/highland-our-design-desktop.png.asset.json';
 import highlandCurrentAsset from '@/assets/highland-current-desktop.png.asset.json';
+
+const CONTACT_EMAIL = 'jiki5462@gmail.com';
+const CONTACT_LINKEDIN = 'https://www.linkedin.com/in/jinakim5462/';
+
+async function copyContactText(text: string) {
+  const attempt = (async () => {
+    try { await navigator.clipboard.writeText(text); return true; } catch { /* clipboard unavailable */ }
+    try {
+      const helper = document.createElement('textarea');
+      helper.value = text;
+      helper.setAttribute('readonly', '');
+      helper.style.position = 'fixed';
+      helper.style.opacity = '0';
+      document.body.appendChild(helper);
+      helper.select();
+      const ok = document.execCommand('copy');
+      helper.remove();
+      return ok;
+    } catch { return false; }
+  })();
+  // Clipboard calls can stay pending in some embedded browsers; don't wait on them.
+  return Promise.race([attempt, new Promise<boolean>(resolve => setTimeout(() => resolve(false), 1200))]);
+}
+
+function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate?: () => void }) {
+  const [note, setNote] = useState<string | null>(null);
+  const noteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const showNote = (message: string) => {
+    setNote(message);
+    if (noteTimer.current) clearTimeout(noteTimer.current);
+    noteTimer.current = setTimeout(() => setNote(null), 6000);
+  };
+
+  // The preview frame blocks mailto and popups, so surface the details right away.
+  const handleEmail = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    showNote(`Email me at ${CONTACT_EMAIL}`);
+    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch { /* blocked in the preview frame */ }
+    void copyContactText(CONTACT_EMAIL).then(copied => { if (copied) showNote(`Copied — ${CONTACT_EMAIL}`); });
+  };
+
+  const handleLinkedIn = async (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    try {
+      const win = window.open(CONTACT_LINKEDIN, '_blank', 'noopener,noreferrer');
+      if (win) { onNavigate?.(); return; }
+    } catch { /* blocked in the preview frame */ }
+    showNote(`LinkedIn: ${CONTACT_LINKEDIN.replace(/^https?:\/\//, '')}`);
+    const copied = await copyContactText(CONTACT_LINKEDIN);
+    if (copied) showNote('Copied — paste it in your browser to open LinkedIn');
+  };
+
+  return <>
+    <span className={stacked ? 'contact-pair contact-pair--stacked' : 'contact-pair'}>
+      <a className="footer-btn footer-btn--solid" href={`mailto:${CONTACT_EMAIL}`} onClick={handleEmail}><Mail size={14} /> Email</a>
+      <a className="footer-btn" href={CONTACT_LINKEDIN} target="_blank" rel="noopener noreferrer" onClick={event => { void handleLinkedIn(event); }}><Linkedin size={14} /> LinkedIn <ArrowUpRight size={13} /></a>
+    </span>
+    {note && <p className="contact-note" role="status">{note}</p>}
+  </>;
+}
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -252,12 +312,12 @@ function Portfolio() {
         <div className="education-grid"><div><h3 className="subheading">Education</h3><h4 className="resume-role">B.S. Information</h4><p className="resume-company">University of Michigan - Ann Arbor · 2019 — 2023</p><p className="resume-copy">Concentration: UX design</p></div><div><h3 className="subheading">TOOLS I WORK WITH </h3><div className="tool-list">{['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'A sketchbook & a pencil', 'Claude Code', 'ChatGPT', 'Gemini', 'Lovable', 'Jira', 'Confluence', 'Google Suite'].map(tool => <span key={tool}>{tool}</span>)}</div></div></div>
       </section>
     </main>
-    <footer className="portfolio-shell" id="contact"><div className="site-footer"><h2 className="footer-title">Good things start with a conversation.</h2><p className="footer-cta">Let’s connect!</p><div className="footer-links"><a className="footer-btn footer-btn--solid" href="mailto:jiki5462@gmail.com"><Mail size={14} /> Email</a><a className="footer-btn" href="https://www.linkedin.com/in/jinakim5462/" target="_blank" rel="noopener noreferrer"><Linkedin size={14} /> LinkedIn <ArrowUpRight size={13} /></a></div><div className="footer-bottom"><span>© 2026 Jina</span><a href="#top" className="inline-flex items-center gap-2">Back to top <ArrowUp size={12} /></a></div></div></footer>
+    <footer className="portfolio-shell" id="contact"><div className="site-footer"><h2 className="footer-title">Good things start with a conversation.</h2><p className="footer-cta">Let’s connect!</p><div className="footer-links"><ContactButtons /></div><div className="footer-bottom"><span>© 2026 Jina</span><a href="#top" className="inline-flex items-center gap-2">Back to top <ArrowUp size={12} /></a></div></div></footer>
     <Dialog.Root open={selected !== null} onOpenChange={open => { if (!open) setSelected(null); }}>
         <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content">{selected && <><div className="dialog-top"><div><p className="eyebrow mb-2">OTHER WORK</p><Dialog.Title className="dialog-title">{selected.title}</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close case study"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">{selected.description}</Dialog.Description>{!selected.hideImage && <figure className={selected.blur ? 'dialog-media dialog-media--private' : 'dialog-media'}><div className={selected.blur ? 'dialog-frame dialog-frame--private' : 'dialog-frame'}><img src={selected.image} alt={`${selected.title} sample project detail`} className={selected.blur ? 'dialog-image dialog-image--private' : 'dialog-image'} style={{ aspectRatio: selected.aspect ?? '2 / 1' }} width={1536} height={1024} /></div>{selected.blur && <figcaption className="dialog-conf">Screens blurred for confidentiality</figcaption>}</figure>}<div className="project-tags mb-7">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.dialog.length > 0 && <div className="dialog-grid">{selected.dialog.map(block => <div className={block.className} key={block.label}><h3 className="resume-role">{block.label}</h3>{block.body}</div>)}</div>}</>}</Dialog.Content></Dialog.Portal>
     </Dialog.Root>
     <Dialog.Root open={talk} onOpenChange={setTalk}>
-        <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content dialog-talk"><div className="dialog-top"><div><p className="eyebrow mb-2">GET IN TOUCH</p><Dialog.Title className="dialog-title">Let’s talk</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close contact options"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">Email is the quickest way to reach me — or connect on LinkedIn.</Dialog.Description><div className="talk-options"><a className="footer-btn footer-btn--solid" href="mailto:jiki5462@gmail.com" onClick={() => setTalk(false)}><Mail size={14} /> Email</a><a className="footer-btn" href="https://www.linkedin.com/in/jinakim5462/" target="_blank" rel="noopener noreferrer" onClick={() => setTalk(false)}><Linkedin size={14} /> LinkedIn <ArrowUpRight size={13} /></a></div></Dialog.Content></Dialog.Portal>
+        <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content dialog-talk"><div className="dialog-top"><div><p className="eyebrow mb-2">GET IN TOUCH</p><Dialog.Title className="dialog-title">Let’s talk</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close contact options"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">Email is the quickest way to reach me — or connect on LinkedIn.</Dialog.Description><div className="talk-options"><ContactButtons stacked onNavigate={() => setTalk(false)} /></div></Dialog.Content></Dialog.Portal>
     </Dialog.Root>
   </>;
 }
