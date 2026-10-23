@@ -49,8 +49,9 @@ function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate
   // The preview frame blocks mailto and popups, so copy the details as a fallback.
   const handleEmail = (event: ReactMouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
-    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch { /* blocked in the preview frame */ }
-    void copyContactText(CONTACT_EMAIL).then(copied => showNote(copied ? `Copied — ${CONTACT_EMAIL}` : `Email me at ${CONTACT_EMAIL}`));
+    console.log('[contact] email click');
+    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch (err) { console.log('[contact] mailto blocked', err); }
+    void copyContactText(CONTACT_EMAIL).then(copied => { console.log('[contact] copy result', copied); showNote(copied ? `Copied — ${CONTACT_EMAIL}` : `Email me at ${CONTACT_EMAIL}`); }).catch(err => console.log('[contact] copy error', err));
   };
 
   const handleLinkedIn = async (event: ReactMouseEvent<HTMLAnchorElement>) => {
