@@ -50,9 +50,9 @@ function CaseStudy() {
         </dl>
       </div></section>
       <div className="portfolio-shell cs-shell">
-        <Section n="01" label="Problem"><p>Gravity’s existing data visualization palette was due for an update — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
+        <Section n="01" label="Problem"><p>Enterprise Design System’s existing data visualization palette was due for an update — bringing it up to current token and brand standards. Three distinct problems justified the work:</p>
           <ol className="cs-problems">
-            <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Gravity’s current brand standards — visually out of step with the rebranded system and the products built on top of it.</p></div></li>
+            <li><span className="cs-problem-num">1</span><div><h3>Legacy brand colors</h3><p>The palette was still built on an outdated brand color set that predated Enterprise Design System’s current brand standards — visually out of step with the rebranded system and the products built on top of it.</p></div></li>
             <li><span className="cs-problem-num">2</span><div><h3>Token sprawl with no usage signal</h3><p>The palette had accumulated far more color tokens than teams were actually using. With no clear guidance on which token applied to which situation, teams routinely picked the wrong one — with no clear answer to “which token do I use here?”</p></div></li>
             <li><span className="cs-problem-num">3</span><div><h3>Accessibility and contrast gaps</h3><p>The existing palette hadn’t been built with color accessibility and contrast as a first-class requirement, meaning some combinations in active use didn’t meet the bar charts need to be readable for all users.</p></div></li>
           </ol>
@@ -105,7 +105,7 @@ function CaseStudy() {
               <span className="cs-problem-num">1</span>
               <div>
                 <h3>Rebuilding the palette</h3>
-                <p>Rather than inventing new hues from scratch, the 5 palettes were generated from Gravity’s existing brand palette — building color scales directly off the brand’s established colors so the data viz system stayed visually tied to the rest of Gravity rather than introducing a disconnected secondary color language.</p>
+                <p>Rather than inventing new hues from scratch, the 5 palettes were generated from Enterprise Design System’s existing brand palette — building color scales directly off the brand’s established colors so the data viz system stayed visually tied to the rest of Enterprise Design System rather than introducing a disconnected secondary color language.</p>
                 <p>Across all 5 palettes, we used Color Oracle to simulate color-blind vision and check that colors stayed distinguishable across vision types, and built custom AI-assisted tools to test color combinations and speed up iterating on palette candidates — rather than manually testing each combination by hand. For my two owned palettes (Categorical, Rating), I ran this process myself; my co-lead ran the same process for the other three.</p><figure className="cs-concept"><img src={ratingsToolAsset.url} alt="The Ratings Palette Generator tool showing three palette variants, each with five rating-tier swatches, accessibility badges, and comparison gauges" width={1920} height={771} /><figcaption>The Ratings Palette Generator — one of the custom AI-assisted tools built to test color combinations and iterate on palette candidates faster</figcaption></figure>
               </div>
             </li>
