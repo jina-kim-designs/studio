@@ -71,3 +71,4 @@
 - [x] Autopilot visual: blur eased a further touch (2.5px to 1.8px) and size reduced (960px to 760px wide).
 - [x] Contact: Email button and address removed everywhere; only the LinkedIn button remains in the footer and the "Let's talk" popup, opening as a plain browser link (no JS popup call) so the preview frame doesn't block it.
 - [x] Copy: every visible "Gravity" (including the GRV abbreviation) replaced with "Enterprise Design System".
+- [x] "Let's talk" nav link: now a direct link to the LinkedIn profile — the intermediate popup is gone (footer LinkedIn button unchanged).
