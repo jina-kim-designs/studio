@@ -266,11 +266,9 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
 .contact-pair { display: inline-flex; flex-wrap: wrap; gap: 14px; }
 .contact-pair--stacked { flex-direction: column; align-items: flex-start; }
-.contact-note { flex-basis: 100%; margin-top: 4px; font-size: 12px; letter-spacing: .01em; color: color-mix(in oklab, var(--foreground) 65%, transparent); }
 .footer-btn { display: inline-flex; align-items: center; gap: 9px; padding: 12px 22px; border-radius: 999px; border: 1px solid var(--foreground); font-size: 13px; text-decoration: none; color: var(--foreground); background: transparent; transition: opacity .2s ease; }
 .footer-btn svg { flex-shrink: 0; }
 .footer-btn:hover { opacity: .72; }
-.footer-btn--solid { background: var(--foreground); color: var(--background); }
 .site-nav button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; transition: opacity .2s; }
 .site-nav button:hover { opacity: .6; }
 .dialog-content.dialog-talk { width: min(520px, calc(100% - 32px)); }
