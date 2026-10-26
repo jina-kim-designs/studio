@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
-import { useState, useRef, type MouseEvent as ReactMouseEvent, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, Mail, Linkedin } from 'lucide-react';
+import { useState, type ReactNode } from 'react';
+import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, Linkedin } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
