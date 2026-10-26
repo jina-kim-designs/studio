@@ -69,3 +69,5 @@
 - [x] Added Jina's AI color-tool screenshot (Ratings Palette Generator) under the AI-tools paragraph in Section 04 of the palette case study.
 - [x] Confidential blur eased a touch: 3.5px to 2.5px on desktop, 3px to 2px on phones.
 - [x] Autopilot visual: blur eased a further touch (2.5px to 1.8px) and size reduced (960px to 760px wide).
+- [x] Contact: Email button and address removed everywhere; only the LinkedIn button remains in the footer and the "Let's talk" popup, opening as a plain browser link (no JS popup call) so the preview frame doesn't block it.
+- [x] Copy: every visible "Gravity" (including the GRV abbreviation) replaced with "Enterprise Design System".
