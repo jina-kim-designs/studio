@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import dataviz from '@/assets/dataviz-editorial-mockup.jpg';
-import { useState, useRef, type MouseEvent as ReactMouseEvent, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, Mail, Linkedin } from 'lucide-react';
+import { useState, type ReactNode } from 'react';
+import { ArrowUpRight, ArrowDown, ArrowUp, Plus, X, Linkedin } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Button } from '@/components/ui/button';
 import studioImage from '@/assets/studio-project.jpg';
@@ -18,64 +18,24 @@ import highlandBeforeAsset from '@/assets/highland-before-desktop.png.asset.json
 import highlandAfterAsset from '@/assets/highland-our-design-desktop.png.asset.json';
 import highlandCurrentAsset from '@/assets/highland-current-desktop.png.asset.json';
 
-const CONTACT_EMAIL = 'jiki5462@gmail.com';
 const CONTACT_LINKEDIN = 'https://www.linkedin.com/in/jinakim5462/';
 
-async function copyContactText(text: string) {
-  const attempt = (async () => {
-    try { await navigator.clipboard.writeText(text); return true; } catch { /* clipboard unavailable */ }
-    try {
-      const helper = document.createElement('textarea');
-      helper.value = text;
-      helper.setAttribute('readonly', '');
-      helper.style.position = 'fixed';
-      helper.style.opacity = '0';
-      document.body.appendChild(helper);
-      helper.select();
-      const ok = document.execCommand('copy');
-      helper.remove();
-      return ok;
-    } catch { return false; }
-  })();
-  // Clipboard calls can stay pending in some embedded browsers; don't wait on them.
-  return Promise.race([attempt, new Promise<boolean>(resolve => setTimeout(() => resolve(false), 1200))]);
-}
-
 function ContactButtons({ stacked, onNavigate }: { stacked?: boolean; onNavigate?: () => void }) {
-  const [note, setNote] = useState<string | null>(null);
-  const noteTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const showNote = (message: string) => {
-    setNote(message);
-    if (noteTimer.current) clearTimeout(noteTimer.current);
-    noteTimer.current = setTimeout(() => setNote(null), 6000);
-  };
-
-  // The preview frame blocks mailto and popups, so surface the details right away.
-  const handleEmail = (event: ReactMouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    showNote(`Email me at ${CONTACT_EMAIL}`);
-    try { window.location.href = `mailto:${CONTACT_EMAIL}`; } catch { /* blocked in the preview frame */ }
-    void copyContactText(CONTACT_EMAIL).then(copied => { if (copied) showNote(`Copied — ${CONTACT_EMAIL}`); });
-  };
-
-  const handleLinkedIn = async (event: ReactMouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    try {
-      const win = window.open(CONTACT_LINKEDIN, '_blank', 'noopener,noreferrer');
-      if (win) { onNavigate?.(); return; }
-    } catch { /* blocked in the preview frame */ }
-    showNote(`LinkedIn: ${CONTACT_LINKEDIN.replace(/^https?:\/\//, '')}`);
-    const copied = await copyContactText(CONTACT_LINKEDIN);
-    if (copied) showNote('Copied — paste it in your browser to open LinkedIn');
-  };
-
-  return <>
+  // A plain link (no JS navigation) is the most reliable way through the preview
+  // frame and popup blockers: the browser treats it as a user-initiated click.
+  return (
     <span className={stacked ? 'contact-pair contact-pair--stacked' : 'contact-pair'}>
-      <a className="footer-btn footer-btn--solid" href={`mailto:${CONTACT_EMAIL}`} onClick={handleEmail}><Mail size={14} /> Email</a>
-      <a className="footer-btn" href={CONTACT_LINKEDIN} target="_blank" rel="noopener noreferrer" onClick={event => { void handleLinkedIn(event); }}><Linkedin size={14} /> LinkedIn <ArrowUpRight size={13} /></a>
+      <a
+        className="footer-btn"
+        href={CONTACT_LINKEDIN}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => onNavigate?.()}
+      >
+        <Linkedin size={14} /> LinkedIn <ArrowUpRight size={13} />
+      </a>
     </span>
-    {note && <p className="contact-note" role="status">{note}</p>}
-  </>;
+  );
 }
 
 export const Route = createFileRoute('/')({
@@ -99,7 +59,7 @@ type OtherWorkItem = { title: string; description: string; image: string; catego
 const otherWork: OtherWorkItem[] = [
   { title: 'AI + design systems automation', description: 'Pioneering AI-assisted workflows that generate components and documentation and safeguard design-to-code parity, preparing the design system for what’s next.', image: automationVisualAsset.url, thumb: jiraLogoAsset.url, thumbInset: true, alt: 'The Jira logo: three interlocking blue gradient chevrons', aspect: '1726 / 1738', blur: true, category: 'Exploration', tags: ['Exploration', 'AI'], dialog: [
     { label: 'The challenge', body: <>
-      <p className="resume-copy">Gravity’s parity initiative keeps the Figma and code definitions of each component in sync. It began in Q1 2026 as largely manual work, and as it neared closeout, three recurring problems slowed it down — each found by hand, after the fact:</p>
+      <p className="resume-copy">Enterprise Design System’s parity initiative keeps the Figma and code definitions of each component in sync. It began in Q1 2026 as largely manual work, and as it neared closeout, three recurring problems slowed it down — each found by hand, after the fact:</p>
       <p className="resume-copy"><strong>Parity bugs surfaced after shipping.</strong> A property would be renamed or re-typed on one side without the other being updated, as in Checkbox’s rename of Inactive to Disabled. Teams found these only when they hit the bug and filed a ticket.</p>
       <p className="resume-copy"><strong>Backlog grooming was a manual chore.</strong> Parity and design stories went quiet without being resolved, and finding them meant someone periodically scanning the board.</p>
       <p className="resume-copy"><strong>Epic status required reading every Story.</strong> An Epic with six closed Stories and one awaiting acceptance looks nearly done but can’t close until someone notices and accepts the last one.</p>
@@ -162,7 +122,7 @@ const otherWork: OtherWorkItem[] = [
     { label: 'Reflection', className: 'dialog-reflection', body: <>
       <p className="resume-copy">Taking this on didn’t feel like a deliberate career bet — it felt obligatory. The audit had just produced a real, prioritized roadmap with momentum behind it; letting that stall for lack of a PM would have wasted the two-day working session and the months of pre-work behind it. Someone needed to keep it moving, and nobody else was going to.</p>
       <p className="resume-copy">If I backfilled a PM gap like this again, I’d do two things, not one. First, I’d push to be embedded in the audit’s original “Roadmap Creation” governance step from the start — a handoff plan baked into the process beats an informal pickup three months later. Second, I’d escalate the gap explicitly and early rather than quietly absorbing the coordination work myself — so leadership sees what’s actually unowned, and the next person isn’t starting from the same blind improvisation I did.</p>
-      <p className="resume-copy">This manual coordination is also the direct throughline to the AI skills I later built — the Jira Stale Story Tracker and the GRV Epic Closeout Tracker exist specifically because status-chasing and backlog-scanning shouldn’t depend on me remembering to do it by hand, every week, forever.</p>
+      <p className="resume-copy">This manual coordination is also the direct throughline to the AI skills I later built — the Jira Stale Story Tracker and the Enterprise Design System Epic Closeout Tracker exist specifically because status-chasing and backlog-scanning shouldn’t depend on me remembering to do it by hand, every week, forever.</p>
     </> },
   ] },
   { title: 'Pocket Mentor', description: 'Building an agentic AI financial companion to bridge digital engagement and physical banking through transparent, trust-driven micro-lessons.', image: pocketMentorImage, thumb: pocketMentorIconAsset.url, alt: 'Ten Pocket Mentor screens in the Capital One app, from onboarding and goal setting to chat guidance and booking a Café appointment', aspect: '1920 / 1632', blur: true, category: 'Hackathon', tags: ['Hackathon', 'AI'], dialog: [
@@ -317,7 +277,7 @@ function Portfolio() {
         <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content">{selected && <><div className="dialog-top"><div><p className="eyebrow mb-2">OTHER WORK</p><Dialog.Title className="dialog-title">{selected.title}</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close case study"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">{selected.description}</Dialog.Description>{!selected.hideImage && <figure className={selected.blur ? 'dialog-media dialog-media--private' : 'dialog-media'}><div className={selected.blur ? 'dialog-frame dialog-frame--private' : 'dialog-frame'}><img src={selected.image} alt={`${selected.title} sample project detail`} className={selected.blur ? 'dialog-image dialog-image--private' : 'dialog-image'} style={{ aspectRatio: selected.aspect ?? '2 / 1' }} width={1536} height={1024} /></div>{selected.blur && <figcaption className="dialog-conf">Screens blurred for confidentiality</figcaption>}</figure>}<div className="project-tags mb-7">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{selected.dialog.length > 0 && <div className="dialog-grid">{selected.dialog.map(block => <div className={block.className} key={block.label}><h3 className="resume-role">{block.label}</h3>{block.body}</div>)}</div>}</>}</Dialog.Content></Dialog.Portal>
     </Dialog.Root>
     <Dialog.Root open={talk} onOpenChange={setTalk}>
-        <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content dialog-talk"><div className="dialog-top"><div><p className="eyebrow mb-2">GET IN TOUCH</p><Dialog.Title className="dialog-title">Let’s talk</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close contact options"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">Email is the quickest way to reach me — or connect on LinkedIn.</Dialog.Description><div className="talk-options"><ContactButtons stacked onNavigate={() => setTalk(false)} /></div></Dialog.Content></Dialog.Portal>
+        <Dialog.Portal><Dialog.Overlay className="dialog-overlay" /><Dialog.Content className="dialog-content dialog-talk"><div className="dialog-top"><div><p className="eyebrow mb-2">GET IN TOUCH</p><Dialog.Title className="dialog-title">Let’s talk</Dialog.Title></div><Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close contact options"><X /></Button></Dialog.Close></div><Dialog.Description className="project-description">Connect with me on LinkedIn.</Dialog.Description><div className="talk-options"><ContactButtons stacked onNavigate={() => setTalk(false)} /></div></Dialog.Content></Dialog.Portal>
     </Dialog.Root>
   </>;
 }
