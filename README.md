@@ -1,6 +1,6 @@
-# Sevenfold Creative Portfolio
+# Creative Portfolio
 
-I want to make a design portfolio out of my projects
+This is a design portfolio out of my projects
 
 This project was built with [Lovable](https://lovable.dev).
 
