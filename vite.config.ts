@@ -7,7 +7,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  base: "/your-repository-name/", // 👈 ADD THIS LINE (replace with your exact repo name)
+  base: "/studio/", // 👈 Must match your repository subfolder precisely!
+  // ... rest of config
   plugins: [react()],
   // ... leave the rest of the existing configuration as is
   tanstackStart: {
