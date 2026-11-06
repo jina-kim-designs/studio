@@ -42,7 +42,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Vite outputs built static files to the 'dist' directory
+          path: './.output/public' # 👈 Try changing this from './dist' if it was empty
+
 
       - name: Deploy to GitHub Pages
         id: deployment
