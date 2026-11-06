@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Triggers the build whenever Lovable pushes changes to main
+      - main
 
 permissions:
   contents: read
@@ -27,7 +27,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-size: 20
+          node-version: 20
           cache: 'npm'
 
       - name: Install dependencies
@@ -39,11 +39,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Determine artifact path
+        id: set-path
+        run: |
+          if [ -d "./.output/public" ]; then
+            echo "path=./.output/public" >> $GITHUB_OUTPUT
+          else
+            echo "path=./dist" >> $GITHUB_OUTPUT
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './.output/public' # 👈 Try changing this from './dist' if it was empty
-
+          path: ${{ steps.set-path.outputs.path }}
 
       - name: Deploy to GitHub Pages
         id: deployment
