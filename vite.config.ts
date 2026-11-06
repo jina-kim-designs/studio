@@ -7,7 +7,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  base: "/studio/", // 👈 Must match your repository subfolder precisely!
+  base: "./", // 👈 Must match your repository subfolder precisely!
   // ... rest of config
   plugins: [react()],
   // ... leave the rest of the existing configuration as is
