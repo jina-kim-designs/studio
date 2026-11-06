@@ -44,9 +44,14 @@ jobs:
         run: |
           if [ -d "./.output/public" ]; then
             echo "path=./.output/public" >> $GITHUB_OUTPUT
-          else
+          elif [ -d "./dist" ]; then
             echo "path=./dist" >> $GITHUB_OUTPUT
+          elif [ -d "./build" ]; then
+            echo "path=./build" >> $GITHUB_OUTPUT
+          else
+            echo "path=." >> $GITHUB_OUTPUT
           fi
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
